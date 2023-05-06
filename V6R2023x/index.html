@@ -3166,26 +3166,28 @@ make clean &amp;&amp; make distclean
 </code></pre>
 <p>重启一下服务器，开机测试一下</p>
 <h3 id="modules">Modules激活</h3>
-<p>3DE环境的运行需要Apache的一些模块，我们可以从PD网站上获取这些模块的清单，这些模块有些是默认关闭的，所以我们需要修改启用这些modules，具体列表如下：
-- mod_authz_core.so
-- mod_cache.so
-- mod_cache_disk.so
-- mod_deflate.so
-- mod_filter.so
-- mod_headers.so
-- mod_log_config.so
-- mod_proxy.so
-- mod_proxy_http.so
-- mod_proxy_wstunnel.so
-- mod_rewrite.so
-- mod_setenvif.so
-- mod_socache_shmcb.so
-- mod_ssl.so
-- mod_slotmem_shm.so
-- mod_alias.so
-- mod_authz_host.so
-- mod_dir.so
-- mod_mime.so</p>
+<p>3DE环境的运行需要Apache的一些模块，我们可以从PD网站上获取这些模块的清单，这些模块有些是默认关闭的，所以我们需要修改启用这些modules，具体列表如下：</p>
+<ul>
+<li>mod_authz_core.so</li>
+<li>mod_cache.so</li>
+<li>mod_cache_disk.so</li>
+<li>mod_deflate.so</li>
+<li>mod_filter.so</li>
+<li>mod_headers.so</li>
+<li>mod_log_config.so</li>
+<li>mod_proxy.so</li>
+<li>mod_proxy_http.so</li>
+<li>mod_proxy_wstunnel.so</li>
+<li>mod_rewrite.so</li>
+<li>mod_setenvif.so</li>
+<li>mod_socache_shmcb.so</li>
+<li>mod_ssl.so</li>
+<li>mod_slotmem_shm.so</li>
+<li>mod_alias.so</li>
+<li>mod_authz_host.so</li>
+<li>mod_dir.so</li>
+<li>mod_mime.so</li>
+</ul>
 <p>LoadBalance需要额外开启：</p>
 <ul>
 <li>mod_proxy_balancer.so</li>
