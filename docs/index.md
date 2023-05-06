@@ -1,3 +1,3 @@
-# Welcome to MkDocs
+# HOME
 
 ENOVIA INSTALLLATION DOC
