@@ -547,6 +547,136 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    证书的生成与设置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apachehttpdconf" class="md-nav__link">
+    设置Apache的httpd.conf文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    平台安装准备
+  </a>
+  
+    <nav class="md-nav" aria-label="平台安装准备">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    创建License目录与文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    创建用户与组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    设置用户限制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomee" class="md-nav__link">
+    设置TomEE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3de" class="md-nav__link">
+    3DE服务安装目录设置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dpassport" class="md-nav__link">
+    安装3DPassport
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DPassport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3ddashboard" class="md-nav__link">
+    安装3DDashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DDashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -674,7 +804,7 @@ yum makecache  #缓存本地yum源中的软件包信息
 <hr />
 <h2 id="rpm">安装所需的RPM包</h2>
 <h3 id="yumrpm">Yum源内的RPM包</h3>
-<p>首先，进入Program Directories网站查找到“RHEL 8.1 Servers Software Packages listing”，如下图：</p>
+<p>首先，进入Program Directories网站查找到"RHEL 8.1 Servers Software Packages listing"，如下图：</p>
 <p>将这些依赖包拷贝出来，只保留第一列依赖包的名称，将其生成一个txt文档。</p>
 <pre><code class="language-txt">
 abattis-cantarell-fonts
@@ -3216,6 +3346,283 @@ ln -s -f /app/jdk-17.0.5/bin/javac
 </code></pre>
 <p>进行验证</p>
 <p>这里确认显示的Java的路径和Java的版本都是我们新安装的Java即可。</p>
+<h2 id="_10">证书的生成与设置</h2>
+<p>使用root用户执行如下命令，注意保证使用的java的版本正确</p>
+<pre><code class="language-bash">mkdir -p /app/apache24/conf/ssl
+cd /app/apache24/conf/ssl
+</code></pre>
+<p>在Apache安装路径下的conf文件夹下创建ssl目录，并进入该目录创建文件3dx_vs_com.ext用于生成v3证书，因为powerby的连接需要v3证书，默认的v1证书无法正常连接。</p>
+<pre><code class="language-bash">vi 3dx_vs_com.ext
+</code></pre>
+<p>填写如下内容到3dx_vs_com.ext文件内</p>
+<pre><code class="language-bash">authorityKeyIdentifier=keyid,issuer
+basicConstraints=CA:FALSE
+keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = dsu.3ds.com
+DNS.2 = dsu.3ds.com
+</code></pre>
+<p>执行如下命令</p>
+<pre><code class="language-bash">openssl genrsa -des3 -out RootCA.key -passout pass:Qwer1234 2048
+openssl req -x509 -sha256 -new -nodes -key RootCA.key -days 3650 -out RootCA.crt -passin pass:Qwer1234 -subj &quot;/C=ZH/ST=BJ/L=BJ/O=DSCN/OU=CS/CN=RootCA&quot;
+openssl rsa -in RootCA.key -out 3dx_vs_com.key -passin pass:Qwer1234
+openssl req -new -key 3dx_vs_com.key -out 3dx_vs_com.csr -subj &quot;/C=ZH/ST=BJ/L=BJ/O=DSCN/OU=CS/CN=*.3ds.com&quot;
+openssl x509 -sha256 -req -in 3dx_vs_com.csr -CA RootCA.crt -CAkey RootCA.key -CAcreateserial -out 3dx_vs_com.crt -days 3650 -passin pass:Qwer1234 -extfile 3dx_vs_com.ext
+openssl x509 -noout -text -in 3dx_vs_com.crt
+keytool -importcert -keystore /app/jdk-17.0.5/lib/security/cacerts -noprompt -storepass changeit -file RootCA.crt -alias RootCA
+</code></pre>
+<p>执行下面的命令，检查是否正确导入</p>
+<pre><code class="language-bash">keytool -list -keystore /app/jdk-17.0.5/lib/security/cacerts -storepass changeit -alias RootCA
+</code></pre>
+<p>删除导入证书的命令：</p>
+<pre><code class="language-bash">keytool -delete -alias RootCA -keystore /app/jdk-17.0.5/lib/security/cacerts -storepass changeit
+</code></pre>
+<p>更改一下ssl目录下面的文件权限</p>
+<pre><code class="language-bash">chmod -R 777 /app/apache24/conf/ssl
+</code></pre>
+<h2 id="apachehttpdconf">设置Apache的httpd.conf文件</h2>
+<p>打开conf 目录下httpd.conf文件进行编辑
+在文件的最后加上一行：</p>
+<pre><code class="language-bash">Include conf/2023x_v1.conf
+</code></pre>
+<p>在conf目录下，创建文件</p>
+<pre><code class="language-bash">2023x_v1.conf
+</code></pre>
+<p>文件内容如下：</p>
+<pre><code class="language-conf">
+KeepAlive On
+KeepAliveTimeout 6
+MaxKeepAliveRequests 400
+
+#LoadModule cache_module modules/mod_cache.so
+&lt;IfModule mod_cache.c&gt;
+#LoadModule cache_disk_module modules/mod_cache_disk.so
+&lt;IfModule mod_cache_disk.c&gt;
+CacheRoot /opt/data/memory_vol
+CacheEnable disk /
+CacheDirLevels 5
+CacheDirLength 2
+&lt;/IfModule&gt;
+&lt;/IfModule&gt;
+
+#LoadModule deflate_module modules/mod_deflate.so
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/javascript
+#AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/atom_xml
+
+Listen 443
+&lt;VirtualHost *:443&gt;
+    ServerName  dsu.3ds.com
+    ServerAlias dsu.3ds.com
+
+    SSLEngine on
+    SSLProxyEngine On
+    SSLCertificateFile conf/ssl/3dx_vs_com.crt
+    SSLCertificateKeyFile conf/ssl/3dx_vs_com.key
+
+    ProxyRequests Off 
+
+    #Include conf/3DPassport_httpd_fragment.conf
+    #Include conf/3DDashboard_httpd_fragment.conf
+    #Include conf/federated_httpd_fragment.conf
+    #Include conf/3DSpace_httpd_fragment.conf
+    #Include conf/fcs_httpd_fragment.conf
+    #Include conf/3DSwym_httpd_fragment.conf
+    #Include conf/3DNotification_httpd_fragment.conf
+    #Include conf/3DComment_httpd_fragment.conf
+
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+    ServerName  untrusted.dsu.3ds.com
+    ServerAlias     untrusted.dsu.3ds.com
+
+    SSLEngine on
+    SSLProxyEngine On
+    SSLCertificateFile conf/ssl/3dx_vs_com.crt
+    SSLCertificateKeyFile conf/ssl/3dx_vs_com.key
+
+    ProxyRequests Off 
+&lt;/VirtualHost&gt;
+
+</code></pre>
+<h2 id="_11">平台安装准备</h2>
+<h3 id="license">创建License目录与文件</h3>
+<p>使用root用户执行如下命令</p>
+<pre><code class="language-bash">mkdir -p  /var/DassaultSystemes/Licenses
+vi /var/DassaultSystemes/Licenses/DSLicSrv.txt
+</code></pre>
+<p>添加DSLS的设置，这里的设置需要对应设置你自己的DSLS相应的IP和端口号。</p>
+<pre><code class="language-bash">192.168.107.1:4085
+</code></pre>
+<h2 id="_12">创建用户与组</h2>
+<p>3DE的安装和运维，我们是不推荐使用root账号执行的，所以我们需要创建一个专门来安装和运维3DE的用户，下面用root账号创建plmadm用户和组：</p>
+<pre><code class="language-bash">groupadd plmadm
+useradd -g plmadm plmadm
+</code></pre>
+<p>设置用户密码：</p>
+<pre><code class="language-bash">passwd plmadm
+</code></pre>
+<h2 id="_13">设置用户限制</h2>
+<p>在RHEL8.7我查看了一下，好像默认的限制已经很大了，但是考虑到用户可能有不同的情况，所以下面还是给出解除用户限制的方法下面的设置，尤其后两行是设置可以打开最大文件数目的如果当前机器安装了索引服务器，那么最后两行最好设置一下，因为系统默认open file的数量是1024，对于索引服务器有些少。</p>
+<pre><code class="language-bash">ulimit -a 
+</code></pre>
+<p>显示当前的用户各种限制</p>
+<p>在/etc/security/limits.conf中添加如下配置：</p>
+<pre><code class="language-bash">plmadm soft nproc 8192
+plmadm hard nproc 8192
+plmadm soft nofile 80000
+plmadm hard nofile 80000
+</code></pre>
+<p>我们可以切换到plmadm用户看一下设置之后的用户限制数值</p>
+<h2 id="tomee">设置TomEE</h2>
+<p>因为系统里面的各个服务基本都是以TomEE为中间件服务器的，所以我们要将符合版本要求的TomEE拷贝多份，以方便后边不用的服务的使用，因为app目录默认是root的所有权，所以下面的操作我是使用root账号运行的。</p>
+<pre><code class="language-bash">mkdir -p /app/tomee
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3dpassport
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3ddashboard
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3dsearch
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3dspace
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/fcs
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3dswym
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/3dcomment
+cp -r apache-tomee-plus-8.0.13/ /app/tomee/nocas
+</code></pre>
+<p>因为这个示例的安装是在一个服务器上进行安装，所以就需要给各个tomee设置不同的端口号，我们预定义的各个tomee的端口号如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Server Name</th>
+<th align="right">Shutdown Port</th>
+<th align="center">HTTP Port</th>
+<th align="left">Redirect Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">3dpassport</td>
+<td align="right">8005</td>
+<td align="center">8080</td>
+<td align="left">8443</td>
+</tr>
+<tr>
+<td align="left">3ddashboard</td>
+<td align="right">8006</td>
+<td align="center">8081</td>
+<td align="left">8444</td>
+</tr>
+<tr>
+<td align="left">3dsearch</td>
+<td align="right">8007</td>
+<td align="center">8082</td>
+<td align="left">8445</td>
+</tr>
+<tr>
+<td align="left">3dspace(CAS)</td>
+<td align="right">8008</td>
+<td align="center">8083</td>
+<td align="left">8446</td>
+</tr>
+<tr>
+<td align="left">FCS</td>
+<td align="right">9005</td>
+<td align="center">8084</td>
+<td align="left">8447</td>
+</tr>
+<tr>
+<td align="left">3dswym</td>
+<td align="right">9006</td>
+<td align="center">8085</td>
+<td align="left">8448</td>
+</tr>
+<tr>
+<td align="left">3dcomment</td>
+<td align="right">9007</td>
+<td align="center">8086</td>
+<td align="left">8449</td>
+</tr>
+<tr>
+<td align="left">3dspace(NoCAS)</td>
+<td align="right">9008</td>
+<td align="center">8070</td>
+<td align="left">8450</td>
+</tr>
+<tr>
+<td align="left">3dnotification</td>
+<td align="right">9009</td>
+<td align="center">8071</td>
+<td align="left">8451</td>
+</tr>
+</tbody>
+</table>
+<p>3dnotification 使用8089端口
+在修改server.xml里面端口设置的同时，请将这个参数加上，如下：</p>
+<pre><code class="language-bash">&lt;Connector port=&quot;8080&quot; protocol=&quot;HTTP/1.1&quot;
+               connectionTimeout=&quot;20000&quot;  URIEncoding=&quot;UTF-8&quot; 
+               redirectPort=&quot;8443&quot; xpoweredBy=&quot;false&quot; server=&quot;Apache TomEE&quot; /&gt;
+
+</code></pre>
+<p>修改完毕后，我们可以做个简单测试，我们同时启动这几个tomee，看看是否能够同时启动起来，同时启动起来后，我们再访问各个tomee的主页，如果tomee能够同时启动起来，并且各个主页都可以打开，那么tomee设置就没有问题了。
+因为后期要使用TomEE服务的是我们前面创建的plmadm这个用户，所以在确认TomEE的设置没有问题后，我们需要再更改一下整个目录的所有权为plmadm，命令如下：</p>
+<pre><code class="language-bash">chown -R plmadm:plmadm /app/tomee/
+</code></pre>
+<h2 id="3de">3DE服务安装目录设置</h2>
+<p>我这里的用例是准备将3DE服务都安装到/app/DassaultSystemes目录下，因为在后期安装的时候，安装程序会使用用户plmadm在安装目录下生成相应的文件，这就需要plmadm用户在相应的目录有所有权，可以进行写操作，所以在安装之前，我们先手动创建一下目录并设置一下目录的所有权。</p>
+<pre><code class="language-bash">mkdir -p  /app/DassaultSystemes/
+chown -R plmadm:plmadm /app/DassaultSystemes/
+</code></pre>
+<h2 id="3dpassport">安装3DPassport</h2>
+<h3 id="_14">创建用户与表空间</h3>
+<pre><code class="language-sql">CREATE SMALLFILE TABLESPACE &quot;x3dpassadmin&quot; LOGGING DATAFILE 'passdb.dbf' SIZE 10M AUTOEXTEND
+ON NEXT 10M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+create user x3dpassadmin identified by x3dpassadmin;
+grant CREATE SEQUENCE to x3dpassadmin;
+grant CREATE SESSION to x3dpassadmin;
+grant CREATE SYNONYM to x3dpassadmin;
+grant CREATE TABLE to x3dpassadmin;
+ALTER USER x3dpassadmin default tablespace &quot;x3dpassadmin&quot;;
+ALTER USER x3dpassadmin QUOTA UNLIMITED ON &quot;x3dpassadmin&quot;;
+
+CREATE SMALLFILE TABLESPACE &quot;x3dpasstokens&quot; LOGGING DATAFILE 'passtkdb.dbf' SIZE 10M AUTOEXTEND 
+ON NEXT 10M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+create user x3dpasstokens identified by x3dpasstokens;
+grant CREATE SEQUENCE to x3dpasstokens;
+grant CREATE SESSION to x3dpasstokens;
+grant CREATE SYNONYM to x3dpasstokens;
+grant CREATE TABLE to x3dpasstokens;
+ALTER USER x3dpasstokens default tablespace &quot;x3dpasstokens&quot;;
+ALTER USER x3dpasstokens QUOTA UNLIMITED ON &quot;x3dpasstokens&quot;;
+</code></pre>
+<h3 id="_15">安装完毕配置</h3>
+<p>将"3DPassport_httpd_fragment.conf"相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DPassport_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动passport的tomee服务。</p>
+<h3 id="_16">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：https://dsu.3ds.com/3dpassport/ </p>
+<h2 id="3ddashboard">安装3DDashboard</h2>
+<h3 id="_17">创建用户与表空间</h3>
+<pre><code class="language-sql">CREATE USER x3ddashadmin IDENTIFIED BY x3ddashadmin;
+GRANT CREATE SESSION TO x3ddashadmin;
+GRANT RESOURCE TO x3ddashadmin;
+CREATE SMALLFILE TABLESPACE x3ddashadmin LOGGING DATAFILE 'x3ddashadmin.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE UNLIMITED EXTENT MANAGEMENT LOCAL SEGMENT SPACE MANAGEMENT AUTO;
+ALTER USER x3ddashadmin default tablespace x3ddashadmin;
+ALTER USER x3ddashadmin QUOTA UNLIMITED ON x3ddashadmin;
+GRANT UNLIMITED TABLESPACE TO x3ddashadmin;
+</code></pre>
+<h3 id="_18">安装完毕配置</h3>
+<p>将"3DDashboard_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DDashboard_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。</p>
+<h3 id="_19">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：https://dsu.3ds.com/3ddashboard/ 
+输入账号密码，进入如下界面：</p>
 
 
 
