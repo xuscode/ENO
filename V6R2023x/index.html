@@ -552,26 +552,12 @@
     证书的生成与设置
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apachehttpdconf" class="md-nav__link">
-    设置Apache的httpd.conf文件
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    平台安装准备
-  </a>
-  
-    <nav class="md-nav" aria-label="平台安装准备">
+    <nav class="md-nav" aria-label="证书的生成与设置">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    创建License目录与文件
+  <a href="#apachehttpdconf" class="md-nav__link">
+    设置Apache的httpd.conf文件
   </a>
   
 </li>
@@ -582,14 +568,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#dsls" class="md-nav__link">
+    DSLS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
     创建用户与组
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     设置用户限制
   </a>
   
@@ -618,21 +611,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     创建用户与表空间
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     安装完毕配置
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     安装完成测试
   </a>
   
@@ -652,21 +645,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     创建用户与表空间
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     安装完毕配置
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     安装完成测试
   </a>
   
@@ -3368,7 +3361,7 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 <p>更改一下ssl目录下面的文件权限</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-79-1"><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a>chmod -R <span class="m">777</span> /app/apache24/conf/ssl
 </span></code></pre></div>
-<h2 id="apachehttpdconf">设置Apache的httpd.conf文件</h2>
+<h3 id="apachehttpdconf">设置Apache的httpd.conf文件</h3>
 <p>打开conf 目录下httpd.conf文件进行编辑
 在文件的最后加上一行：
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-80-1"><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a>Include conf/2023x_v1.conf
@@ -3443,8 +3436,8 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 </span><span id="__span-82-64"><a id="__codelineno-82-64" name="__codelineno-82-64" href="#__codelineno-82-64"></a>    ProxyRequests Off 
 </span><span id="__span-82-65"><a id="__codelineno-82-65" name="__codelineno-82-65" href="#__codelineno-82-65"></a>&lt;/VirtualHost&gt;
 </span></code></pre></div>
-<h2 id="_11">平台安装准备</h2>
-<h3 id="license">创建License目录与文件</h3>
+<h2 id="dsls">DSLS</h2>
+<p>创建License目录与文件</p>
 <p>使用root用户执行如下命令
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-83-1"><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a>mkdir -p  /var/DassaultSystemes/Licenses
 </span><span id="__span-83-2"><a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a>vi /var/DassaultSystemes/Licenses/DSLicSrv.txt
@@ -3452,7 +3445,7 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 <p>添加DSLS的设置，这里的设置需要对应设置你自己的DSLS相应的IP和端口号。</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-84-1"><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="m">192</span>.168.107.1:4085
 </span></code></pre></div>
-<h2 id="_12">创建用户与组</h2>
+<h2 id="_11">创建用户与组</h2>
 <p>3DE的安装和运维，我们是不推荐使用root账号执行的，所以我们需要创建一个专门来安装和运维3DE的用户，下面用root账号创建plmadm用户和组：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-85-1"><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a>groupadd plmadm
 </span><span id="__span-85-2"><a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a>useradd -g plmadm plmadm
@@ -3460,7 +3453,7 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 <p>设置用户密码：</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-86-1"><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a>passwd plmadm
 </span></code></pre></div>
-<h2 id="_13">设置用户限制</h2>
+<h2 id="_12">设置用户限制</h2>
 <p>在RHEL8.7我查看了一下，好像默认的限制已经很大了，但是考虑到用户可能有不同的情况，所以下面还是给出解除用户限制的方法下面的设置，尤其后两行是设置可以打开最大文件数目的如果当前机器安装了索引服务器，那么最后两行最好设置一下，因为系统默认open file的数量是1024，对于索引服务器有些少。</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-87-1"><a id="__codelineno-87-1" name="__codelineno-87-1" href="#__codelineno-87-1"></a><span class="nb">ulimit</span> -a 
 </span></code></pre></div>
@@ -3567,7 +3560,7 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 </span><span id="__span-92-2"><a id="__codelineno-92-2" name="__codelineno-92-2" href="#__codelineno-92-2"></a>chown -R plmadm:plmadm /app/DassaultSystemes/
 </span></code></pre></div>
 <h2 id="3dpassport">安装3DPassport</h2>
-<h3 id="_14">创建用户与表空间</h3>
+<h3 id="_13">创建用户与表空间</h3>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-93-1"><a id="__codelineno-93-1" name="__codelineno-93-1" href="#__codelineno-93-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">&quot;x3dpassadmin&quot;</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">&#39;passdb.dbf&#39;</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"></span>
 </span><span id="__span-93-2"><a id="__codelineno-93-2" name="__codelineno-93-2" href="#__codelineno-93-2"></a><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span><span class="w"></span>
 </span><span id="__span-93-3"><a id="__codelineno-93-3" name="__codelineno-93-3" href="#__codelineno-93-3"></a><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span><span class="w"></span>
@@ -3588,12 +3581,12 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 </span><span id="__span-93-18"><a id="__codelineno-93-18" name="__codelineno-93-18" href="#__codelineno-93-18"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">&quot;x3dpasstokens&quot;</span><span class="p">;</span><span class="w"></span>
 </span><span id="__span-93-19"><a id="__codelineno-93-19" name="__codelineno-93-19" href="#__codelineno-93-19"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">&quot;x3dpasstokens&quot;</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div>
-<h3 id="_15">安装完毕配置</h3>
+<h3 id="_14">安装完毕配置</h3>
 <p>将"3DPassport_httpd_fragment.conf"相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DPassport_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动passport的tomee服务。</p>
-<h3 id="_16">安装完成测试</h3>
+<h3 id="_15">安装完成测试</h3>
 <p>打开Firefox浏览器，输入网址：https://dsu.3ds.com/3dpassport/ </p>
 <h2 id="3ddashboard">安装3DDashboard</h2>
-<h3 id="_17">创建用户与表空间</h3>
+<h3 id="_16">创建用户与表空间</h3>
 <div class="language-sql highlight"><pre><span></span><code><span id="__span-94-1"><a id="__codelineno-94-1" name="__codelineno-94-1" href="#__codelineno-94-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span><span class="w"></span>
 </span><span id="__span-94-2"><a id="__codelineno-94-2" name="__codelineno-94-2" href="#__codelineno-94-2"></a><span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span><span class="w"></span>
 </span><span id="__span-94-3"><a id="__codelineno-94-3" name="__codelineno-94-3" href="#__codelineno-94-3"></a><span class="k">GRANT</span><span class="w"> </span><span class="n">RESOURCE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span><span class="w"></span>
@@ -3602,9 +3595,9 @@ PCRE：https://sourceforge.net/projects/pcre/</p>
 </span><span id="__span-94-6"><a id="__codelineno-94-6" name="__codelineno-94-6" href="#__codelineno-94-6"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span><span class="w"></span>
 </span><span id="__span-94-7"><a id="__codelineno-94-7" name="__codelineno-94-7" href="#__codelineno-94-7"></a><span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span><span class="w"></span>
 </span></code></pre></div>
-<h3 id="_18">安装完毕配置</h3>
+<h3 id="_17">安装完毕配置</h3>
 <p>将"3DDashboard_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DDashboard_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。</p>
-<h3 id="_19">安装完成测试</h3>
+<h3 id="_18">安装完成测试</h3>
 <p>打开Firefox浏览器，输入网址：https://dsu.3ds.com/3ddashboard/ 
 输入账号密码，进入如下界面：</p>
 
