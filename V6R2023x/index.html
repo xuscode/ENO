@@ -1067,8 +1067,22 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#tomee-cache" class="md-nav__link">
+    TomEE Cache设置
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    常用Linux命令
+  </a>
   
 </li>
       
@@ -4288,28 +4302,41 @@ http://dsu.3ds.com:19001
 <p>如果WebApp模块装的比较多，那么编译JPO会是一个比较耗时的工作，编译的时候请耐心等待。</p>
 <h3 id="fts">更改FTS配置</h3>
 <p>在安装完WebApp，尤其是打完WebApp补丁后，经常会遇到FTS搜索出问题的情况，这种问题基本都是FTS默认的配置文件发生变化，而新的配置文件没有成功导入schema的缘故，所以我们建议在安装完所有的WebApp和补丁后，都做一下FTS配置的操作。
-做FTS的配置操作有两种方法，一种是可以直接执行系统里面的脚本命令，在3DSpace的安装目录下，在script目录下有一个命令脚本FullTextSearch_PostInstall.sh，执行这个脚本，可以直接完成FTS的配置文件更换和索引重新生成的操作；另外一种就是直接在mql环境里面运行如下的mql命令：
-set system searchindex file /app/DassaultSystemes/R2023x/3DSpace/Apps/BusinessProcessServices/V6R2023x/Modules/ENOFramework/AppInstall/Programs/config.xml ;
-start searchindex mode full;
-个人建议，如果对mql操作不是很熟练，还是执行脚本来更新FTS配置最简单。
+做FTS的配置操作有两种方法，一种是可以直接执行系统里面的脚本命令，在3DSpace的安装目录下，在script目录下有一个命令脚本</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-117-1"><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>FullTextSearch_PostInstall.sh
+</span></code></pre></div>
+<p>执行这个脚本，可以直接完成FTS的配置文件更换和索引重新生成的操作；另外一种就是直接在mql环境里面运行如下的mql命令：</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-118-1"><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a><span class="nb">set</span> system searchindex file /app/DassaultSystemes/R2023x/3DSpace/Apps/BusinessProcessServices/V6R2023x/Modules/ENOFramework/AppInstall/Programs/config.xml <span class="p">;</span>
+</span><span id="__span-118-2"><a id="__codelineno-118-2" name="__codelineno-118-2" href="#__codelineno-118-2"></a>start searchindex mode full<span class="p">;</span>
+</span></code></pre></div>
+<p>个人建议，如果对mql操作不是很熟练，还是执行脚本来更新FTS配置最简单。
 注意：FTS的配置更改进行操作的时候，需要确保3DSpace Index的服务是启动的。</p>
 <h2 id="_49">系统其他配置更改</h2>
 <h3 id="apache_1">Apache日志设定</h3>
-<p>默认Apache日志目录中access_log与error_log是不会自动切割，随着时间会变大，如果没有按时清理，在后面写入新的日志信息会比较影响性能，另外文件太大，对后期的日志查找也不太方便，建议可以按照下列方法进行自动切割，切割日志可按文件大小与时间，建议按照时间切割。
-修改Apache的httpd.conf
-•   找到并修改ErrorLog
-<div class="language-text highlight"><pre><span></span><code><span id="__span-117-1"><a id="__codelineno-117-1" name="__codelineno-117-1" href="#__codelineno-117-1"></a>#ErrorLog &quot;logs/error_log&quot;
-</span><span id="__span-117-2"><a id="__codelineno-117-2" name="__codelineno-117-2" href="#__codelineno-117-2"></a>ErrorLog &quot;|/app/apache24/bin/rotatelogs /usr/apache24/logs/error-%Y-%m-%d.log 86400&quot;
+<p>默认Apache日志目录中access_log与error_log是不会自动切割，随着时间会变大，如果没有按时清理，在后面写入新的日志信息会比较影响性能，另外文件太大，对后期的日志查找也不太方便，建议可以按照下列方法进行自动切割，切割日志可按文件大小与时间，建议按照时间切割。</p>
+<p>修改Apache的httpd.conf</p>
+<ul>
+<li>
+<p>找到并修改ErrorLog
+<div class="language-text highlight"><pre><span></span><code><span id="__span-119-1"><a id="__codelineno-119-1" name="__codelineno-119-1" href="#__codelineno-119-1"></a>#ErrorLog &quot;logs/error_log&quot;
+</span><span id="__span-119-2"><a id="__codelineno-119-2" name="__codelineno-119-2" href="#__codelineno-119-2"></a>ErrorLog &quot;|/app/apache24/bin/rotatelogs /usr/apache24/logs/error-%Y-%m-%d.log 86400&quot;
 </span></code></pre></div></p>
-<p>•   找到并修改CustomLog</p>
-<h1 id="customlog-logsaccess_log-common">CustomLog "logs/access_log" common</h1>
-<p>CustomLog "|/app/apache24/bin/rotatelogs /usr/apache24/logs/access-%Y-%m-%d.log 86400" common
-•   重启apache
-注意：这里注意自己的Apache安装路径</p>
+</li>
+<li>
+<p>找到并修改CustomLog</p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-120-1"><a id="__codelineno-120-1" name="__codelineno-120-1" href="#__codelineno-120-1"></a>#CustomLog &quot;logs/access_log&quot; common
+</span><span id="__span-120-2"><a id="__codelineno-120-2" name="__codelineno-120-2" href="#__codelineno-120-2"></a>CustomLog &quot;|/app/apache24/bin/rotatelogs /usr/apache24/logs/access-%Y-%m-%d.log 86400&quot; common
+</span></code></pre></div>
+<ul>
+<li>重启apache</li>
+</ul>
+<p>注意：这里注意自己的Apache安装路径</p>
 <h3 id="tomee-cache">TomEE Cache设置</h3>
-<p>有时候我们在3dspace的tomee实例启动日志里面能发现有提示cache不足的警告，这是因为tomee的默认缓存是10M，我们可以修改tomee实例中的context.xml文件，增加cache的最大值，这里可以根据具体的需求来进行调整，但是不适合调整的过大。
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-118-1"><a id="__codelineno-118-1" name="__codelineno-118-1" href="#__codelineno-118-1"></a><span class="nt">&lt;Resources</span> <span class="na">cachingAllowed=</span><span class="s">&quot;true&quot;</span> <span class="na">cacheMaxSize=</span><span class="s">&quot;100000&quot;</span> <span class="nt">/&gt;</span>
-</span></code></pre></div></p>
+<p>有时候我们在3dspace的tomee实例启动日志里面能发现有提示cache不足的警告，这是因为tomee的默认缓存是10M，我们可以修改tomee实例中的context.xml文件，增加cache的最大值，这里可以根据具体的需求来进行调整，但是不适合调整的过大。</p>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-121-1"><a id="__codelineno-121-1" name="__codelineno-121-1" href="#__codelineno-121-1"></a><span class="nt">&lt;Resources</span> <span class="na">cachingAllowed=</span><span class="s">&quot;true&quot;</span> <span class="na">cacheMaxSize=</span><span class="s">&quot;100000&quot;</span> <span class="nt">/&gt;</span>
+</span></code></pre></div>
 <h2 id="linux_1">常用Linux命令</h2>
 <ul>
 <li>vi修改文件内容
