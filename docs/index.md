@@ -31,21 +31,98 @@ ENOVIA INSTALLLATION DOC
     ```bash
     C:\Program Files\Dassault Systemes\B424\win_b64\code\bin\DSYAutomation.chm
     ```
-    
-## __其他工具网站__
+ 
 
-- [CATSearch](https://gitee.com/xuscode/CATSearch/attach_files/1038270/download/CATIASearch.7z)
-- [软件自动安装下载地址](https://gitee.com/xuscode/enovia.git)
-- 中文语言汉化包bug 修复，[语言包下载地址](https://gitee.com/xuscode/catia-language.git)
-- [菜鸟工具](https://c.runoob.com/)
-- [代码可视化](https://pythontutor.com/)
+## __本地服务器网站__
 
-## __协同工具__
 
-- [代码类 gitee ](https://gitee.com/) 免费空间1GB,代码操作提示人性化，微信绑定可查看代码，登录提示友好。
-- [成果分享 coding](https://e.coding.net/signin) 免费空间2GB，适合同步一些技术文件，与客户电脑协调共享成果。
-- [Teambition](https://www.teambition.com/)  无限空间，下载与上传不限制速度，非常友好，用于整个项目的存储与团队协作，免费10人。
-- [github](https://github.com/) 开源代码分享，开源自己的项目。
-- [flowus](https://flowus.cn/product) 国产notion,临时性的文件分享，免费2GB空间。
+=== "R2023x-r2023x.mydomain.com"
+
+    - [localhost](https://r2023x.mydomain.com)
+    - [3DPassport](https://r2023x.mydomain.com/3dpassport)
+    - [admin登录逃生通道](https://r2023x.mydomain.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://r2023x.mydomain.com/3ddashboard)
+    - [3DSearch](https://r2023x.mydomain.com/federated/search?query=test)
+    - [3DSpace](https://r2023x.mydomain.com/3dspace)
+    - [Internal](https://r2023x.mydomain.com/internal/)
+    - [FCS](https://r2023x.mydomain.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://r2023x.mydomain.com/3dswym)
+    - [Exalead](http://r2023x.mydomain.com:19001/admin/)
+    - [Autovue检查](https://r2023x.mydomain.com/3dspace/VueServlet)
+
+
+=== "R2023x"
+
+    - [localhost](https://dsplm23x.3ds.com)
+    - [3DPassport](https://dsplm23x.3ds.com/3dpassport)
+    - [admin登录逃生通道](https://dsplm23x.3ds.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://dsplm23x.3ds.com/3ddashboard)
+    - [3DSearch](https://dsplm23x.3ds.com/federated/search?query=test)
+    - [3DSpace](https://dsplm23x.3ds.com/3dspace)
+    - [Internal](https://dsplm23x.3ds.com/internal/)
+    - [FCS](https://dsplm23x.3ds.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://dsplm23x.3ds.com/3dswym)
+    - [Exalead](http://dsplm23x.3ds.com:19001/admin/)
+    - [Autovue检查](https://dsplm23x.3ds.com/3dspace/VueServlet)
+
+
+
+=== "R2022x"
+
+    - [localhost](https://dsplm22x.3ds.com)
+    - [3DPassport](https://dsplm22x.3ds.com/3dpassport)
+    - [admin登录逃生通道](https://dsplm22x.3ds.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://dsplm22x.3ds.com/3ddashboard)
+    - [3DSearch](https://dsplm22x.3ds.com/federated/search?query=test)
+    - [3DSpace](https://dsplm22x.3ds.com/3dspace)
+    - [Internal](https://dsplm22x.3ds.com/internal/)
+    - [FCS](https://dsplm22x.3ds.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://dsplm22x.3ds.com/3dswym)
+    - [Exalead](http://dsplm22x.3ds.com:19001/admin/)
+    - [Autovue检查](https://dsplm22x.3ds.com/3dspace/VueServlet)
+
+
+=== "R2021x"
+
+    - [localhost](https://dsplm21x.3ds.com)
+    - [3DPassport](https://dsplm21x.3ds.com/3dpassport)
+    - [admin登录逃生通道](https://dsplm21x.3ds.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://dsplm21x.3ds.com/3ddashboard)
+    - [3DSearch](https://dsplm21x.3ds.com/federated/search?query=test)
+    - [3DSpace](https://dsplm21x.3ds.com/3dspace)
+    - [Internal](https://dsplm21x.3ds.com/internal/)
+    - [FCS](https://dsplm21x.3ds.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://dsplm21x.3ds.com/3dswym)
+    - [Exalead](http://dsplm21x.3ds.com:19001/admin/)
+    - [Autovue检查](https://dsplm21x.3ds.com/3dspace/VueServlet)
+
+=== "R2020x"
+
+    - [localhost](https://v6r2020x.3de.com)
+    - [3DPassport](https://v6r2020x.3de.com/3dpassport)
+    - [admin登录逃生通道](https://v6r2020x.3de.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://v6r2020x.3de.com/3ddashboard)
+    - [3DSearch](https://v6r2020x.3de.com/federated/search?query=test)
+    - [3DSpace](https://v6r2020x.3de.com/3dspace)
+    - [Internal](https://v6r2020x.3de.com/internal/)
+    - [FCS](https://v6r2020x.3de.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://v6r2020x.3de.com/3dswym)
+    - [Exalead](http://v6r2020x.3de.com:19001/admin/)
+    - [Autovue检查](https://v6r2020x.3de.com/3dspace/VueServlet)
+
+=== "R2019x"
+
+    - [localhost](https://3dexpv6r2019x.3ds.com)
+    - [3DPassport](https://3dexpv6r2019x.3ds.com/3dpassport)
+    - [admin登录逃生通道](https://3dexpv6r2019x.3ds.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://3dexpv6r2019x.3ds.com/3ddashboard)
+    - [3DSearch](https://3dexpv6r2019x.3ds.com/federated/search?query=test)
+    - [3DSpace](https://3dexpv6r2019x.3ds.com/3dspace)
+    - [Internal](https://3dexpv6r2019x.3ds.com/internal/)
+    - [FCS](https://3dexpv6r2019x.3ds.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://3dexpv6r2019x.3ds.com/3dswym)
+    - [Exalead](http://3dexpv6r2019x.3ds.com:19001/admin/)
+    - [Autovue检查](https://3dexpv6r2019x.3ds.com/3dspace/VueServlet)
+
 
 ---
