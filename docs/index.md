@@ -31,7 +31,10 @@ ENOVIA INSTALLLATION DOC
     ```bash
     C:\Program Files\Dassault Systemes\B424\win_b64\code\bin\DSYAutomation.chm
     ```
- 
+
+=== "开源工具"
+
+- [useful Script](https://gitee.com/xuscode/ENOVIA_SCRIPTS.git)
 
 ## __本地服务器网站__
 
