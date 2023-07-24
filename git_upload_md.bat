@@ -5,7 +5,7 @@ echo %data%
 
 cd /d %~dp0
 
-git add *.md
+git add .
 
 @echo WRITE UPDATE AND PRESS ENTER:
 ::set /p GetYourLog=
