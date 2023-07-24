@@ -1,9 +1,4 @@
-site_name: DS ENOVIA INSTALL
-
-# nav:
-#   - Home: index.md
-#   - About: about.md
-
+site_name: ENOVIA Knowledge Base
 
 # theme:
     # name: yeti
@@ -12,38 +7,28 @@ site_name: DS ENOVIA INSTALL
 theme:
   name: material
   palette:
-      primary: lime
-      scheme: slate
-      accent: "deep orange"
+    primary: indigo
+    scheme: slate
+    accent: "deep orange"
   features:
-      # - content.tabs.link
-      - navigation.tabs
-      - toc.integrate
-      - navigation.expand
-      - navigation.sections
+    - content.tabs.link
+    - navigation.tabs
+    - toc.integrate
+    - content.code.copy
+
 # theme: windmill
 
-
 plugins:
-  - mkdocs-video 
-  - tags
-  - search:
-      # separator: '[\s\u200b\-]'
-      separator: '[\s\-\.]+'
-      lang: 
-          - en
-          - ru
-          - ja
-          - zh
-
-# markdown_extensions:
-#   - pymdownx.highlight:
-#       anchor_linenums: true
-#   - pymdownx.superfences
-#   - tables
-#   - toc:
-#       permalink: true
-
+    - mkdocs-video 
+    - tags
+    - search:
+        separator: '[\s\u200b\-]'
+        lang: 
+            - en
+            - ja
+        separator: '[\s\-\.]+'
+        
+        
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
@@ -53,34 +38,38 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+# plugins:
+#   - glightbox
+
 
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:<support.3ds.com>
+      link: mailto:<song_hsu@126.com>
       name: Email to me 
 
   generator: false
-
+  
 extra_css:
   - stylesheets/extra.css
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css
+
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
 
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js
   - javascripts/highlight.js
-
-# markdown_extensions:
-#   - pymdownx.superfences
-#   - pymdownx.tabbed:
-#       alternate_style: true 
-
-
-
-
-#repo_url: https://github.com/xuscode/dsexam.github.io.git
+repo_url: https://github.com/xuscode/enovia.git
 
 copyright: Copyright &copy; 2023 DS USERS
 
 
+
+    
