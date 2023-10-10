@@ -1,66 +1,84 @@
-
 # R2022x-windows
+
+![](../../assets/2023-10-10-11-36-03-image.png)
+
 -----------------
 
 ## hostname
+
 -----------------
+
 v6r2021x.3ds.com
 
-## host 
+## host
+
 -----------------
-127.0.0.1	v6r2021x.3ds.com
-127.0.0.1	untrusted.v6r2021x.3ds.com
+
+127.0.0.1    v6r2021x.3ds.com
+127.0.0.1    untrusted.v6r2021x.3ds.com
 
 ## database password
+
 -----------------
+
 Qwer1234
 
-## add to oracle lisener 
+## add to oracle lisener
+
 -----------------
+
     (SID_DESC =
       (GLOBAL_DBNAME = ORCL)
       (ORACLE_HOME = C:\app\oracle\product\12.2.0\dbhome_1)
       (SID_NAME = ORCL)
     ) 
-	
+
   C:\app\oracle\product\12.2.0\dbhome_1\NETWORK\ADMIN\listener.ora
   C:\app\oracle\product\12.2.0\dbhome_1\network\admin\tnsnames.ora
-	
-## JAVA 
+
+## JAVA
+
 -----------------
+
 JAVA_HOME = C:\Java\Jdk
 JRE_HOME = C:\Java\Jre
 
-## Apache24  
+## Apache24
+
 -----------------
+
 C:\Apache24\bin\httpd.exe -k install
 
-## connect to sql 
+## connect to sql
+
 -----------------
+
 sqlplus / as sysdba
 
 @ALL.sql
 
 Qwer1234
 
-
 ## tomee port
+
 -----------------
 
-    APP_Name					Server Name				ShutdownPort	HTTPPort		AJPPort		RedirectPort	SSL_PORT		URL
-    TomEE-3DPassport			3dpassport				8005			8080			8009		8443			443				https://v6r2021x.3ds.com/3dpassport
-    TomEE-3DDashboard			3ddashboard				8105			8180			8109		8444			443				https://v6r2021x.3ds.com/3ddashboard
-    TomEE-3DSearch				Federated_Search		8205			8280			8209		8453			443	
-    TomEE-3DSpace				3dspace_CAS				8305			8380			8309		9443			443	
-    TomEE-3DSpaceNoCAS			3dspace_NoCAS			8405			8480			8409		9444			443	
-    TomEE-CentralFCS			Central_FCS				8505			8580			8509		9445			443	
-    TomEE-RemoteFCS				Remote_FCS				8605			8680			8609		9446			443	
-    TomEE-3DSywm				3DSwym					8705			8780			8709		9447			444	
-    TomEE-3DNotification		3DNotification			8805			8880			8809		9448			446	
-    TomEE-3DComment				3DComment				8905			8980			8909		9449			446	
+    APP_Name                    Server Name                ShutdownPort    HTTPPort        AJPPort        RedirectPort    SSL_PORT        URL
+    TomEE-3DPassport            3dpassport                8005            8080            8009        8443            443                https://v6r2021x.3ds.com/3dpassport
+    TomEE-3DDashboard            3ddashboard                8105            8180            8109        8444            443                https://v6r2021x.3ds.com/3ddashboard
+    TomEE-3DSearch                Federated_Search        8205            8280            8209        8453            443    
+    TomEE-3DSpace                3dspace_CAS                8305            8380            8309        9443            443    
+    TomEE-3DSpaceNoCAS            3dspace_NoCAS            8405            8480            8409        9444            443    
+    TomEE-CentralFCS            Central_FCS                8505            8580            8509        9445            443    
+    TomEE-RemoteFCS                Remote_FCS                8605            8680            8609        9446            443    
+    TomEE-3DSywm                3DSwym                    8705            8780            8709        9447            444    
+    TomEE-3DNotification        3DNotification            8805            8880            8809        9448            446    
+    TomEE-3DComment                3DComment                8905            8980            8909        9449            446    
 
-## 3DPASSPORT  
+## 3DPASSPORT
+
 -----------------
+
 8080
 8081
 8082
@@ -75,8 +93,10 @@ x3dpasstokens
 admin_platform@3ds.com
 Qwer1234
 
-## 3DDASHBOARD  
+## 3DDASHBOARD
+
 -----------------
+
 http
 8083
 ajp
@@ -97,11 +117,11 @@ untrusted.v6r2021x.3ds.com
 
 admin_platform@3ds.com
 
+## 3DSEARCH
 
-## 3DSEARCH  
 -----------------
-8086
 
+8086
 
 https://v6r2021x.3ds.com:443/3dpassport
 https://v6r2021x.3ds.com:443/federated
@@ -110,14 +130,13 @@ https://v6r2021x.3ds.com:444/3dswym
 
 https://v6r2021x.3ds.com/federated/search?query=test
 
-## FULL TEXT SEARCH  
+## FULL TEXT SEARCH
 
 http://v6r2021x.3ds.com:19000
 
 http://v6r2021x.3ds.com:19001/admin/
 
-
-## 3DSPACE  
+## 3DSPACE
 
 spaceuser
 
@@ -138,12 +157,12 @@ https://v6r2021x.3ds.com:443/enoviav5
 https://v6r2021x.3ds.com:446/3dcomment
 https://v6r2021x.3ds.com:446/3dnotification
 
-
 v6r2021x.3ds.com
 admin_platform@3ds.com
 9080
 
 -----------------
+
     Files will be installed in the following directory:
       C:\DassaultSystemes\R2020x\3DSpace
     Java Development Kit (JDK) path: C:\Java\jdk
@@ -180,6 +199,7 @@ admin_platform@3ds.com
     Create Shortcuts on the Desktop: Yes
 
 -----------------
+
     Files will be installed in the following directory:
       C:\DassaultSystemes\R2020x\3DSpace
     Java Development Kit (JDK) path: C:\Java\jdk
@@ -216,10 +236,11 @@ admin_platform@3ds.com
     Create Shortcuts on the Desktop: Yes
 
 -----------------
+
     set SERVICE_NAME=TomEE
     set PR_DISPLAYNAME=Apache TomEE
     set "PR_DESCRIPTION=3DEXPERIENCE_3Dpassport"
-
+    
     3DEXPERIENCE__3DPassport
     3DEXPERIENCE__3DDashboard
     3DEXPERIENCE__3DSearch
@@ -235,14 +256,15 @@ admin_platform@3ds.com
     <server>/<os>/code/command/3DSpaceRegistrationIn3DPassport.[sh|bat]
     运行此脚本之前，确保 3DPassport 已在运行。
 
-## 3DSPACE MQL  
+## 3DSPACE MQL
+
 -----------------
+
     A manual step is required after this hot fix installation.
     The following MQL command must be executed (it may take several minutes).
     Start a MQL command window from <server> installation and type this: 
       MQL>set context person creator;
       MQL>exec prog VPLMDataMigration;
-
 
 -----------------
 
@@ -252,5 +274,3 @@ admin_platform@3ds.com
       3DSwym Foundation
       3DSwym Video Converter
       3DSwym Index
-
-  
