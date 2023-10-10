@@ -1,5 +1,5 @@
 
-# V6R2021x Platform Installation
+# R2021x-windows
 -----------------
 
 ## hostname

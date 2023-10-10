@@ -1,15 +1,15 @@
 
-# V6R2022x Platform Installation
+# R2023x-windows
 -----------------
 
 ## hostname
 -----------------
-v6r2021x.3ds.com
+v6r2023x.3ds.com
 
 ## host 
 -----------------
-127.0.0.1	v6r2021x.3ds.com
-127.0.0.1	untrusted.v6r2021x.3ds.com
+127.0.0.1	v6r2023x.3ds.com
+127.0.0.1	untrusted.v6r2023x.3ds.com
 
 ## database password
 -----------------
@@ -48,8 +48,8 @@ Qwer1234
 -----------------
 
     APP_Name					Server Name				ShutdownPort	HTTPPort		AJPPort		RedirectPort	SSL_PORT		URL
-    TomEE-3DPassport			3dpassport				8005			8080			8009		8443			443				https://v6r2021x.3ds.com/3dpassport
-    TomEE-3DDashboard			3ddashboard				8105			8180			8109		8444			443				https://v6r2021x.3ds.com/3ddashboard
+    TomEE-3DPassport			3dpassport				8005			8080			8009		8443			443				https://v6r2023x.3ds.com/3dpassport
+    TomEE-3DDashboard			3ddashboard				8105			8180			8109		8444			443				https://v6r2023x.3ds.com/3ddashboard
     TomEE-3DSearch				Federated_Search		8205			8280			8209		8453			443	
     TomEE-3DSpace				3dspace_CAS				8305			8380			8309		9443			443	
     TomEE-3DSpaceNoCAS			3dspace_NoCAS			8405			8480			8409		9444			443	
@@ -65,9 +65,9 @@ Qwer1234
 8081
 8082
 
-//v6r2021x.3ds.com:1521/orcl
-https://v6r2021x.3ds.com:443/3dpassport
-https://v6r2021x.3ds.com:443/3dspace
+//v6r2023x.3ds.com:1521/orcl
+https://v6r2023x.3ds.com:443/3dpassport
+https://v6r2023x.3ds.com:443/3dspace
 
 x3dpassadmin
 x3dpasstokens
@@ -84,16 +84,16 @@ ajp
 shutdown
 8085
 
-//v6r2021x.3ds.com:1521/orcl
+//v6r2023x.3ds.com:1521/orcl
 
 x3ddashadmin
 
-https://v6r2021x.3ds.com:443/3dpassport
-https://v6r2021x.3ds.com:443/3ddashboard
-https://v6r2021x.3ds.com:443/3dspace
-https://v6r2021x.3ds.com:443/3dspace
+https://v6r2023x.3ds.com:443/3dpassport
+https://v6r2023x.3ds.com:443/3ddashboard
+https://v6r2023x.3ds.com:443/3dspace
+https://v6r2023x.3ds.com:443/3dspace
 
-untrusted.v6r2021x.3ds.com
+untrusted.v6r2023x.3ds.com
 
 admin_platform@3ds.com
 
@@ -103,43 +103,43 @@ admin_platform@3ds.com
 8086
 
 
-https://v6r2021x.3ds.com:443/3dpassport
-https://v6r2021x.3ds.com:443/federated
-https://v6r2021x.3ds.com:443/3dspace
-https://v6r2021x.3ds.com:444/3dswym
+https://v6r2023x.3ds.com:443/3dpassport
+https://v6r2023x.3ds.com:443/federated
+https://v6r2023x.3ds.com:443/3dspace
+https://v6r2023x.3ds.com:444/3dswym
 
-https://v6r2021x.3ds.com/federated/search?query=test
+https://v6r2023x.3ds.com/federated/search?query=test
 
 ## FULL TEXT SEARCH  
 
-http://v6r2021x.3ds.com:19000
+http://v6r2023x.3ds.com:19000
 
-http://v6r2021x.3ds.com:19001/admin/
+http://v6r2023x.3ds.com:19001/admin/
 
 
 ## 3DSPACE  
 
 spaceuser
 
-//v6r2021x.3ds.com:1521/orcl
+//v6r2023x.3ds.com:1521/orcl
 
 space_data_ts
 space_index_ts
 
-https://v6r2021x.3ds.com:443/3dpassport
-http://v6r2021x.3ds.com:19000
-https://v6r2021x.3ds.com:443/federated
-https://v6r2021x.3ds.com:443/3ddashboard
-https://v6r2021x.3ds.com:443/3dspace
+https://v6r2023x.3ds.com:443/3dpassport
+http://v6r2023x.3ds.com:19000
+https://v6r2023x.3ds.com:443/federated
+https://v6r2023x.3ds.com:443/3ddashboard
+https://v6r2023x.3ds.com:443/3dspace
 
-https://v6r2021x.3ds.com:444/3dswym
+https://v6r2023x.3ds.com:444/3dswym
 
-https://v6r2021x.3ds.com:443/enoviav5
-https://v6r2021x.3ds.com:446/3dcomment
-https://v6r2021x.3ds.com:446/3dnotification
+https://v6r2023x.3ds.com:443/enoviav5
+https://v6r2023x.3ds.com:446/3dcomment
+https://v6r2023x.3ds.com:446/3dnotification
 
 
-v6r2021x.3ds.com
+v6r2023x.3ds.com
 admin_platform@3ds.com
 9080
 
@@ -150,7 +150,7 @@ admin_platform@3ds.com
     Database type: Oracle
     The directory of tnsnames.ora: 
     Oracle Connection User Name: spaceuser
-    Oracle Instance Name: //v6r2021x.3ds.com:1521/orcl
+    Oracle Instance Name: //v6r2023x.3ds.com:1521/orcl
     Default and Administration data tablespace: space_data_ts
     Default and Administration index tablespace: space_index_ts
     Directory for files storage: C:\DassaultSystemes\3DSpaceData
@@ -159,16 +159,16 @@ admin_platform@3ds.com
     Index table space for eService Production vault: space_index_ts
     Data table space for vplm vaults: space_data_ts
     Index table space for vplm vaults: space_index_ts
-    3DPassport service URL: https://v6r2021x.3ds.com:443/3dpassport
-    3DSpace Full Text Search configuration URL: http://v6r2021x.3ds.com:19000
-    3DSearch service URL: https://v6r2021x.3ds.com:443/federated
-    3DDashboard service URL: https://v6r2021x.3ds.com:443/3ddashboard
-    3DSpace service URL: https://v6r2021x.3ds.com:443/3dspace
-    3DSwym service URL: https://v6r2021x.3ds.com:444/3dswym
-    ENOVIA VPM V5 service URL: https://v6r2021x.3ds.com:443/enoviav5
-    3DComment service URL: https://v6r2021x.3ds.com:446/3dcomment
-    3DNotification service URL: https://v6r2021x.3ds.com:446/3dnotification
-    Mail server name: v6r2021x.3ds.com
+    3DPassport service URL: https://v6r2023x.3ds.com:443/3dpassport
+    3DSpace Full Text Search configuration URL: http://v6r2023x.3ds.com:19000
+    3DSearch service URL: https://v6r2023x.3ds.com:443/federated
+    3DDashboard service URL: https://v6r2023x.3ds.com:443/3ddashboard
+    3DSpace service URL: https://v6r2023x.3ds.com:443/3dspace
+    3DSwym service URL: https://v6r2023x.3ds.com:444/3dswym
+    ENOVIA VPM V5 service URL: https://v6r2023x.3ds.com:443/enoviav5
+    3DComment service URL: https://v6r2023x.3ds.com:446/3dcomment
+    3DNotification service URL: https://v6r2023x.3ds.com:446/3dnotification
+    Mail server name: v6r2023x.3ds.com
     Mail sender name: admin_platform@3ds.com
     Build the application: Yes
     Install the embedded Apache TomEE+ and deploy the application: Yes
@@ -186,7 +186,7 @@ admin_platform@3ds.com
     Database type: Oracle
     The directory of tnsnames.ora: 
     Oracle Connection User Name: spaceuser
-    Oracle Instance Name: //v6r2021x.3ds.com:1521/orcl
+    Oracle Instance Name: //v6r2023x.3ds.com:1521/orcl
     Default and Administration data tablespace: space_data_ts
     Default and Administration index tablespace: space_index_ts
     Directory for files storage: C:\DassaultSystemes\3DSpaceData
@@ -195,16 +195,16 @@ admin_platform@3ds.com
     Index table space for eService Production vault: space_index_ts
     Data table space for vplm vaults: space_data_ts
     Index table space for vplm vaults: space_index_ts
-    3DPassport service URL: https://v6r2021x.3ds.com:443/3dpassport
-    3DSpace Full Text Search configuration URL: http://v6r2021x.3ds.com:19000
-    3DSearch service URL: https://v6r2021x.3ds.com:443/federated
-    3DDashboard service URL: https://v6r2021x.3ds.com:443/3ddashboard
-    3DSpace service URL: https://v6r2021x.3ds.com:443/3dspace
-    3DSwym service URL: https://v6r2021x.3ds.com:444/3dswym
+    3DPassport service URL: https://v6r2023x.3ds.com:443/3dpassport
+    3DSpace Full Text Search configuration URL: http://v6r2023x.3ds.com:19000
+    3DSearch service URL: https://v6r2023x.3ds.com:443/federated
+    3DDashboard service URL: https://v6r2023x.3ds.com:443/3ddashboard
+    3DSpace service URL: https://v6r2023x.3ds.com:443/3dspace
+    3DSwym service URL: https://v6r2023x.3ds.com:444/3dswym
     ENOVIA VPM V5 service URL: 
-    3DComment service URL: https://v6r2021x.3ds.com:446/3dcomment
-    3DNotification service URL: https://v6r2021x.3ds.com:446/3dnotification
-    Mail server name: v6r2021x.3ds.com
+    3DComment service URL: https://v6r2023x.3ds.com:446/3dcomment
+    3DNotification service URL: https://v6r2023x.3ds.com:446/3dnotification
+    Mail server name: v6r2023x.3ds.com
     Mail sender name: admin_platform@3dspace.3ds.com
     Build the application: Yes
     Install the embedded Apache TomEE+ and deploy the application: Yes

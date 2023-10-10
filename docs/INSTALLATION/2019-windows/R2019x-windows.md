@@ -1,6 +1,4 @@
-# windows 服务器
-
-## R2017x
+# R2019x-windows
 
 === "关闭许可证服务"
 
@@ -44,17 +42,17 @@
 
 === "关闭TomEE Server"
     ```bash
-    net stop "3DPassport_R2017x"
+    net stop "3DPassport_R2019x"
     timeout /t 3
-    net stop "3DDashboard_R2017x"
+    net stop "3DDashboard_R2019x"
     timeout /t 3
-    net stop "federated_R2017x"
+    net stop "federated_R2019x"
     timeout /t 3
-    net stop "3DEXPERIENCE R2017x 3DSpace Index"
+    net stop "3DEXPERIENCE R2019x 3DSpace Index"
     timeout /t 3
-    net stop "3DSpaceTomEE_R2017x"
+    net stop "3DSpaceTomEE_R2019x"
     timeout /t 3
-    net stop "3DSpaceTomEENoCAS_R2017x"
+    net stop "3DSpaceTomEENoCAS_R2019x"
     timeout /t 3
     ```
 
@@ -80,17 +78,17 @@
     ```
 === "启动TomEE Server"
     ```bash
-    net start "3DPassport_R2017x"
+    net start "3DPassport_R2019x"
     timeout /t 3
-    net start "3DDashboard_R2017x"
+    net start "3DDashboard_R2019x"
     timeout /t 3
-    net start "federated_R2017x"
+    net start "federated_R2019x"
     timeout /t 3
-    net start "3DEXPERIENCE R2017x 3DSpace Index"
+    net start "3DEXPERIENCE R2019x 3DSpace Index"
     timeout /t 3
-    net start "3DSpaceTomEE_R2017x"
+    net start "3DSpaceTomEE_R2019x"
     timeout /t 3
-    net start "3DSpaceTomEENoCAS_R2017x"
+    net start "3DSpaceTomEENoCAS_R2019x"
     timeout /t 3
     ```
 
