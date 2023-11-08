@@ -1,0 +1,5365 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../R2023x-linux-1/">
+      
+      
+        <link rel="next" href="../../2023-windows/R2023x-windows/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.7">
+    
+    
+      
+        <title>R2023x 安装 - ENOVIA Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.4b4a2bd9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.356b1318.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/default.min.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="deep-orange">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#r2023x" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="ENOVIA Knowledge Base" class="md-header__button md-logo" aria-label="ENOVIA Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ENOVIA Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              R2023x 安装
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/xuscode/enovia.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  HOME
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ENOVIA/batch/" class="md-tabs__link">
+          
+  
+  ENOVIA
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../2019-windows/R2019x-windows/" class="md-tabs__link">
+          
+  
+  INSTALLATION
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ENOVIA Knowledge Base" class="md-nav__button md-logo" aria-label="ENOVIA Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ENOVIA Knowledge Base
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/xuscode/enovia.git" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HOME
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ENOVIA
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            ENOVIA
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/batch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Batch
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E5%88%9B%E5%BB%BA%E5%90%88%E4%BD%9C%E5%8C%BA%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%88%9B%E5%BB%BA%E6%9D%83%E9%99%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    创建合作区提示没有创建权限
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E8%AE%B8%E5%8F%AF%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何启动许可证管理器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E5%A6%82%E4%BD%95%E7%94%A8mql%E6%9F%A5%E8%AF%A2%E4%B8%80%E4%B8%AA%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%85%A8%E9%83%A8%E5%85%B3%E8%81%94%E7%9A%84%E5%8D%8F%E4%BD%9C%E5%8C%BA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    如何用mql查询一个账号的全部关联的协作区
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文档
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    clear cache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E7%94%A8%E6%88%B7%E5%90%8D%E6%89%B9%E9%87%8F%E5%BB%BA%E7%AB%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    用户名批量建立
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E7%AE%A1%E7%90%86%E7%A9%BA%E9%97%B4%E6%9D%83%E9%99%90/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    管理空间权限
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AEWindowsServer%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    远程访问WindowsServer服务器
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E9%87%8D%E5%BB%BA%E7%B4%A2%E5%BC%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    重建索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E9%87%8D%E7%BD%AE3DPassport%E9%87%8C%E9%9D%A2%E7%9A%84%E5%AF%86%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    重置3DPassport里面的密码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E9%87%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%86%E7%A0%81/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    重置数据库密码
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_13" id="__nav_2_13_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    移除license
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_13">
+            <span class="md-nav__icon md-icon"></span>
+            移除license
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ENOVIA/%E7%A7%BB%E9%99%A4license/%E7%A7%BB%E9%99%A4license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    移除license
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    INSTALLATION
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            INSTALLATION
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2019 windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            2019 windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2019-windows/R2019x-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2019x-windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021 linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            2021 linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021-linux/R2021x-linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2021x-linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2021 windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            2021 windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2021-windows/R2021x-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2021x-windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022 linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2022 linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022-linux/R2021x-linux/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2021x-Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2022 windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            2022 windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2022-windows/R2022x-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2022x-windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023 linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2023 linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../R2023x-linux-1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2023x 安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    R2023x 安装
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    R2023x 安装
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rhel-87" class="md-nav__link">
+    RHEL 8.7系统安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    主机名修改
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#host" class="md-nav__link">
+    修改HOST文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    关闭防火墙
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux的增强安全体系关闭
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux的增强安全体系关闭">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#selinux" class="md-nav__link">
+    查看当前SELINUX配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selinux_1" class="md-nav__link">
+    修改当前SELINUX配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yum" class="md-nav__link">
+    本地yum源的配置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rpm" class="md-nav__link">
+    安装所需的RPM包
+  </a>
+  
+    <nav class="md-nav" aria-label="安装所需的RPM包">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#yumrpm" class="md-nav__link">
+    Yum源内的RPM包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm_1" class="md-nav__link">
+    需要单独下载的RPM包
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vncoption" class="md-nav__link">
+    VNC服务配置（option）
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oracle19c" class="md-nav__link">
+    安装Oracle19C
+  </a>
+  
+    <nav class="md-nav" aria-label="安装Oracle19C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    检查依赖包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    系统内核参数修改
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    数据库用户的创建
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle" class="md-nav__link">
+    配置Oracle用户限制
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle_1" class="md-nav__link">
+    设定Oracle用户环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    数据库软件安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    配置数据库监听与服务
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    数据库创建实例
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle_2" class="md-nav__link">
+    Oracle服务启动命令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#oracle_3" class="md-nav__link">
+    设置Oracle服务自启动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    取消数据库密码过期限制
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-http-server" class="md-nav__link">
+    Apache HTTP Server的安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openssl" class="md-nav__link">
+    OpenSSL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apr" class="md-nav__link">
+    安装APR
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apr-util" class="md-nav__link">
+    安装APR-Util
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pcre" class="md-nav__link">
+    安装PCRE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apr-iconv" class="md-nav__link">
+    安装apr-iconv
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httpd" class="md-nav__link">
+    安装HTTPD
+  </a>
+  
+    <nav class="md-nav" aria-label="安装HTTPD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache" class="md-nav__link">
+    Apache软件安装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apacheoption" class="md-nav__link">
+    Apache开机自启动服务（option）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    Modules激活
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jdk" class="md-nav__link">
+    安装JDK
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    证书的生成与设置
+  </a>
+  
+    <nav class="md-nav" aria-label="证书的生成与设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apachehttpdconf" class="md-nav__link">
+    设置Apache的httpd.conf文件
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dsls" class="md-nav__link">
+    DSLS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    创建用户与组
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    设置用户限制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tomee" class="md-nav__link">
+    设置TomEE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3de" class="md-nav__link">
+    3DE服务安装目录设置
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dpassport" class="md-nav__link">
+    安装3DPassport
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DPassport">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3ddashboard" class="md-nav__link">
+    安装3DDashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DDashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3ddashboard_1" class="md-nav__link">
+    安装3DDashboard
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DDashboard">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dspaceindex" class="md-nav__link">
+    安装3DSpaceIndex
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DSpaceIndex">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    服务维护
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#federatedsearch" class="md-nav__link">
+    安装FederatedSearch
+  </a>
+  
+    <nav class="md-nav" aria-label="安装FederatedSearch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dspace" class="md-nav__link">
+    安装3DSpace
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DSpace">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    反向代理设置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomee_1" class="md-nav__link">
+    Tomee服务配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fcs" class="md-nav__link">
+    安装FCS
+  </a>
+  
+    <nav class="md-nav" aria-label="安装FCS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dswym" class="md-nav__link">
+    安装3DSwym
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DSwym">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    创建用户与表空间
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudview" class="md-nav__link">
+    安装CloudView
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dswym_1" class="md-nav__link">
+    安装3DSwym
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DSwym">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    服务维护
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dnotification" class="md-nav__link">
+    安装3DNotification
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DNotification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    创建表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    设置环境变量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    安装完成测试
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_43" class="md-nav__link">
+    服务维护
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3dcomment" class="md-nav__link">
+    安装3DComment
+  </a>
+  
+    <nav class="md-nav" aria-label="安装3DComment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_44" class="md-nav__link">
+    创建表空间
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_45" class="md-nav__link">
+    安装步骤
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_46" class="md-nav__link">
+    安装完毕配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#webapp" class="md-nav__link">
+    WebApp安装
+  </a>
+  
+    <nav class="md-nav" aria-label="WebApp安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ds-installeroption" class="md-nav__link">
+    配置DS Installer环境变量（option）
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_47" class="md-nav__link">
+    安装注意
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_48" class="md-nav__link">
+    安装完成配置
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#war" class="md-nav__link">
+    重新部署War包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jpo" class="md-nav__link">
+    编译JPO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fts" class="md-nav__link">
+    更改FTS配置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_49" class="md-nav__link">
+    系统其他配置更改
+  </a>
+  
+    <nav class="md-nav" aria-label="系统其他配置更改">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apache_1" class="md-nav__link">
+    Apache日志设定
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tomee-cache" class="md-nav__link">
+    TomEE Cache设置
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux_1" class="md-nav__link">
+    常用Linux命令
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2023 windows
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            2023 windows
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2023-windows/R2023x-windows/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R2023x-windows
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<div><h1 id="r2023x">R2023x 安装</h1>
+<h2 id="rhel-87">RHEL 8.7系统安装</h2>
+<p>对于系统的安装，这个就完全基于我们一般的安装习惯了，因为后面我们会有根据系统需求整体的一个RPM包安装的步骤，所以前面我们对于一些模块的安装选择不用太过在意，这里唯一需要大家注意的是，我们的系统语言的选择，请选择英文；另外，我们需要图形化界面，所以我们一开始安装RHEL就请直接选择带GUI界面的安装；最后，如果这个系统还需要安装oracle 19C数据库，根据oracle 19C的安装要求，那么请保证SWAP的大小请保证有16G以上。</p>
+<p>以下是我进行系统安装的步骤截图，仅供参考，不需要一定按照我的安装步骤来。</p>
+<p>这里语言选择请尽量选择英文。</p>
+<p>下面几个是我安装的时候的选择习惯，仅供参考，不用照搬。</p>
+<p>FTP Server</p>
+<p>Mail Server</p>
+<p>Performance Tools</p>
+<p>Security Tools</p>
+<p>Development Tools</p>
+<hr>
+<h2 id="_1">主机名修改</h2>
+<p>一般来说，主机名都尽量在操作系统安装的时候就设置好，可以用hostname命令查看本机的主机名，如果不符合要求想修改的话，可以使用下面命令进行更改。</p>
+<p>使用root账号，使用命令</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/sysconfig/network
+</code></pre></div>
+<p>增加内容如下：</p>
+<div class="highlight"><pre><span></span><code><span class="nv">NETWORKING</span><span class="o">=</span>yes
+<span class="nv">HOSTNAME</span><span class="o">=</span>dsu.3ds.com
+</code></pre></div>
+<hr>
+<h2 id="host">修改HOST文件</h2>
+<p>使用root账号，使用命令</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/hosts
+</code></pre></div>
+<p>这里是将dsu.3ds.com和untrusted.dsu.3ds.com的IP设置一下，方便后面调用。</p>
+<div class="highlight"><pre><span></span><code><span class="m">127</span>.0.0.1<span class="w"> </span>dsu.3ds.com
+<span class="m">127</span>.0.0.1<span class="w"> </span>untrusted.dsu.3ds.com
+</code></pre></div>
+<p>这里我修改成127.0.0.1是因为我的虚拟机可能会移动或者发生IP变化，设成这个值我就不用在IP变化的时候再麻烦进行重新设置了。</p>
+<hr>
+<h2 id="_2">关闭防火墙</h2>
+<p>使用root账号，命令如下：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#查看防火墙状态</span>
+firewall-cmd<span class="w"> </span>--state<span class="w"> </span>
+<span class="c1">#关闭防火墙服务</span>
+systemctl<span class="w"> </span>disable<span class="w"> </span>firewalld
+<span class="c1">#停止防火墙</span>
+systemctl<span class="w"> </span>stop<span class="w"> </span>firewalld
+</code></pre></div>
+<hr>
+<h2 id="linux">Linux的增强安全体系关闭</h2>
+<h3 id="selinux">查看当前SELINUX配置</h3>
+<p>使用命令sestatus查看：
+- SELINUX=enforcing - 强制打开,拒绝违反安全策略
+- SELINUX=permissive - 遇到违反安全策略仍正常执行，但输出警告
+- SELINUX=disabled - 关闭安全策略</p>
+<div class="highlight"><pre><span></span><code>sestatu
+</code></pre></div>
+<h3 id="selinux_1">修改当前SELINUX配置</h3>
+<p>执行命令</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/selinux/config
+</code></pre></div>
+<p>修改参数值</p>
+<p>重启系统，设置就会生效。</p>
+<hr>
+<h2 id="yum">本地yum源的配置</h2>
+<p>首先创建一个本地路径用来作为映射路径
+</p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/mnt/cdrom
+</code></pre></div>
+下面有两种情况进行mount
+一种是将设备光盘挂载到本地的mnt下面的cdrom目录。
+<div class="highlight"><pre><span></span><code>mount<span class="w"> </span>/dev/cdrom<span class="w"> </span>/mnt/cdrom/
+</code></pre></div>
+<p>第二种是已经将iso文件拷贝到本地了，那么可以直接挂载iso文件</p>
+<div class="highlight"><pre><span></span><code>mount<span class="w"> </span>-o<span class="w"> </span>loop<span class="w"> </span>/usr/local/tooldisk/mydisk3.iso<span class="w"> </span>/mnt/cdrom
+</code></pre></div>
+<p>挂载完光盘或者iso可以用用df -lh命令查看是否挂载了</p>
+<p>下面是具体yum源的配置文件的创建与设置。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/etc/yum.repos.d/<span class="w">   </span><span class="c1">#进入yum配置目录 </span>
+touch<span class="w">  </span>rhel8.repo<span class="w">   </span><span class="c1">#建立yum配置文件 </span>
+vi<span class="w">  </span>rhel8.repo<span class="w">   </span><span class="c1">#编辑配置文件，添加以下内容</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>[name-OS]
+name=cdrom-BaseOS
+baseurl=file:///mnt/cdrom/BaseOS
+enabled=1
+gpgcheck=0
+
+[name-APP]
+name=cdrom-app
+baseurl=file:///mnt/cdrom/AppStream
+enabled=1
+gpgcheck=0
+</code></pre></div>
+<p>添加保存后，用命令使设置生效</p>
+<div class="highlight"><pre><span></span><code>yum<span class="w"> </span>clean<span class="w"> </span>all<span class="w">  </span><span class="c1">#清除yum缓存 </span>
+yum<span class="w"> </span>makecache<span class="w">  </span><span class="c1">#缓存本地yum源中的软件包信息</span>
+</code></pre></div>
+<p>执行
+</p><div class="highlight"><pre><span></span><code>yum<span class="w"> </span>repolist
+</code></pre></div>
+检查是否配置成功
+<hr>
+<h2 id="rpm">安装所需的RPM包</h2>
+<h3 id="yumrpm">Yum源内的RPM包</h3>
+<p>首先，进入Program Directories网站查找到"RHEL 8.1 Servers Software Packages listing"，如下图：</p>
+<p>将这些依赖包拷贝出来，只保留第一列依赖包的名称，将其生成一个txt文档。</p>
+<div class="highlight"><pre><span></span><code>abattis-cantarell-fonts
+abrt-addon-coredump-helper
+abrt-gui-libs
+abrt-libs
+accountsservice
+accountsservice-libs
+acl
+adcli
+adobe-mappings-cmap
+adobe-mappings-cmap-deprecated
+adobe-mappings-pdf
+adoptopenjdk-8-openj9
+adwaita-cursor-theme
+adwaita-gtk2-theme
+adwaita-icon-theme
+alsa-lib
+alsa-lib-devel
+anaconda-core
+anaconda-gui
+anaconda-tui
+anaconda-user-help
+anaconda-widgets
+annobin
+appstream-data
+asciidoc
+aspell
+at
+atk
+atk-devel
+atkmm
+atlas
+atlas-devel
+atop
+at-spi2-atk
+at-spi2-atk-devel
+at-spi2-core
+at-spi2-core-devel
+attr
+audit
+audit-libs
+audit-libs-devel
+augeas-libs
+authselect
+authselect-compat
+authselect-libs
+autoconf
+autofs
+automake
+avahi
+avahi-glib
+avahi-libs
+babl
+baobab
+basesystem
+bash
+bash-completion
+bc
+bcc
+bcc-tools
+bind-export-libs
+bind-libs
+bind-libs-lite
+bind-license
+bind-utils
+binutils
+binutils-devel
+biosdevname
+bison
+blivet-data
+blktrace
+bluez
+bluez-libs
+bluez-obexd
+bolt
+boost
+boost-atomic
+boost-chrono
+boost-container
+boost-context
+boost-coroutine
+boost-date-time
+boost-devel
+boost-fiber
+boost-filesystem
+boost-graph
+boost-iostreams
+boost-locale
+boost-log
+boost-math
+boost-program-options
+boost-random
+boost-regex
+boost-serialization
+boost-signals
+boost-stacktrace
+boost-system
+boost-test
+boost-thread
+boost-timer
+boost-type_erasure
+boost-wave
+bpftool
+brlapi
+brltty
+brotli
+bubblewrap
+byacc
+bzip2
+bzip2-devel
+bzip2-libs
+ca-certificates
+cairo
+cairo-devel
+cairo-gobject
+cairo-gobject-devel
+cairomm
+c-ares
+c-ares-devel
+ccache
+celt051
+cgdcbxd
+check
+check-devel
+checkpolicy
+cheese
+cheese-libs
+chkconfig
+chrome-gnome-shell
+chrony
+cifs-utils
+clang-libs
+cldr-emoji-annotation
+clutter
+clutter-gst3
+clutter-gtk
+cmake
+cmake-data
+cmake-filesystem
+cmake-rpm-macros
+cockpit
+cockpit-bridge
+cockpit-doc
+cockpit-packagekit
+cockpit-system
+cockpit-ws
+cogl
+colord
+colord-gtk
+colord-libs
+color-filesystem
+__commvault-custom-default-desktop-11.20.x86_64.rpm.Instance001
+compat-libgfortran-48
+compat-libtiff3
+compat-openssl10
+compiler-rt
+copy-jdk-configs
+coreutils
+coreutils-common
+cpio
+cpp
+cracklib
+cracklib-dicts
+crash
+crash-gcore-command
+crash-ptdump-command
+crash-trace-command
+cronie
+cronie-anacron
+crontabs
+crypto-policies
+cryptsetup
+cryptsetup-libs
+ctags
+cups-client
+cups-devel
+cups-libs
+cups-pk-helper
+curl
+cyrus-sasl
+cyrus-sasl-devel
+cyrus-sasl-gssapi
+cyrus-sasl-lib
+cyrus-sasl-plain
+daemon
+daxctl-libs
+dbus
+dbus-common
+dbus-daemon
+dbus-devel
+dbus-glib
+dbus-glib-devel
+dbus-libs
+dbus-tools
+dbus-x11
+dbxtool
+dconf
+dcraw
+dejavu-fonts-common
+dejavu-sans-fonts
+dejavu-sans-mono-fonts
+dejavu-serif-fonts
+desktop-file-utils
+device-mapper
+device-mapper-event
+device-mapper-event-libs
+device-mapper-libs
+device-mapper-multipath
+device-mapper-multipath-libs
+device-mapper-persistent-data
+dhcp-client
+dhcp-common
+dhcp-libs
+diffstat
+diffutils
+distcc
+distcc-server
+dleyna-connector-dbus
+dleyna-core
+dleyna-server
+dmidecode
+dnf
+dnf-data
+dnf-plugins-core
+dnf-plugin-subscription-manager
+dnsmasq
+docbook-dtds
+docbook-style-xsl
+dos2unix
+dosfstools
+dotconf
+dracut
+dracut-config-rescue
+dracut-network
+dracut-squash
+dwz
+dyninst
+e2fsprogs
+e2fsprogs-devel
+e2fsprogs-libs
+ed
+edk2-ovmf
+efi-filesystem
+efi-srpm-macros
+efivar
+efivar-libs
+elfutils
+elfutils-default-yama-scope
+elfutils-devel
+elfutils-libelf
+elfutils-libelf-devel
+elfutils-libs
+emacs-filesystem
+enchant
+enchant2
+environment-modules
+eog
+espeak-ng
+ethtool
+evince
+evince-libs
+evince-nautilus
+evolution-data-server
+evolution-data-server-devel
+evolution-data-server-langpacks
+exempi
+exiv2
+exiv2-libs
+expat
+expat-devel
+fcoe-utils
+file
+file-libs
+file-roller
+filesystem
+findutils
+fipscheck
+fipscheck-lib
+firefox
+firewalld
+firewalld-filesystem
+flac-libs
+flatpak
+flatpak-libs
+flatpak-selinux
+flatpak-session-helper
+flex
+fltk
+fontconfig
+fontconfig-devel
+fontpackages-filesystem
+fprintd
+fprintd-pam
+freetype
+freetype-devel
+frei0r-plugins
+fribidi
+fribidi-devel
+fuse
+fuse3-devel
+fuse3-libs
+fuse-common
+fuse-libs
+fusioninventory-agent
+fusioninventory-agent-task-inventory
+fwupd
+fwupdate
+fwupdate-efi
+fwupdate-libs
+gavl
+gawk
+gc
+gcc
+gcc-c++
+gcc-gdb-plugin
+GConf2
+gcr
+gcr-devel
+gd
+gdb
+gdb-gdbserver
+gdb-headless
+gdbm
+gdbm-libs
+gd-devel
+gdisk
+gdk-pixbuf2
+gdk-pixbuf2-devel
+gdk-pixbuf2-modules
+gdm
+gedit
+gegl
+genisoimage
+geoclue2
+geoclue2-libs
+geocode-glib
+geocode-glib-devel
+geolite2-city
+geolite2-country
+gettext
+gettext-common-devel
+gettext-devel
+gettext-libs
+ghc-srpm-macros
+giflib
+gimp
+gimp-libs
+git
+git-core
+git-core-doc
+gjs
+glade-libs
+glib2
+glib2-devel
+glibc
+glibc
+glibc-all-langpacks
+glibc-common
+glibc-devel
+glibc-headers
+glibc-langpack-en
+glibmm24
+glib-networking
+gl-manpages
+glusterfs
+glusterfs-api
+glusterfs-cli
+glusterfs-client-xlators
+glusterfs-fuse
+glusterfs-libs
+glx-utils
+gmp
+gmp-c++
+gmp-devel
+gnome-abrt
+gnome-autoar
+gnome-bluetooth
+gnome-bluetooth-libs
+gnome-boxes
+gnome-calculator
+gnome-characters
+gnome-classic-session
+gnome-color-manager
+gnome-control-center
+gnome-control-center-filesystem
+gnome-desktop3
+gnome-desktop3-devel
+gnome-disk-utility
+gnome-font-viewer
+gnome-getting-started-docs
+gnome-keyring
+gnome-keyring-pam
+gnome-logs
+gnome-menus
+gnome-online-accounts
+gnome-online-accounts-devel
+gnome-remote-desktop
+gnome-screenshot
+gnome-session
+gnome-session-wayland-session
+gnome-session-xsession
+gnome-settings-daemon
+gnome-shell
+gnome-shell-extension-apps-menu
+gnome-shell-extension-common
+gnome-shell-extension-desktop-icons
+gnome-shell-extension-horizontal-workspaces
+gnome-shell-extension-launch-new-instance
+gnome-shell-extension-places-menu
+gnome-shell-extension-window-list
+gnome-software
+gnome-system-monitor
+gnome-terminal
+gnome-terminal-nautilus
+gnome-themes-standard
+gnome-user-docs
+gnome-video-effects
+gnu-free-fonts-common
+gnu-free-mono-fonts
+gnu-free-sans-fonts
+gnu-free-serif-fonts
+gnupg2
+gnupg2-smime
+gnutls
+gnutls-c++
+gnutls-dane
+gnutls-devel
+gobject-introspection
+gom
+google-chrome-stable
+google-droid-sans-fonts
+google-noto-cjk-fonts-common
+google-noto-emoji-color-fonts
+google-noto-emoji-fonts
+google-noto-fonts-common
+google-noto-sans-cjk-ttc-fonts
+google-noto-sans-lisu-fonts
+google-noto-sans-mandaic-fonts
+google-noto-sans-meetei-mayek-fonts
+google-noto-sans-sinhala-fonts
+google-noto-sans-tagalog-fonts
+google-noto-sans-tai-tham-fonts
+google-noto-sans-tai-viet-fonts
+google-noto-serif-cjk-ttc-fonts
+go-srpm-macros
+gpgme
+gpg-pubkey
+gpg-pubkey
+gpm
+gpm-devel
+gpm-libs
+grafana
+grafana-azure-monitor
+grafana-cloudwatch
+grafana-elasticsearch
+grafana-graphite
+grafana-influxdb
+grafana-loki
+grafana-mssql
+grafana-mysql
+grafana-opentsdb
+grafana-postgres
+grafana-prometheus
+grafana-stackdriver
+graphite2
+graphite2-devel
+graphviz
+grep
+grilo
+grilo-plugins
+groff-base
+grub2-common
+grub2-pc
+grub2-pc-modules
+grub2-tools
+grub2-tools-extra
+grub2-tools-minimal
+grubby
+gsettings-desktop-schemas
+gsettings-desktop-schemas-devel
+gsm
+gspell
+gssdp
+gssproxy
+gstreamer1
+gstreamer1-devel
+gstreamer1-plugins-bad-free
+gstreamer1-plugins-base
+gstreamer1-plugins-base-devel
+gstreamer1-plugins-good
+gstreamer1-plugins-ugly-free
+gtk2
+gtk2-devel
+gtk2-devel-docs
+gtk2-immodule-xim
+gtk3
+gtk3-devel
+gtk3-immodule-xim
+gtkmm30
+gtksourceview3
+gtk-update-icon-cache
+gtk-vnc2
+guile
+gupnp
+gupnp-av
+gupnp-dlna
+gutenprint
+gutenprint-libs
+gutenprint-libs-ui
+gutenprint-plugin
+gvfs
+gvfs-afc
+gvfs-afp
+gvfs-archive
+gvfs-client
+gvfs-devel
+gvfs-fuse
+gvfs-goa
+gvfs-gphoto2
+gvfs-mtp
+gvfs-smb
+gvnc
+gzip
+hardlink
+harfbuzz
+harfbuzz-devel
+harfbuzz-icu
+hdparm
+hicolor-icon-theme
+hostname
+hplip-common
+hplip-libs
+htop
+hunspell
+hunspell-devel
+hunspell-en
+hunspell-en-GB
+hunspell-en-US
+hwdata
+hwloc
+hwloc-libs
+hyphen
+ibacm
+ibus
+ibus-gtk2
+ibus-gtk3
+ibus-hangul
+ibus-kkc
+ibus-libpinyin
+ibus-libs
+ibus-libzhuyin
+ibus-m17n
+ibus-setup
+ibus-typing-booster
+iio-sensor-proxy
+ilmbase
+ima-evm-utils
+infiniband-diags
+info
+initscripts
+insights-client
+intltool
+iotop
+iowatcher
+ipcalc
+iproute
+iproute-tc
+iprutils
+ipset
+ipset-libs
+iptables
+iptables-devel
+iptables-ebtables
+iptables-libs
+iptstate
+iputils
+ipxe-roms-qemu
+irqbalance
+iscsi-initiator-utils
+iscsi-initiator-utils-iscsiuio
+isl
+isns-utils-libs
+iso-codes
+iso-codes-devel
+itstool
+iwl1000-firmware
+iwl100-firmware
+iwl105-firmware
+iwl135-firmware
+iwl2000-firmware
+iwl2030-firmware
+iwl3160-firmware
+iwl3945-firmware
+iwl4965-firmware
+iwl5000-firmware
+iwl5150-firmware
+iwl6000-firmware
+iwl6000g2a-firmware
+iwl6050-firmware
+iwl7260-firmware
+jansson
+jasper-libs
+java-1.8.0-openjdk
+java-1.8.0-openjdk-devel
+java-1.8.0-openjdk-headless
+javapackages-filesystem
+jbig2dec-libs
+jbigkit-libs
+jdk
+jna
+jomolhari-fonts
+json-c
+json-glib
+json-glib-devel
+julietaula-montserrat-fonts
+kbd
+kbd-legacy
+kbd-misc
+kernel
+kernel
+kernel-core
+kernel-core
+kernel-devel
+kernel-devel
+kernel-headers
+kernel-modules
+kernel-modules
+kernel-tools
+kernel-tools-libs
+kexec-tools
+keybinder3
+keyutils
+keyutils-libs
+keyutils-libs-devel
+khmeros-base-fonts
+khmeros-fonts-common
+kmod
+kmod-kvdo
+kmod-libs
+kpartx
+kpatch
+krb5-devel
+krb5-libs
+krb5-workstation
+ksh
+kyotocabinet-libs
+lame-libs
+langpacks-en
+langtable
+langtable-data
+lcms2
+ldns
+ledmon
+less
+liba52
+libacl
+libacl-devel
+libaio
+libaio-devel
+libao
+libappstream-glib
+libarchive
+libasan
+libassuan
+libasyncns
+libatasmart
+libatomic_ops
+libattr
+libattr-devel
+libavc1394
+libbabeltrace
+libbasicobjects
+libblkid
+libblkid-devel
+libblockdev
+libblockdev-crypto
+libblockdev-dm
+libblockdev-fs
+libblockdev-kbd
+libblockdev-loop
+libblockdev-lvm
+libblockdev-mdraid
+libblockdev-mpath
+libblockdev-nvdimm
+libblockdev-part
+libblockdev-swap
+libblockdev-utils
+libbluray
+libbpf
+libbytesize
+libcacard
+libcanberra
+libcanberra-devel
+libcanberra-gtk2
+libcanberra-gtk3
+libcap
+libcap-devel
+libcap-ng
+libcap-ng-devel
+libcdio
+libcdio-paranoia
+libcgroup
+libcollection
+libcom_err
+libcom_err-devel
+libcomps
+libconfig
+libcroco
+libcurl
+libcurl-devel
+libdaemon
+libdatrie
+libdb
+libdb-devel
+libdb-utils
+libdhash
+libdmapsharing
+libdmx
+libdnf
+libdrm
+libdrm-devel
+libdv
+libdvdnav
+libdvdread
+libedit
+libepoxy
+libepoxy-devel
+liberation-fonts
+liberation-fonts-common
+liberation-mono-fonts
+liberation-sans-fonts
+liberation-serif-fonts
+libestr
+libevdev
+libevent
+libexif
+libfabric
+libfastjson
+libfdisk
+libffi
+libffi-devel
+libfontenc
+libfprint
+libgcab1
+libgcc
+libgcrypt
+libgcrypt-devel
+libgdata
+libgdata-devel
+libgdither
+libgee
+libgexiv2
+libgfortran
+libglvnd
+libglvnd-core-devel
+libglvnd-devel
+libglvnd-egl
+libglvnd-gles
+libglvnd-glx
+libglvnd-opengl
+libgnomekbd
+libgomp
+libgovirt
+libgpg-error
+libgpg-error-devel
+libgphoto2
+libgs
+libgsf
+libgtop2
+libgudev
+libgusb
+libgweather
+libgweather-devel
+libgxps
+libhangul
+libhugetlbfs
+libhugetlbfs-devel
+libhugetlbfs-utils
+libibumad
+libibverbs
+libical
+libical-devel
+libICE
+libICE-devel
+libicu
+libicu-devel
+libidn
+libidn2
+libidn2-devel
+libiec61883
+libieee1284
+libieee1284-devel
+libijs
+libimobiledevice
+libini_config
+libinput
+libipa_hbac
+libipt
+libiptcdata
+libiscsi
+libjpeg-turbo
+libjpeg-turbo-devel
+libkadm5
+libkcapi
+libkcapi-hmaccalc
+libkkc
+libkkc-common
+libkkc-data
+libksba
+libldb
+liblouis
+liblsan
+libmaxminddb
+libmbim
+libmbim-utils
+libmcpp
+libmediaart
+libmetalink
+libmicrohttpd
+libmng
+libmnl
+libmodman
+libmodulemd1
+libmount
+libmpc
+libmpcdec
+libmtp
+libmusicbrainz5
+libndp
+libnetfilter_conntrack
+libnfnetlink
+libnfsidmap
+libnftnl
+libnghttp2
+libnl3
+libnl3-cli
+libnl3-devel
+libnma
+libnotify
+libnotify-devel
+libnsl2
+libnsl
+liboauth
+liboauth-devel
+libogg
+libomp
+libopenraw
+libosinfo
+libpaper
+libpath_utils
+libpcap
+libpciaccess
+libpeas
+libpeas-gtk
+libpeas-loader-python3
+libpfm
+libpfm-devel
+libpinyin
+libpinyin-data
+libpipeline
+libpkgconf
+libplist
+libpmem
+libpmemblk
+libpmemblk-devel
+libpmem-devel
+libpmemlog
+libpmemlog-devel
+libpmemobj
+libpmemobj++-devel
+libpmemobj-devel
+libpmemobj++-doc
+libpmempool
+libpmempool-devel
+libpng12
+libpng15
+libpng
+libpng-devel
+libpq
+libpq-devel
+libproxy
+libpsl
+libpsm2
+libpwquality
+libqmi
+libqmi-utils
+libquadmath
+libquadmath-devel
+libquvi
+libquvi-scripts
+librados2
+libraw1394
+librbd1
+librdmacm
+libref_array
+librelp
+librepo
+libreport
+libreport-anaconda
+libreport-cli
+libreport-filesystem
+libreport-gtk
+libreport-plugin-reportuploader
+libreport-plugin-rhtsupport
+libreport-plugin-ureport
+libreport-rhel
+libreport-web
+libreswan
+librhsm
+librpmem
+librpmem-devel
+librsvg2
+librsvg2-devel
+librsvg2-tools
+libsane-hpaio
+libseccomp
+libseccomp-devel
+libsecret
+libsecret-devel
+libselinux
+libselinux-devel
+libselinux-utils
+libsemanage
+libsepol
+libsepol-devel
+libshout
+libsigc++20
+libsigsegv
+libSM
+libsmartcols
+libsmbclient
+libsmbios
+libSM-devel
+libsndfile
+libsolv
+libsoup
+libsoup-devel
+libspectre
+libspiro
+libsrtp
+libss
+libssh
+libssh-config
+libssh-devel
+libsss_autofs
+libsss_certmap
+libsss_idmap
+libsss_nss_idmap
+libsss_sudo
+libstdc++
+libstdc++-devel
+libstemmer
+libstoragemgmt
+libsysfs
+libtalloc
+libtar
+libtasn1
+libtasn1-devel
+libtdb
+libteam
+libtevent
+libthai
+libtheora
+libtiff
+libtiff-devel
+libtimezonemap
+libtirpc
+libtool
+libtool-ltdl
+libtsan
+libubsan
+libudisks2
+libunistring
+libusal
+libusbmuxd
+libusbx
+libusbx-devel
+libuser
+libutempter
+libuuid
+libuuid-devel
+libuv
+libv4l
+libva
+libva-devel
+libvarlink
+libverto
+libverto-devel
+libverto-libevent
+libvirt-daemon
+libvirt-daemon-config-network
+libvirt-daemon-driver-interface
+libvirt-daemon-driver-network
+libvirt-daemon-driver-nodedev
+libvirt-daemon-driver-nwfilter
+libvirt-daemon-driver-qemu
+libvirt-daemon-driver-secret
+libvirt-daemon-driver-storage
+libvirt-daemon-driver-storage-core
+libvirt-daemon-driver-storage-disk
+libvirt-daemon-driver-storage-gluster
+libvirt-daemon-driver-storage-iscsi
+libvirt-daemon-driver-storage-iscsi-direct
+libvirt-daemon-driver-storage-logical
+libvirt-daemon-driver-storage-mpath
+libvirt-daemon-driver-storage-rbd
+libvirt-daemon-driver-storage-scsi
+libvirt-daemon-kvm
+libvirt-devel
+libvirt-gconfig
+libvirt-glib
+libvirt-gobject
+libvirt-libs
+libvisual
+libvmem
+libvmem-devel
+libvmmalloc
+libvmmalloc-devel
+libvncserver
+libvorbis
+libvpx
+libwacom
+libwacom-data
+libwayland-client
+libwayland-cursor
+libwayland-egl
+libwayland-server
+libwbclient
+libwebp
+libwebp-devel
+libwmf
+libwmf-lite
+libwnck3
+libX11
+libX11-common
+libX11-devel
+libX11-xcb
+libXau
+libXau-devel
+libXaw
+libXaw-devel
+libxcb
+libxcb-devel
+libXcomposite
+libXcomposite-devel
+libxcrypt
+libxcrypt-devel
+libXcursor
+libXcursor-devel
+libXdamage
+libXdamage-devel
+libXdmcp
+libXext
+libXext-devel
+libXfixes
+libXfixes-devel
+libXfont2
+libXft
+libXft-devel
+libXi
+libXi-devel
+libXinerama
+libXinerama-devel
+libxkbcommon
+libxkbcommon-devel
+libxkbcommon-x11
+libxkbfile
+libxklavier
+libxml2
+libxml2-devel
+libXmu
+libXmu-devel
+libXp
+libXp-devel
+libXpm
+libXpm-devel
+libXrandr
+libXrandr-devel
+libXrender
+libXrender-devel
+libXres
+libXScrnSaver
+libXScrnSaver-devel
+libxshmfence
+libxshmfence-devel
+libxslt
+libxslt-devel
+libXt
+libXt-devel
+libXtst
+libXtst-devel
+libXv
+libXv-devel
+libXxf86dga
+libXxf86dga-devel
+libXxf86misc
+libXxf86misc-devel
+libXxf86vm
+libXxf86vm-devel
+libyaml
+libzhuyin
+linuxconsoletools
+linux-firmware
+lksctp-tools
+lksctp-tools-devel
+lldpad
+llvm-libs
+lm_sensors-devel
+lm_sensors-libs
+lockdev
+logrotate
+lohit-assamese-fonts
+lohit-bengali-fonts
+lohit-devanagari-fonts
+lohit-gujarati-fonts
+lohit-gurmukhi-fonts
+lohit-kannada-fonts
+lohit-odia-fonts
+lohit-tamil-fonts
+lohit-telugu-fonts
+lshw
+lsof
+lsscsi
+ltrace
+lua
+lua-expat
+lua-json
+lua-libs
+lua-lpeg
+lua-socket
+lvm2
+lvm2-libs
+lz4
+lz4-devel
+lz4-libs
+lzo
+lzo-devel
+lzo-minilzo
+lzop
+m17n-db
+m17n-lib
+m4
+mailcap
+mailx
+make
+mallard-rng
+man-db
+man-pages
+man-pages-overrides
+mariadb
+mariadb-backup
+mariadb-common
+mariadb-connector-c
+mariadb-connector-c-config
+mariadb-connector-c-devel
+mariadb-devel
+mariadb-errmsg
+mariadb-gssapi-server
+mariadb-server
+mariadb-server-utils
+marisa
+mcelog
+mcpp
+mdadm
+mesa-dri-drivers
+mesa-filesystem
+mesa-libEGL
+mesa-libEGL-devel
+mesa-libgbm
+mesa-libGL
+mesa-libglapi
+mesa-libGL-devel
+mesa-libGLU
+mesa-libGLU-devel
+mesa-libGLw
+mesa-libGLw-devel
+mesa-libOSMesa
+mesa-vulkan-drivers
+metacity
+microcode_ctl
+mlocate
+mobile-broadband-provider-info
+ModemManager
+ModemManager-glib
+mokutil
+motif
+motif-devel
+mousetweaks
+mozilla-filesystem
+mozjs60
+mpfr
+mpfr-devel
+mpg123-libs
+mtdev
+mtools
+mtr
+mutter
+nano
+nautilus
+nautilus-extensions
+nautilus-sendto
+ncompress
+ncurses
+ncurses-base
+ncurses-c++-libs
+ncurses-compat-libs
+ncurses-devel
+ncurses-libs
+ndctl
+ndctl-libs
+neon
+netcf-libs
+net-snmp-agent-libs
+net-snmp-devel
+net-snmp-libs
+nettle
+nettle-devel
+net-tools
+NetworkManager
+NetworkManager-adsl
+NetworkManager-libnm
+NetworkManager-team
+NetworkManager-tui
+NetworkManager-wifi
+newt
+newt-devel
+nfs4-acl-tools
+nfs-utils
+nftables
+nmap-ncat
+nm-connection-editor
+npth
+nscd
+nspr
+nspr-devel
+nss
+nss-devel
+nss_nis
+nss-softokn
+nss-softokn-devel
+nss-softokn-freebl
+nss-softokn-freebl-devel
+nss-sysinit
+nss-tools
+nss-util
+nss-util-devel
+numactl
+numactl-devel
+numactl-libs
+numad
+nvmetcli
+ocaml-srpm-macros
+oddjob
+oddjob-mkhomedir
+openal-soft
+openblas-srpm-macros
+OpenEXR-libs
+openjpeg2
+openldap
+openldap-clients
+openldap-devel
+openscap
+openscap-devel
+opensm-libs
+openssh
+openssh-clients
+openssh-server
+openssl
+openssl-devel
+openssl-libs
+openssl-pkcs11
+opus
+orc
+orca
+orc-compiler
+orc-devel
+osinfo-db
+osinfo-db-tools
+os-prober
+ostree
+ostree-libs
+p11-kit
+p11-kit-devel
+p11-kit-server
+p11-kit-trust
+PackageKit
+PackageKit-command-not-found
+PackageKit-glib
+PackageKit-gtk3-module
+pakchois
+paktype-naskh-basic-fonts
+pam
+pam-devel
+pango
+pango-devel
+pangomm
+papi
+papi-devel
+papi-libs
+paratype-pt-sans-fonts
+parted
+passwd
+patch
+patchutils
+pcaudiolib
+pciutils
+pciutils-devel
+pciutils-libs
+pcp
+pcp-conf
+pcp-devel
+pcp-doc
+pcp-export-pcp2graphite
+pcp-export-pcp2influxdb
+pcp-export-pcp2json
+pcp-export-pcp2xml
+pcp-export-pcp2zabbix
+pcp-export-zabbix-agent
+pcp-gui
+pcp-import-collectl2pcp
+pcp-import-ganglia2pcp
+pcp-import-iostat2pcp
+pcp-import-mrtg2pcp
+pcp-import-sar2pcp
+pcp-libs
+pcp-libs-devel
+pcp-manager
+pcp-pmda-activemq
+pcp-pmda-apache
+pcp-pmda-bash
+pcp-pmda-bcc
+pcp-pmda-bind2
+pcp-pmda-bonding
+pcp-pmda-cifs
+pcp-pmda-cisco
+pcp-pmda-dbping
+pcp-pmda-dm
+pcp-pmda-docker
+pcp-pmda-ds389
+pcp-pmda-ds389log
+pcp-pmda-elasticsearch
+pcp-pmda-gfs2
+pcp-pmda-gluster
+pcp-pmda-gpfs
+pcp-pmda-gpsd
+pcp-pmda-haproxy
+pcp-pmda-infiniband
+pcp-pmda-json
+pcp-pmda-libvirt
+pcp-pmda-lio
+pcp-pmda-lmsensors
+pcp-pmda-logger
+pcp-pmda-lustre
+pcp-pmda-lustrecomm
+pcp-pmda-mailq
+pcp-pmda-memcache
+pcp-pmda-mic
+pcp-pmda-mounts
+pcp-pmda-mysql
+pcp-pmda-named
+pcp-pmda-netfilter
+pcp-pmda-news
+pcp-pmda-nfsclient
+pcp-pmda-nginx
+pcp-pmda-nvidia-gpu
+pcp-pmda-oracle
+pcp-pmda-pdns
+pcp-pmda-perfevent
+pcp-pmda-podman
+pcp-pmda-postfix
+pcp-pmda-postgresql
+pcp-pmda-prometheus
+pcp-pmda-redis
+pcp-pmda-roomtemp
+pcp-pmda-rpm
+pcp-pmda-rsyslog
+pcp-pmda-samba
+pcp-pmda-sendmail
+pcp-pmda-shping
+pcp-pmda-slurm
+pcp-pmda-smart
+pcp-pmda-snmp
+pcp-pmda-summary
+pcp-pmda-systemd
+pcp-pmda-trace
+pcp-pmda-unbound
+pcp-pmda-vmware
+pcp-pmda-weblog
+pcp-pmda-zimbra
+pcp-pmda-zswap
+pcp-selinux
+pcp-system-tools
+pcp-testsuite
+pcp-webapi
+pcp-webapp-blinkenlights
+pcp-webapp-grafana
+pcp-webapp-graphite
+pcp-webapp-vector
+pcp-webjs
+pcp-zeroconf
+pcre2
+pcre2-devel
+pcre2-utf16
+pcre2-utf32
+pcre
+pcre-cpp
+pcre-devel
+pcre-utf16
+pcre-utf32
+perf
+perl-Bit-Vector
+perl-Carp
+perl-Carp-Clan
+perl-Class-Method-Modifiers
+perl-Compress-Raw-Bzip2
+perl-Compress-Raw-Zlib
+perl-constant
+perl-CPAN-Meta
+perl-CPAN-Meta-Requirements
+perl-CPAN-Meta-YAML
+perl-Crypt-DES
+perl-Data-Dump
+perl-Data-Dumper
+perl-Data-OptList
+perl-Date-Calc
+perl-Date-Manip
+perl-DBD-MySQL
+perl-DBD-SQLite
+perl-DBI
+perl-devel
+perl-Devel-GlobalDestruction
+perl-Digest
+perl-Digest-HMAC
+perl-Digest-MD5
+perl-Digest-SHA1
+perl-Digest-SHA
+perl-Encode
+perl-Encode-Locale
+perl-encoding
+perl-Errno
+perl-Error
+perl-Exporter
+perl-ExtUtils-Command
+perl-ExtUtils-Install
+perl-ExtUtils-MakeMaker
+perl-ExtUtils-Manifest
+perl-ExtUtils-ParseXS
+perl-Fedora-VSP
+perl-File-Copy-Recursive
+perl-File-Listing
+perl-File-Path
+perl-File-Slurp
+perl-File-Temp
+perl-File-Which
+perl-Filter
+perl-Filter-Simple
+perl-FusionInventory-Agent
+perl-generators
+perl-Getopt-Long
+perl-Git
+perl-HTML-Parser
+perl-HTML-Tagset
+perl-HTTP-Cookies
+perl-HTTP-Daemon
+perl-HTTP-Date
+perl-HTTP-Lite
+perl-HTTP-Message
+perl-HTTP-Negotiate
+perl-HTTP-Tiny
+perl-Import-Into
+perl-interpreter
+perl-IO
+perl-IO-Compress
+perl-IO-HTML
+perl-IO-Socket-IP
+perl-IO-Socket-SSL
+perl-Jcode
+perl-JSON
+perl-JSON-PP
+perl-libnet
+perl-libs
+perl-libwww-perl
+perl-LWP-MediaTypes
+perl-LWP-Protocol-https
+perl-macros
+perl-Math-BigInt
+perl-Math-Complex
+perl-Memoize
+perl-MIME-Base64
+perl-Module-Runtime
+perl-Moo
+perl-Mozilla-CA
+perl-Net-CUPS
+perl-Net-HTTP
+perl-Net-IP
+perl-Net-Ping
+perl-Net-SNMP
+perl-Net-SSLeay
+perl-NTLM
+perl-open
+perl-Package-Generator
+perl-Parallel-ForkManager
+perl-Params-Util
+perl-parent
+perl-Parse-EDID
+perl-PathTools
+perl-PCP-LogImport
+perl-PCP-LogSummary
+perl-PCP-MMV
+perl-PCP-PMDA
+perl-Pod-Escapes
+perl-podlators
+perl-Pod-Perldoc
+perl-Pod-Simple
+perl-Pod-Usage
+perl-Proc-Daemon
+perl-Proc-ProcessTable
+perl-Role-Tiny
+perl-Scalar-List-Utils
+perl-SelfLoader
+perl-Socket
+perl-Socket6
+perl-Socket-GetAddrInfo
+perl-srpm-macros
+perl-Storable
+perl-Sub-Exporter
+perl-Sub-Exporter-Progressive
+perl-Sub-Install
+perl-Sub-Quote
+perl-Sys-Syslog
+perl-Term-ANSIColor
+perl-Term-Cap
+perl-TermReadKey
+perl-Test-Harness
+perl-Text-Balanced
+perl-Text-ParseWords
+perl-Text-Tabs+Wrap
+perl-Text-Template
+perl-Thread-Queue
+perl-threads
+perl-threads-shared
+perl-Tie-IxHash
+perl-TimeDate
+perl-Time-HiRes
+perl-Time-Local
+perl-Try-Tiny
+perl-Unicode-Normalize
+perl-UNIVERSAL-require
+perl-URI
+perl-version
+perl-WWW-RobotRules
+perl-XML-Catalog
+perl-XML-LibXML
+perl-XML-NamespaceSupport
+perl-XML-Parser
+perl-XML-SAX
+perl-XML-SAX-Base
+perl-XML-TokeParser
+perl-XML-TreePP
+perl-XML-XPath
+perl-YAML-Tiny
+pesign
+pigz
+pinentry
+pinentry-gtk
+pinfo
+pipewire0.2-libs
+pipewire
+pipewire-libs
+pixman
+pixman-devel
+pkgconf
+pkgconf-m4
+pkgconf-pkg-config
+platform-python
+platform-python-coverage
+platform-python-pip
+platform-python-setuptools
+plymouth
+plymouth-core-libs
+plymouth-scripts
+policycoreutils
+policycoreutils-python-utils
+polkit
+polkit-devel
+polkit-docs
+polkit-libs
+polkit-pkla-compat
+poppler
+poppler-data
+poppler-glib
+popt
+popt-devel
+postfix
+postfix-perl-scripts
+powertop
+prefixdevname
+procps-ng
+protobuf-c
+psacct
+psmisc
+publicsuffix-list-dafsa
+pulseaudio
+pulseaudio-libs
+pulseaudio-libs-devel
+pulseaudio-libs-glib2
+pulseaudio-module-bluetooth
+pygobject2
+pygtk2
+python2
+python2-cairo
+python2-libs
+python2-pip
+python2-pip-wheel
+python2-setuptools
+python2-setuptools-wheel
+python36
+python3-asn1crypto
+python3-audit
+python3-augeas
+python3-bcc
+python3-bind
+python3-blivet
+python3-blockdev
+python3-brlapi
+python3-bytesize
+python3-cairo
+python3-cffi
+python3-chardet
+python3-configobj
+python3-configshell
+python3-cryptography
+python3-cups
+python3-dateutil
+python3-dbus
+python3-decorator
+python3-dmidecode
+python3-dnf
+python3-dnf-plugins-core
+python3-enchant
+python3-ethtool
+python3-firewall
+python3-gobject
+python3-gobject-base
+python3-gpg
+python3-hawkey
+python3-html5lib
+python3-humanize
+python3-hwdata
+python3-idna
+python3-iniparse
+python3-inotify
+python3-jsonpointer
+python3-kickstart
+python3-kmod
+python3-langtable
+python3-libcomps
+python3-libdnf
+python3-librepo
+python3-libreport
+python3-libs
+python3-libselinux
+python3-libsemanage
+python3-libstoragemgmt
+python3-libstoragemgmt-clibs
+python3-libvirt
+python3-libxml2
+python3-linux-procfs
+python3-louis
+python3-lxml
+python3-magic
+python3-meh
+python3-meh-gui
+python3-netaddr
+python3-netifaces
+python3-newt
+python3-ntplib
+python3-ordered-set
+python3-pcp
+python3-perf
+python3-pid
+python3-pip
+python3-pip-wheel
+python3-ply
+python3-policycoreutils
+python3-productmd
+python3-psycopg2
+python3-pwquality
+python3-pyatspi
+python3-pycparser
+python3-pycurl
+python3-pydbus
+python3-pyOpenSSL
+python3-pyparsing
+python3-pyparted
+python3-pysocks
+python3-pytz
+python3-pyudev
+python3-pyxdg
+python3-pyyaml
+python3-requests
+python3-requests-file
+python3-requests-ftp
+python3-rhnlib
+python3-rpm
+python3-rpm-macros
+python3-rtslib
+python3-schedutils
+python3-setools
+python3-setuptools
+python3-setuptools-wheel
+python3-simpleline
+python3-six
+python3-slip
+python3-slip-dbus
+python3-speechd
+python3-sssdconfig
+python3-subscription-manager-rhsm
+python3-syspurpose
+python3-systemd
+python3-unbound
+python3-urllib3
+python3-urwid
+python3-webencodings
+python-srpm-macros
+qemu-img
+qemu-kvm
+qemu-kvm-block-curl
+qemu-kvm-block-gluster
+qemu-kvm-block-iscsi
+qemu-kvm-block-rbd
+qemu-kvm-block-ssh
+qemu-kvm-common
+qemu-kvm-core
+qt5-designer
+qt5-doctools
+qt5-linguist
+qt5-qt3d
+qt5-qt3d-devel
+qt5-qtbase
+qt5-qtbase-common
+qt5-qtbase-devel
+qt5-qtbase-gui
+qt5-qtbase-mysql
+qt5-qtbase-odbc
+qt5-qtbase-postgresql
+qt5-qtcanvas3d
+qt5-qtconnectivity
+qt5-qtconnectivity-devel
+qt5-qtdeclarative
+qt5-qtdeclarative-devel
+qt5-qtdoc
+qt5-qtgraphicaleffects
+qt5-qtimageformats
+qt5-qtlocation
+qt5-qtlocation-devel
+qt5-qtmultimedia
+qt5-qtmultimedia-devel
+qt5-qtquickcontrols2
+qt5-qtquickcontrols
+qt5-qtscript
+qt5-qtscript-devel
+qt5-qtsensors
+qt5-qtsensors-devel
+qt5-qtserialbus
+qt5-qtserialport
+qt5-qtserialport-devel
+qt5-qtsvg
+qt5-qtsvg-devel
+qt5-qttools
+qt5-qttools-common
+qt5-qttools-devel
+qt5-qttools-libs-designer
+qt5-qttools-libs-designercomponents
+qt5-qttools-libs-help
+qt5-qttranslations
+qt5-qtwayland
+qt5-qtwebchannel
+qt5-qtwebchannel-devel
+qt5-qtwebsockets
+qt5-qtwebsockets-devel
+qt5-qtx11extras
+qt5-qtx11extras-devel
+qt5-qtxmlpatterns
+qt5-qtxmlpatterns-devel
+qt5-rpm-macros
+qt5-srpm-macros
+quota
+quota-nls
+radvd
+rarian
+rarian-compat
+rasdaemon
+rdma-core
+rdma-core-devel
+readline
+readline-devel
+realmd
+redhat-backgrounds
+redhat-indexhtml
+redhat-logos
+redhat-lsb-core
+redhat-lsb-submod-security
+redhat-menus
+redhat-release
+redhat-release-eula
+redhat-rpm-config
+rest
+rhnlib
+rhsm-gtk
+rng-tools
+rootfiles
+rpcbind
+rpm
+rpm-build
+rpm-build-libs
+rpm-devel
+rpm-libs
+rpm-ostree-libs
+rpm-plugin-selinux
+rpm-plugin-systemd-inhibit
+rpm-sign
+rrdtool
+rrdtool-perl
+rsync
+rsyslog
+rsyslog-gnutls
+rsyslog-gssapi
+rsyslog-relp
+rtkit
+rust-srpm-macros
+sac
+samba
+samba-client
+samba-client-libs
+samba-common
+samba-common-libs
+samba-common-tools
+samba-libs
+sane-backends
+sane-backends-devel
+sane-backends-drivers-cameras
+sane-backends-drivers-scanners
+sane-backends-libs
+sane-frontends
+satyr
+sbc
+scl-utils
+scl-utils-build
+SDL
+SDL-devel
+seabios-bin
+seavgabios-bin
+sed
+selinux-policy
+selinux-policy-targeted
+setroubleshoot-plugins
+setroubleshoot-server
+setup
+sg3_utils
+sg3_utils-libs
+sgabios-bin
+sgml-common
+shadow-utils
+shared-mime-info
+shim-x64
+sil-abyssinica-fonts
+sil-nuosu-fonts
+sil-padauk-fonts
+skkdic
+slang
+slang-devel
+smartmontools
+smc-fonts-common
+smc-meera-fonts
+snappy
+socat
+sos
+sound-theme-freedesktop
+soundtouch
+source-highlight
+spax
+speech-dispatcher
+speech-dispatcher-espeak-ng
+speex
+speexdsp
+spice-glib
+spice-gtk3
+spice-server
+sqlite
+sqlite-devel
+sqlite-libs
+squashfs-tools
+sscg
+sssd
+sssd-ad
+sssd-client
+sssd-common
+sssd-common-pac
+sssd-ipa
+sssd-kcm
+sssd-krb5
+sssd-krb5-common
+sssd-ldap
+sssd-nfs-idmap
+sssd-proxy
+startup-notification
+startup-notification-devel
+stix-fonts
+strace
+subscription-manager-rhsm-certificates
+sudo
+suitesparse
+sushi
+switcheroo-control
+symlinks
+sysstat
+system-config-printer-libs
+systemd
+systemd-container
+systemd-devel
+systemd-libs
+systemd-pam
+systemd-udev
+systemtap
+systemtap-client
+systemtap-devel
+systemtap-runtime
+systemtap-sdt-devel
+taglib
+tar
+targetcli
+target-restore
+tbb
+tbb-devel
+tcl
+tcl-devel
+tcpdump
+tcsh
+teamd
+thai-scalable-fonts-common
+thai-scalable-waree-fonts
+theora-tools
+tigervnc
+tigervnc-icons
+tigervnc-license
+tigervnc-server
+tigervnc-server-minimal
+time
+timedatex
+tk
+tk-devel
+totem
+totem-nautilus
+totem-pl-parser
+trace-cmd
+traceroute
+tracker
+tracker-miners
+tree
+trousers
+trousers-lib
+ttmkfdir
+tuned
+twolame-libs
+tzdata
+tzdata-java
+udisks2
+unbound-libs
+unicode-ucd
+unixODBC
+unixODBC-devel
+unzip
+upower
+urw-base35-bookman-fonts
+urw-base35-c059-fonts
+urw-base35-d050000l-fonts
+urw-base35-fonts
+urw-base35-fonts-common
+urw-base35-gothic-fonts
+urw-base35-nimbus-mono-ps-fonts
+urw-base35-nimbus-roman-fonts
+urw-base35-nimbus-sans-fonts
+urw-base35-p052-fonts
+urw-base35-standard-symbols-ps-fonts
+urw-base35-z003-fonts
+usbmuxd
+usbredir
+usbutils
+usermode
+usermode-gtk
+userspace-rcu
+util-linux
+util-linux-user
+valgrind
+valgrind-devel
+vdo
+vim-common
+vim-enhanced
+vim-filesystem
+vim-minimal
+vino
+virt-what
+volume_key-libs
+vte291
+vte-profile
+vulkan-loader
+wavpack
+wayland-devel
+wayland-protocols-devel
+webkit2gtk3
+webkit2gtk3-devel
+webkit2gtk3-jsc
+webkit2gtk3-jsc-devel
+webkit2gtk3-plugin-process-gtk2
+webrtc-audio-processing
+wget
+which
+woff2
+words
+wpa_supplicant
+xcb-util
+xcb-util-image
+xcb-util-keysyms
+xcb-util-renderutil
+xcb-util-wm
+xdg-desktop-portal
+xdg-desktop-portal-gtk
+xdg-user-dirs
+xdg-user-dirs-gtk
+xdg-utils
+xfsdump
+xfsprogs
+xfsprogs-devel
+xkeyboard-config
+xkeyboard-config-devel
+xml-common
+xmlrpc-c
+xmlrpc-c-client
+xorg-x11-docs
+xorg-x11-drv-fbdev
+xorg-x11-drv-libinput
+xorg-x11-drv-vesa
+xorg-x11-fonts-ISO8859-1-100dpi
+xorg-x11-fonts-ISO8859-1-75dpi
+xorg-x11-fonts-misc
+xorg-x11-fonts-Type1
+xorg-x11-font-utils
+xorg-x11-proto-devel
+xorg-x11-server-common
+xorg-x11-server-utils
+xorg-x11-server-Xorg
+xorg-x11-server-Xvfb
+xorg-x11-server-Xwayland
+xorg-x11-utils
+xorg-x11-xauth
+xorg-x11-xbitmaps
+xorg-x11-xinit
+xorg-x11-xkb-utils
+xsane-common
+xsane-gimp
+xterm
+xterm-resize
+xz
+xz-devel
+xz-libs
+yajl
+yelp
+yelp-libs
+yelp-tools
+yelp-xsl
+ypbind
+yp-tools
+yum
+zabbix-agent
+zenity
+zip
+zlib
+zlib-devel
+zsh
+</code></pre></div>
+<p>然后创建一个批处理命令，在RHEL里面执行，将依赖包都安装好。
+创建批处理命令，并给其可执行的权限：
+</p><div class="highlight"><pre><span></span><code>touch<span class="w"> </span>yuminstall.sh
+chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>yuminstall.sh
+</code></pre></div>
+<p>批处理命令内容如下：</p>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>line
+<span class="k">do</span>
+dnf<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span><span class="nv">$line</span>
+<span class="k">done</span><span class="w"> </span>&lt;<span class="w"> </span>/tmp/installer/list.txt
+</code></pre></div>
+<p>注意：这里所需要的txt文件名称和路径根据自己的文件来设置。
+这里因为依赖包数目非常多，所以这个安装时间会比较长。</p>
+<hr>
+<h3 id="rpm_1">需要单独下载的RPM包</h3>
+<p>有几个RPM不在系统本身的yum源里面，需要单独下载。
+先给大家提供几个我常用的RPM下载网站：</p>
+<ul>
+<li>https://rpmfind.net/linux/rpm2html/search.php</li>
+<li>https://pkgs.org/</li>
+<li>http://rpm.pbone.net</li>
+</ul>
+<p>下面4个RPM包是安装oracle所需要的：</p>
+<ul>
+<li>compat-libstdc++-33-3.2.3-72.el7.i686.rpm</li>
+<li>compat-libstdc++-33-3.2.3-72.el7.x86_64.rpm</li>
+<li>compat-libcap1-1.10-7.el7.i686.rpm</li>
+<li>compat-libcap1-1.10-7.el7.x86_64.rpm</li>
+</ul>
+<p>下面这个包是autovue所需要的：</p>
+<ul>
+<li>wine-av-20040914-26.i386.rpm</li>
+</ul>
+<p>下载地址为：https://oss.oracle.com/AutoVue/</p>
+<hr>
+<h2 id="vncoption">VNC服务配置（option）</h2>
+<p>VNC服务不是一定要安装，具体情况可以根据我们的需要自行决定这个服务是否需要配置。
+确认yum源配置成功后，执行命令</p>
+<p></p><div class="highlight"><pre><span></span><code>dnf<span class="w"> </span>install<span class="w"> </span>tigervnc<span class="w"> </span>tigervnc-server
+</code></pre></div>
+执行成功后，运行
+<div class="highlight"><pre><span></span><code>rpm<span class="w"> </span>-qa<span class="p">|</span>grep<span class="w"> </span>tigervnc
+</code></pre></div>
+<p>可以查询是否安装成功。
+安装成功后，我们可以先设置vnc服务的密码，执行命令：</p>
+<p></p><div class="highlight"><pre><span></span><code>vncpasswd
+</code></pre></div>
+进行设置VPN的密码，以后也可以用改命令更改VNC服务的密码。
+在正式使用VNC服务之前，我们还需要先修改配置文件
+<div class="highlight"><pre><span></span><code>vim<span class="w"> </span>/etc/tigervnc/vncserver-config-defaults
+</code></pre></div>
+<p>注意：一定不要将localhost的注释取消，否则会连不上；geometry是分辨率，可以根据自己的电脑进行设置。
+修改配置文件
+</p><div class="highlight"><pre><span></span><code>vim<span class="w"> </span>/etc/tigervnc/vncserver.users
+</code></pre></div>
+<p>这里可以设置上vpn打开的默认用户，可以根据自己的需要来。
+VNC的设置完成后，我们可以用root执行命令：
+</p><div class="highlight"><pre><span></span><code>vncserver<span class="w"> </span>:1
+</code></pre></div>
+<p>来打开VNC的服务，这里的：1对应的就是5900+1即5901的端口。
+我们也可以将VNC做成一个系统服务，这样就不用每次启动都手动启动这个VNC服务了，这里需要注意一点是，设置这个服务之前，一定请先设置好vnc的服务密码。
+先创建服务文件：</p>
+<div class="highlight"><pre><span></span><code>/etc/systemd/system/vncserver@.service
+</code></pre></div>
+<p>文件内容如下：</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=Remote Desktop VNC Service
+After=syslog.target network.target
+
+[Service]
+Type=forking
+WorkingDirectory=/root
+User=root
+Group=root
+# Clean any existing files in /tmp/.X11-unix environment
+ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i &gt; /dev/null 2&gt;&amp;1 || :'
+ExecStart=/sbin/runuser -l root -c "/usr/bin/vncserver -autokill %i"
+PIDFile=/root/.vnc/%H%i.pid
+ExecStop=/bin/sh -c '/usr/bin/vncserver -kill %i &gt; /dev/null 2&gt;&amp;1 || :'
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div>
+<p>系统服务文件创建成功后，执行下面命令：</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#重载系统服务：</span>
+systemctl<span class="w"> </span>daemon-reload
+<span class="c1">#启动VNC系统服务</span>
+systemctl<span class="w"> </span>start<span class="w"> </span>vncserver@:1.service
+<span class="c1">#将VNC做成系统自启动服务</span>
+systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>vncserver@:1.service
+</code></pre></div>
+<hr>
+<h2 id="oracle19c">安装Oracle19C</h2>
+<h3 id="_3">检查依赖包</h3>
+<p>可以到Oracle官网查询文档，检查RHEL下面需要哪些依赖包。</p>
+<ul>
+<li>bc</li>
+<li>binutils</li>
+<li>compat-libcap1</li>
+<li>compat-libstdc++</li>
+<li>elfutils-libelf</li>
+<li>elfutils-libelf-devel</li>
+<li>fontconfig-devel</li>
+<li>glibc</li>
+<li>glibc-devel</li>
+<li>ksh</li>
+<li>libaio</li>
+<li>libaio-devel</li>
+<li>libX11</li>
+<li>libXau</li>
+<li>libXi</li>
+<li>libXtst</li>
+<li>libXrender</li>
+<li>libXrender-devel</li>
+<li>libgcc</li>
+<li>libstdc++</li>
+<li>libstdc++-devel</li>
+<li>libxcb</li>
+<li>make</li>
+<li>net-tools (for Oracle RAC and Oracle Clusterware)</li>
+<li>nfs-utils (for Oracle ACFS)</li>
+<li>python (for Oracle ACFS Remote)</li>
+<li>python-configshell (for Oracle ACFS Remote)</li>
+<li>python-rtslib (for Oracle ACFS Remote)</li>
+<li>python-six (for Oracle ACFS Remote)</li>
+<li>targetcli (for Oracle ACFS Remote)</li>
+<li>smartmontools</li>
+<li>sysstat</li>
+</ul>
+<hr>
+<h3 id="_4">系统内核参数修改</h3>
+<p>修改</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/sysctl.conf
+</code></pre></div>
+<p>文件，文件尾追加如下设置</p>
+<div class="highlight"><pre><span></span><code>fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+kernel.shmall = 16777216
+kernel.shmmax =  68719476736
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048586
+</code></pre></div>
+<p>修改完成后保存，然后运行</p>
+<p></p><div class="highlight"><pre><span></span><code>sysctl<span class="w"> </span>-p
+</code></pre></div>
+命令使之生效
+<hr>
+<h3 id="_5">数据库用户的创建</h3>
+<p>安装和运行Oracle数据库软件都需要使用指定用户组内的指定用户，用户为Oracle，出于安全考虑，用户组建为oinstall、dba，oinstall组中的成员用于管理Oracle数据库物理软件，dba组中的成员用于管理、操作数据库，具有sysdba权限</p>
+<div class="highlight"><pre><span></span><code><span class="c1">#创建oracle用户组</span>
+groupadd<span class="w"> </span>oinstall
+<span class="c1">#创建oracle用户组</span>
+groupadd<span class="w"> </span>dba
+<span class="c1">#oracle加入新建的2个用户组</span>
+useradd<span class="w"> </span>-g<span class="w"> </span>oinstall<span class="w"> </span>-G<span class="w"> </span>dba<span class="w"> </span>oracle
+<span class="c1">#设置oracle用户的密码</span>
+passwd<span class="w"> </span>oracle
+</code></pre></div>
+<h3 id="oracle">配置Oracle用户限制</h3>
+<p>使用root账号执行下面操作。</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/security/limits.conf
+</code></pre></div>
+<p>在文件最后加入以下的配置：</p>
+<div class="highlight"><pre><span></span><code>oracle              soft    nproc   16384
+oracle              hard    nproc   16384
+oracle              soft    nofile  8192
+oracle              hard    nofile  65536
+oracle              soft    stack   10240
+oracle              hard    stack   32768
+</code></pre></div>
+<h3 id="oracle_1">设定Oracle用户环境变量</h3>
+<p>要成功安装并使用Oracle数据库软件，必须在Oracle用户的.bash_profile文件中设置ORACLE_BASE、ORACLE_HOME、ORACLE_SID和PATH环境变量，其他的根据需要来设置。ORACLE_HOME可以在安装前手动配置，另外，Oracle安装过程中会根据ORACLE_BASE的值自动指定的ORACLE_HOME，所以也可以在安装后将这个ORACLE_HOME写入.bash_profile。
+使用root用户创建安装目录
+</p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/app/oracle/product/19C/db_1
+chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>/app
+chown<span class="w"> </span>-R<span class="w"> </span>oracle:oinstall<span class="w"> </span>/app/oracle
+</code></pre></div>
+<p>切换oracle用户设置变量</p>
+<div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>oracle
+vi<span class="w"> </span>.bash_profile
+</code></pre></div>
+<p>添加如下内容，并保存退出。</p>
+<div class="highlight"><pre><span></span><code>export TMP=/tmp;
+export TMPDIR=$TMP;
+export ORACLE_HOSTNAME=dsu.3ds.com;
+export ORACLE_UNQNAME=enoviav6;
+export ORACLE_BASE=/app/oracle;
+export ORACLE_HOME=$ORACLE_BASE/product/19C/db_1;
+export ORACLE_SID=enoviav6;
+export PATH=/usr/sbin:$PATH;
+export PATH=$ORACLE_HOME/bin:$PATH;
+export LD_LIBRARY_PATH=$ORACLE_HOME/lib:/lib:/usr/lib:/usr/local/lib;
+export CLASSPATH=$ORACLE_HOME/jlib:$ORACLE_HOME/rdbms/jlib;
+export LANG=en_US
+</code></pre></div>
+<p>使配置文件生效</p>
+<div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.bash_profile
+</code></pre></div>
+<h3 id="_6">数据库软件安装</h3>
+<p>因为19c不会将一些安装文件拷贝到oracle_home目录下，所以我们需要将安装文件拷贝至ORACLE_HOME目录下，然后执行安装命令runInstaller，这里需要注意因为RHEL8.7比19C发布的时间晚，所以直接执行安装会有版本不兼容的错误，如下图：</p>
+<p>所以，我们执行安装命令之前，需要设置一下参数，命令如下：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CV_ASSUME_DISTID</span><span class="o">=</span>RHEL7.6
+</code></pre></div>
+<p>然后再执行runInstaller命令即可，具体安装细节如下：</p>
+<p>注：这里是需要用root账号来执行一个脚本，个人是建议使用它的自动执行，这里需要设置上root账号的密码。</p>
+<h3 id="_7">配置数据库监听与服务</h3>
+<p>使用oracle用户输入netca，弹出配置界面</p>
+<h3 id="_8">数据库创建实例</h3>
+<p>使用oracle账户运行dbca，弹出数据库配置。如果显示dbca为不识别命令，是因为oracle的环境变量未配置，检查.bash_profile里面的路径是否正确，或者检查安装的时候，是否将安装文件拷贝到oracle_home下了。
+注：在创建实例的sizing里面的process，更改至900，如果是正式环境则要1200以上。</p>
+<p>注：数据库的字符集一定不要设置错，默认语言和时区建议设置成美国。</p>
+<p>这里是设置EM服务的，有的环境会因为oracle本身的bug，可能这里无法设置，这个没关系的，因为我们操作数据库基本都是靠命令行，EM服务基本用不大上。</p>
+<h3 id="oracle_2">Oracle服务启动命令</h3>
+<p>oracle启动命令为：</p>
+<ul>
+<li>
+<p>启动数据库服务
+</p><div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>oracle
+sqlplus<span class="w"> </span><span class="s2">"/as sysdba"</span>
+startup
+<span class="nb">exit</span>
+
+<span class="sb">```</span>bash
+
+查看数据库是否启动
+<span class="sb">```</span>bash
+<span class="k">select</span><span class="w"> </span>status<span class="w"> </span>from<span class="w"> </span>v<span class="nv">$instance</span><span class="p">;</span>
+</code></pre></div>
+</li>
+<li>
+<p>启动oracle监听
+</p><div class="highlight"><pre><span></span><code>lsnrctl
+lsnrctl&gt;status<span class="w"> </span><span class="o">(</span>查状态<span class="o">)</span>
+lsnrctl&gt;start
+</code></pre></div>
+</li>
+<li>
+<p>关闭数据库服务
+</p><div class="highlight"><pre><span></span><code>shutdown<span class="w"> </span>immediate
+</code></pre></div>
+</li>
+</ul>
+<h3 id="oracle_3">设置Oracle服务自启动</h3>
+<p>对于自用的环境，oracle设置成自启动能让我们省心不少，省的每次都要切oracle用户去执行数据库启动命令了，具体设置方法如下：
+</p><div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>oracle
+vi<span class="w"> </span>/etc/oratab
+</code></pre></div>
+<p>修改设置如下：将默认的N改为Y
+</p><div class="highlight"><pre><span></span><code>enoviav6:/app/oracle/product/19C/db_1:Y
+</code></pre></div>
+<p>rc.local是开机启动需要执行的脚本，下面对其进行一些修改设置，必须用root
+</p><div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>root
+chmod<span class="w"> </span>a+w+x<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>查询一下，这个文件的权限
+</p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>一定要有x这个执行权限
+修改rc.local这个开机启动需要执行的脚本
+</p><div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>在文件最后加上两行启动命令，这里要注意命令的路径：</p>
+<div class="highlight"><pre><span></span><code>su<span class="w"> </span>oracle<span class="w"> </span>-lc<span class="w"> </span><span class="s2">"/app/oracle/product/19C/db_1/bin/lsnrctl start"</span>
+su<span class="w"> </span>oracle<span class="w"> </span>-lc<span class="w"> </span><span class="s2">"/app/oracle/product/19C/db_1/bin/dbstart"</span>
+</code></pre></div>
+<h3 id="_9">取消数据库密码过期限制</h3>
+<p>数据库默认有180密码过期的限制，这个不利于后期的使用，我们需要在系统里面取消掉这个密码限制，首先，需要用sysdba登录进sqlplus环境。
+下面的命令是查看当前的密码有效期的命令：</p>
+<div class="highlight"><pre><span></span><code>SQL&gt;<span class="w"> </span>SELECT<span class="w"> </span>*<span class="w"> </span>FROM<span class="w"> </span>dba_profiles<span class="w"> </span>s<span class="w"> </span>WHERE<span class="w"> </span>s.profile<span class="o">=</span><span class="s1">'DEFAULT'</span><span class="w"> </span>AND<span class="w"> </span><span class="nv">resource_name</span><span class="o">=</span><span class="s1">'PASSWORD_LIFE_TIME'</span><span class="p">;</span>
+</code></pre></div>
+<p>下面的命令是将密码有效期改为无限制的命令：
+</p><div class="highlight"><pre><span></span><code>SQL&gt;<span class="w"> </span>ALTER<span class="w"> </span>PROFILE<span class="w"> </span>DEFAULT<span class="w"> </span>LIMIT<span class="w"> </span>PASSWORD_LIFE_TIME<span class="w"> </span>UNLIMITED<span class="p">;</span>
+</code></pre></div>
+<hr>
+<h2 id="apache-http-server">Apache HTTP Server的安装</h2>
+<p>对于2023x，3DE系统对于Apache HTTP Server的版本要求是高于2.4.53，而RHEL8.5自带的httpd版本是2.4.37，如下图：</p>
+<p>所以，我们就只能去Apache官网去下载高版本的Apache HTTP Server来安装使用，相应的下载网址如下：
+OpenSSL：https://www.openssl.org/source/
+Apache：https://httpd.apache.org/download.cgi
+APR、APR-util、APR iconv：https://apr.apache.org/download.cgi
+PCRE：https://sourceforge.net/projects/pcre/</p>
+<hr>
+<h2 id="openssl">OpenSSL</h2>
+<p>RHEL8的本身限制，我们不能安装下载的openssl，否则会出现RHEL无法启动的问题，所以RHEL8下面还是使用系统自带的openssl。</p>
+<hr>
+<h2 id="apr">安装APR</h2>
+<p>使用root用户执行下面的命令
+解压安装包，进入解压的目录开始执行
+</p><div class="highlight"><pre><span></span><code>./buildconf
+./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr/local/apr
+</code></pre></div>
+执行下面的命令，确认所有的输出信息都是success
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>在上面的命令输出信息都确认为success后，执行下面的命令
+</p><div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>distclean
+</code></pre></div>
+<p>安装完成后，按照下面的命令进行验证是否安装成功。</p>
+<hr>
+<h2 id="apr-util">安装APR-Util</h2>
+<p>使用root用户执行下面的命令
+解压安装包，进入解压的目录开始执行
+</p><div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr/local/apr-util<span class="w"> </span>--with-apr<span class="o">=</span>/usr/local/apr/bin/apr-1-config
+</code></pre></div>
+<p>执行下面的命令，确认所有的输出信息都是success。
+注：这里如果testdbd是FAILED没关系，这个可以忽略掉。
+</p><div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nb">test</span>
+make<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>distclean
+</code></pre></div>
+<p>安装完成后，按照下面的命令进行验证是否安装成功。</p>
+<hr>
+<h2 id="pcre">安装PCRE</h2>
+<p>使用root用户执行下面的命令
+解压安装包，进入解压的目录开始执行
+</p><div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr/local/pcre<span class="w"> </span>--with-apr<span class="o">=</span>/usr/local/apr/bin/apr-1-config
+<span class="sb">```</span>bash
+
+执行下面的命令，确认所有的输出信息都是PASS
+<span class="sb">```</span>bash
+make<span class="w"> </span><span class="nb">test</span>
+</code></pre></div>
+<p>在上面的命令输出信息都确认为PASS后，执行下面的命令
+</p><div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>distclean
+</code></pre></div>
+安装完成后，按照下面的命令进行验证是否安装成功。
+<hr>
+<h2 id="apr-iconv">安装apr-iconv</h2>
+<p>使用root用户执行下面的命令
+解压安装包，进入解压的目录开始执行
+</p><div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--prefix<span class="o">=</span>/usr/local/apr-iconv<span class="w"> </span>--with-apr<span class="o">=</span>/usr/local/apr
+make<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>distclean
+</code></pre></div>
+安装完成后，按照下面的命令进行验证是否安装成功。
+如果目录与上图不符，再执行一下上面的安装步骤即可。
+<hr>
+<h2 id="httpd">安装HTTPD</h2>
+<h3 id="apache">Apache软件安装</h3>
+<p>使用root用户执行下面的命令
+解压安装包，进入解压的目录开始执行
+由于我们上面没有安装OpenSSL，是使用的系统自带的OpenSSL，所以这里的路径是/usr/bin/openssl，具体我们可以用
+</p><div class="highlight"><pre><span></span><code>which<span class="w"> </span>openssl
+</code></pre></div>
+这个命令来确认这里的路径具体的值。
+<div class="highlight"><pre><span></span><code>./configure<span class="w"> </span>--prefix<span class="o">=</span>/app/apache24<span class="w"> </span>--with-pcre<span class="o">=</span>/usr/local/pcre<span class="w"> </span>--with-apr<span class="o">=</span>/usr/local/apr<span class="w"> </span>--with-apr-util<span class="o">=</span>/usr/local/apr-util<span class="w"> </span>--enable-ssl<span class="w"> </span>--with-ssl<span class="o">=</span>/usr/bin/openssl<span class="w"> </span>--enable-so<span class="w"> </span>--enable-rewrite<span class="w"> </span>--enable-mods-shared<span class="o">=</span>all
+make<span class="w"> </span><span class="p">&amp;</span><span class="w"> </span>make<span class="w"> </span>install
+make<span class="w"> </span>clean<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>make<span class="w"> </span>distclean
+</code></pre></div>
+<p>修改配置文件
+</p><div class="highlight"><pre><span></span><code>httpd.conf
+</code></pre></div>
+<p>在文件里有一行为
+</p><div class="highlight"><pre><span></span><code><span class="c1">#ServerName www.example.com:80</span>
+</code></pre></div>
+我们在该行下面添加一行
+<div class="highlight"><pre><span></span><code>ServerName<span class="w"> </span><span class="m">127</span>.0.0.1:80
+</code></pre></div>
+<p>注释掉</p>
+<p>SSLRandomSeed startup builtin</p>
+<p>SSLRandomSeed connect builtin</p>
+<p>启动服务</p>
+<div class="highlight"><pre><span></span><code>/app/apache24/bin/apachectl<span class="w"> </span>-k<span class="w"> </span>start
+</code></pre></div>
+<p>后面的start参数还可以换成stop或者restart来停止或者重启Apache服务
+测试
+打开浏览器，输入
+</p><div class="highlight"><pre><span></span><code>http://localhost
+</code></pre></div>
+页面出现It Works! 表示成功安装。
+或者直接在命令行输入：
+<div class="highlight"><pre><span></span><code>curl<span class="w"> </span>http://localhost
+</code></pre></div>
+<p>输出结果显示 </p><h1>It works!</h1>
+<h3 id="apacheoption">Apache开机自启动服务（option）</h3>
+<p>设定这个Apache开机自启动，可以不用每次开机都切换root账号去启动这个服务，会给我们省心不少。</p>
+<p>查询确认一下，这个文件的权限
+</p><div class="highlight"><pre><span></span><code>ls<span class="w"> </span>-l<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>一定要有x这个执行权限，如果没有，用root账号给设置好执行权限
+</p><div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>a+w+x<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>修改rc.local这个开机启动需要执行的脚本
+</p><div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/rc.d/rc.local
+</code></pre></div>
+<p>在文件最后加上一行
+</p><div class="highlight"><pre><span></span><code>su<span class="w"> </span>root<span class="w"> </span>-lc<span class="w"> </span><span class="s2">"/app/apache24/bin/apachectl -k start"</span>
+</code></pre></div>
+<p>设置一下整个目录的权限
+</p><div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>/app/apache24/
+</code></pre></div>
+<p>重启一下服务器，开机测试一下</p>
+<h3 id="modules">Modules激活</h3>
+<p>3DE环境的运行需要Apache的一些模块，我们可以从PD网站上获取这些模块的清单，这些模块有些是默认关闭的，所以我们需要修改启用这些modules，具体列表如下：</p>
+<ul>
+<li>mod_authz_core.so</li>
+<li>mod_cache.so</li>
+<li>mod_cache_disk.so</li>
+<li>mod_deflate.so</li>
+<li>mod_filter.so</li>
+<li>mod_headers.so</li>
+<li>mod_log_config.so</li>
+<li>mod_proxy.so</li>
+<li>mod_proxy_http.so</li>
+<li>mod_proxy_wstunnel.so</li>
+<li>mod_rewrite.so</li>
+<li>mod_setenvif.so</li>
+<li>mod_socache_shmcb.so</li>
+<li>mod_ssl.so</li>
+<li>mod_slotmem_shm.so</li>
+<li>mod_alias.so</li>
+<li>mod_authz_host.so</li>
+<li>mod_dir.so</li>
+<li>mod_mime.so</li>
+</ul>
+<p>LoadBalance需要额外开启：</p>
+<ul>
+<li>mod_proxy_balancer.so</li>
+<li>mod_lbmethod_bybusyness.so</li>
+<li>mod_lbmethod_byrequests.so</li>
+<li>mod_lbmethod_bytraffic.so</li>
+<li>mod_lbmethod_heartbeat.so</li>
+</ul>
+<hr>
+<h2 id="jdk">安装JDK</h2>
+<p>解压jdk文件，并将解压的目录移动到app目录下。
+</p><div class="highlight"><pre><span></span><code>tar<span class="w"> </span>zxvf<span class="w"> </span>jdk-17.0.5_linux-x64_bin.tar.gz
+mv<span class="w"> </span>jdk-17.0.5<span class="w"> </span>/app/.
+</code></pre></div>
+<p>修改环境变量</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>/etc/profile
+</code></pre></div>
+<p>增加设定如下：
+</p><div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">JAVA_HOME</span><span class="o">=</span>/app/jdk-17.0.5
+<span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span>/bin:<span class="nv">$PATH</span>
+</code></pre></div>
+<p>执行 source /etc/profile使配置立即生效
+执行下面命令，使安装的java成为默认Java</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/usr/bin/
+ln<span class="w"> </span>-s<span class="w"> </span>-f<span class="w"> </span>/app/jdk-17.0.5/bin/javac
+</code></pre></div>
+<p>进行验证</p>
+<p>这里确认显示的Java的路径和Java的版本都是我们新安装的Java即可。</p>
+<h2 id="_10">证书的生成与设置</h2>
+<p>使用root用户执行如下命令，注意保证使用的java的版本正确</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/app/apache24/conf/ssl
+<span class="nb">cd</span><span class="w"> </span>/app/apache24/conf/ssl
+</code></pre></div>
+<p>在Apache安装路径下的conf文件夹下创建ssl目录，并进入该目录创建文件3dx_vs_com.ext用于生成v3证书，因为powerby的连接需要v3证书，默认的v1证书无法正常连接。</p>
+<div class="highlight"><pre><span></span><code>vi<span class="w"> </span>3dx_vs_com.ext
+</code></pre></div>
+<p>填写如下内容到3dx_vs_com.ext文件内</p>
+<div class="highlight"><pre><span></span><code><span class="nv">authorityKeyIdentifier</span><span class="o">=</span>keyid,issuer
+<span class="nv">basicConstraints</span><span class="o">=</span>CA:FALSE
+<span class="nv">keyUsage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>digitalSignature,<span class="w"> </span>nonRepudiation,<span class="w"> </span>keyEncipherment,<span class="w"> </span>dataEncipherment
+<span class="nv">subjectAltName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>@alt_names
+<span class="o">[</span>alt_names<span class="o">]</span>
+DNS.1<span class="w"> </span><span class="o">=</span><span class="w"> </span>dsu.3ds.com
+DNS.2<span class="w"> </span><span class="o">=</span><span class="w"> </span>dsu.3ds.com
+</code></pre></div>
+<p>执行如下命令</p>
+<div class="highlight"><pre><span></span><code>openssl<span class="w"> </span>genrsa<span class="w"> </span>-des3<span class="w"> </span>-out<span class="w"> </span>RootCA.key<span class="w"> </span>-passout<span class="w"> </span>pass:Qwer1234<span class="w"> </span><span class="m">2048</span>
+openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-sha256<span class="w"> </span>-new<span class="w"> </span>-nodes<span class="w"> </span>-key<span class="w"> </span>RootCA.key<span class="w"> </span>-days<span class="w"> </span><span class="m">3650</span><span class="w"> </span>-out<span class="w"> </span>RootCA.crt<span class="w"> </span>-passin<span class="w"> </span>pass:Qwer1234<span class="w"> </span>-subj<span class="w"> </span><span class="s2">"/C=ZH/ST=BJ/L=BJ/O=DSCN/OU=CS/CN=RootCA"</span>
+openssl<span class="w"> </span>rsa<span class="w"> </span>-in<span class="w"> </span>RootCA.key<span class="w"> </span>-out<span class="w"> </span>3dx_vs_com.key<span class="w"> </span>-passin<span class="w"> </span>pass:Qwer1234
+openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>3dx_vs_com.key<span class="w"> </span>-out<span class="w"> </span>3dx_vs_com.csr<span class="w"> </span>-subj<span class="w"> </span><span class="s2">"/C=ZH/ST=BJ/L=BJ/O=DSCN/OU=CS/CN=*.3ds.com"</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-sha256<span class="w"> </span>-req<span class="w"> </span>-in<span class="w"> </span>3dx_vs_com.csr<span class="w"> </span>-CA<span class="w"> </span>RootCA.crt<span class="w"> </span>-CAkey<span class="w"> </span>RootCA.key<span class="w"> </span>-CAcreateserial<span class="w"> </span>-out<span class="w"> </span>3dx_vs_com.crt<span class="w"> </span>-days<span class="w"> </span><span class="m">3650</span><span class="w"> </span>-passin<span class="w"> </span>pass:Qwer1234<span class="w"> </span>-extfile<span class="w"> </span>3dx_vs_com.ext
+openssl<span class="w"> </span>x509<span class="w"> </span>-noout<span class="w"> </span>-text<span class="w"> </span>-in<span class="w"> </span>3dx_vs_com.crt
+keytool<span class="w"> </span>-importcert<span class="w"> </span>-keystore<span class="w"> </span>/app/jdk-17.0.5/lib/security/cacerts<span class="w"> </span>-noprompt<span class="w"> </span>-storepass<span class="w"> </span>changeit<span class="w"> </span>-file<span class="w"> </span>RootCA.crt<span class="w"> </span>-alias<span class="w"> </span>RootCA
+</code></pre></div>
+<p>执行下面的命令，检查是否正确导入</p>
+<div class="highlight"><pre><span></span><code>keytool<span class="w"> </span>-list<span class="w"> </span>-keystore<span class="w"> </span>/app/jdk-17.0.5/lib/security/cacerts<span class="w"> </span>-storepass<span class="w"> </span>changeit<span class="w"> </span>-alias<span class="w"> </span>RootCA
+</code></pre></div>
+<p>删除导入证书的命令：</p>
+<div class="highlight"><pre><span></span><code>keytool<span class="w"> </span>-delete<span class="w"> </span>-alias<span class="w"> </span>RootCA<span class="w"> </span>-keystore<span class="w"> </span>/app/jdk-17.0.5/lib/security/cacerts<span class="w"> </span>-storepass<span class="w"> </span>changeit
+</code></pre></div>
+<p>更改一下ssl目录下面的文件权限</p>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">777</span><span class="w"> </span>/app/apache24/conf/ssl
+</code></pre></div>
+<h3 id="apachehttpdconf">设置Apache的httpd.conf文件</h3>
+<p>打开conf 目录下httpd.conf文件进行编辑
+在文件的最后加上一行：
+</p><div class="highlight"><pre><span></span><code>Include<span class="w"> </span>conf/2023x_v1.conf
+</code></pre></div>
+<p>在conf目录下，创建文件</p>
+<div class="highlight"><pre><span></span><code>2023x_v1.conf
+</code></pre></div>
+<p>文件内容如下：</p>
+<div class="highlight"><pre><span></span><code>KeepAlive On
+KeepAliveTimeout 6
+MaxKeepAliveRequests 400
+
+#LoadModule cache_module modules/mod_cache.so
+&lt;IfModule mod_cache.c&gt;
+#LoadModule cache_disk_module modules/mod_cache_disk.so
+&lt;IfModule mod_cache_disk.c&gt;
+CacheRoot /opt/data/memory_vol
+CacheEnable disk /
+CacheDirLevels 5
+CacheDirLength 2
+&lt;/IfModule&gt;
+&lt;/IfModule&gt;
+
+#LoadModule deflate_module modules/mod_deflate.so
+
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/javascript
+#AddOutputFilterByType DEFLATE application/x-httpd-php
+AddOutputFilterByType DEFLATE application/json
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/atom_xml
+
+Listen 443
+&lt;VirtualHost *:443&gt;
+    ServerName  dsu.3ds.com
+    ServerAlias dsu.3ds.com
+
+    SSLEngine on
+    SSLProxyEngine On
+    SSLCertificateFile conf/ssl/3dx_vs_com.crt
+    SSLCertificateKeyFile conf/ssl/3dx_vs_com.key
+
+    ProxyRequests Off 
+
+    #Include conf/3DPassport_httpd_fragment.conf
+    #Include conf/3DDashboard_httpd_fragment.conf
+    #Include conf/federated_httpd_fragment.conf
+    #Include conf/3DSpace_httpd_fragment.conf
+    #Include conf/fcs_httpd_fragment.conf
+    #Include conf/3DSwym_httpd_fragment.conf
+    #Include conf/3DNotification_httpd_fragment.conf
+    #Include conf/3DComment_httpd_fragment.conf
+
+&lt;/VirtualHost&gt;
+
+&lt;VirtualHost *:443&gt;
+    ServerName  untrusted.dsu.3ds.com
+    ServerAlias     untrusted.dsu.3ds.com
+
+    SSLEngine on
+    SSLProxyEngine On
+    SSLCertificateFile conf/ssl/3dx_vs_com.crt
+    SSLCertificateKeyFile conf/ssl/3dx_vs_com.key
+
+    ProxyRequests Off 
+&lt;/VirtualHost&gt;
+</code></pre></div>
+<h2 id="dsls">DSLS</h2>
+<p>创建License目录与文件</p>
+<p>使用root用户执行如下命令
+</p><div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w">  </span>/var/DassaultSystemes/Licenses
+vi<span class="w"> </span>/var/DassaultSystemes/Licenses/DSLicSrv.txt
+</code></pre></div>
+<p>添加DSLS的设置，这里的设置需要对应设置你自己的DSLS相应的IP和端口号。</p>
+<div class="highlight"><pre><span></span><code><span class="m">192</span>.168.107.1:4085
+</code></pre></div>
+<h2 id="_11">创建用户与组</h2>
+<p>3DE的安装和运维，我们是不推荐使用root账号执行的，所以我们需要创建一个专门来安装和运维3DE的用户，下面用root账号创建plmadm用户和组：</p>
+<div class="highlight"><pre><span></span><code>groupadd<span class="w"> </span>plmadm
+useradd<span class="w"> </span>-g<span class="w"> </span>plmadm<span class="w"> </span>plmadm
+</code></pre></div>
+<p>设置用户密码：</p>
+<div class="highlight"><pre><span></span><code>passwd<span class="w"> </span>plmadm
+</code></pre></div>
+<h2 id="_12">设置用户限制</h2>
+<p>在RHEL8.7我查看了一下，好像默认的限制已经很大了，但是考虑到用户可能有不同的情况，所以下面还是给出解除用户限制的方法下面的设置，尤其后两行是设置可以打开最大文件数目的如果当前机器安装了索引服务器，那么最后两行最好设置一下，因为系统默认open file的数量是1024，对于索引服务器有些少。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">ulimit</span><span class="w"> </span>-a<span class="w"> </span>
+</code></pre></div>
+<p>显示当前的用户各种限制</p>
+<p>在/etc/security/limits.conf中添加如下配置：</p>
+<div class="highlight"><pre><span></span><code>plmadm<span class="w"> </span>soft<span class="w"> </span>nproc<span class="w"> </span><span class="m">8192</span>
+plmadm<span class="w"> </span>hard<span class="w"> </span>nproc<span class="w"> </span><span class="m">8192</span>
+plmadm<span class="w"> </span>soft<span class="w"> </span>nofile<span class="w"> </span><span class="m">80000</span>
+plmadm<span class="w"> </span>hard<span class="w"> </span>nofile<span class="w"> </span><span class="m">80000</span>
+</code></pre></div>
+<p>我们可以切换到plmadm用户看一下设置之后的用户限制数值</p>
+<h2 id="tomee">设置TomEE</h2>
+<p>因为系统里面的各个服务基本都是以TomEE为中间件服务器的，所以我们要将符合版本要求的TomEE拷贝多份，以方便后边不用的服务的使用，因为app目录默认是root的所有权，所以下面的操作我是使用root账号运行的。</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>/app/tomee
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3dpassport
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3ddashboard
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3dsearch
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3dspace
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/fcs
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3dswym
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/3dcomment
+cp<span class="w"> </span>-r<span class="w"> </span>apache-tomee-plus-8.0.13/<span class="w"> </span>/app/tomee/nocas
+</code></pre></div>
+<p>因为这个示例的安装是在一个服务器上进行安装，所以就需要给各个tomee设置不同的端口号，我们预定义的各个tomee的端口号如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Server Name</th>
+<th style="text-align: right;">Shutdown Port</th>
+<th style="text-align: center;">HTTP Port</th>
+<th style="text-align: left;">Redirect Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">3dpassport</td>
+<td style="text-align: right;">8005</td>
+<td style="text-align: center;">8080</td>
+<td style="text-align: left;">8443</td>
+</tr>
+<tr>
+<td style="text-align: left;">3ddashboard</td>
+<td style="text-align: right;">8006</td>
+<td style="text-align: center;">8081</td>
+<td style="text-align: left;">8444</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dsearch</td>
+<td style="text-align: right;">8007</td>
+<td style="text-align: center;">8082</td>
+<td style="text-align: left;">8445</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dspace(CAS)</td>
+<td style="text-align: right;">8008</td>
+<td style="text-align: center;">8083</td>
+<td style="text-align: left;">8446</td>
+</tr>
+<tr>
+<td style="text-align: left;">FCS</td>
+<td style="text-align: right;">9005</td>
+<td style="text-align: center;">8084</td>
+<td style="text-align: left;">8447</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dswym</td>
+<td style="text-align: right;">9006</td>
+<td style="text-align: center;">8085</td>
+<td style="text-align: left;">8448</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dcomment</td>
+<td style="text-align: right;">9007</td>
+<td style="text-align: center;">8086</td>
+<td style="text-align: left;">8449</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dspace(NoCAS)</td>
+<td style="text-align: right;">9008</td>
+<td style="text-align: center;">8070</td>
+<td style="text-align: left;">8450</td>
+</tr>
+<tr>
+<td style="text-align: left;">3dnotification</td>
+<td style="text-align: right;">9009</td>
+<td style="text-align: center;">8071</td>
+<td style="text-align: left;">8451</td>
+</tr>
+</tbody>
+</table>
+<p>3dnotification 使用8089端口
+在修改server.xml里面端口设置的同时，请将这个参数加上，如下：</p>
+<div class="highlight"><pre><span></span><code>&lt;Connector<span class="w"> </span><span class="nv">port</span><span class="o">=</span><span class="s2">"8080"</span><span class="w"> </span><span class="nv">protocol</span><span class="o">=</span><span class="s2">"HTTP/1.1"</span>
+<span class="w">               </span><span class="nv">connectionTimeout</span><span class="o">=</span><span class="s2">"20000"</span><span class="w">  </span><span class="nv">URIEncoding</span><span class="o">=</span><span class="s2">"UTF-8"</span><span class="w"> </span>
+<span class="w">               </span><span class="nv">redirectPort</span><span class="o">=</span><span class="s2">"8443"</span><span class="w"> </span><span class="nv">xpoweredBy</span><span class="o">=</span><span class="s2">"false"</span><span class="w"> </span><span class="nv">server</span><span class="o">=</span><span class="s2">"Apache TomEE"</span><span class="w"> </span>/&gt;
+</code></pre></div>
+<p>修改完毕后，我们可以做个简单测试，我们同时启动这几个tomee，看看是否能够同时启动起来，同时启动起来后，我们再访问各个tomee的主页，如果tomee能够同时启动起来，并且各个主页都可以打开，那么tomee设置就没有问题了。
+因为后期要使用TomEE服务的是我们前面创建的plmadm这个用户，所以在确认TomEE的设置没有问题后，我们需要再更改一下整个目录的所有权为plmadm，命令如下：</p>
+<div class="highlight"><pre><span></span><code>chown<span class="w"> </span>-R<span class="w"> </span>plmadm:plmadm<span class="w"> </span>/app/tomee/
+</code></pre></div>
+<h2 id="3de">3DE服务安装目录设置</h2>
+<p>我这里的用例是准备将3DE服务都安装到/app/DassaultSystemes目录下，因为在后期安装的时候，安装程序会使用用户plmadm在安装目录下生成相应的文件，这就需要plmadm用户在相应的目录有所有权，可以进行写操作，所以在安装之前，我们先手动创建一下目录并设置一下目录的所有权。</p>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w">  </span>/app/DassaultSystemes/
+chown<span class="w"> </span>-R<span class="w"> </span>plmadm:plmadm<span class="w"> </span>/app/DassaultSystemes/
+</code></pre></div>
+<h2 id="3dpassport">安装3DPassport</h2>
+<h3 id="_13">创建用户与表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dpassadmin"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'passdb.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span>
+<span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SYNONYM</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dpassadmin"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpassadmin</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dpassadmin"</span><span class="p">;</span>
+
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dpasstokens"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'passtkdb.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span>
+<span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SYNONYM</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dpasstokens"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dpasstokens</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dpasstokens"</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_14">安装完毕配置</h3>
+<p>将"3DPassport_httpd_fragment.conf"相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DPassport_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动passport的tomee服务。</p>
+<h3 id="_15">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：
+https://dsu.3ds.com/3dpassport/ </p>
+<h2 id="3ddashboard">安装3DDashboard</h2>
+<h3 id="_16">创建用户与表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">RESOURCE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'x3ddashadmin.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_17">安装完毕配置</h3>
+<p>将"3DDashboard_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DDashboard_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。</p>
+<h3 id="_18">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：
+https://dsu.3ds.com/3ddashboard/ 
+输入账号密码，进入如下界面：</p>
+<h2 id="3ddashboard_1">安装3DDashboard</h2>
+<h3 id="_19">创建用户与表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">IDENTIFIED</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">RESOURCE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'x3ddashadmin.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3ddashadmin</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_20">安装步骤</h3>
+<h3 id="_21">安装完毕配置</h3>
+<p>将"3DDashboard_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DDashboard_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。</p>
+<h3 id="_22">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：
+https://dsu.3ds.com/3ddashboard/ 
+输入账号密码，进入如下界面：</p>
+<p>该页面的错误是因为我们现在还没有安装3dspace服务，这里调用不到3dspace的服务，所以页面显示不出来。</p>
+<h2 id="3dspaceindex">安装3DSpaceIndex</h2>
+<h3 id="_23">安装步骤</h3>
+<h3 id="_24">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：
+http://dsu.3ds.com:19001 
+输入账号密码，进入如下界面：</p>
+<h3 id="_25">服务维护</h3>
+<p>执行命令开启
+</p><div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2023x/3DSpaceIndex/linux_a64/code/command/startXLAdvancedSearchServer.sh
+</code></pre></div>
+<p>执行命令关闭
+</p><div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2023x/3DSpaceIndex/linux_a64/code/command/stopXLAdvancedSearchServer.sh
+</code></pre></div>
+<h2 id="federatedsearch">安装FederatedSearch</h2>
+<p>18.1.   安装步骤</p>
+<h3 id="_26">安装完毕配置</h3>
+<p>将"federated_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将federated_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。
+18.3.   安装完成测试
+打开Firefox浏览器，输入网址：</p>
+<p>https://dsu.3ds.com/federated/search?query=test</p>
+<p>输入账号密码，进入如下界面：</p>
+<h2 id="3dspace">安装3DSpace</h2>
+<h3 id="_27">创建用户与表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">M1</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">M1</span><span class="p">;</span><span class="w"> </span>
+<span class="k">grant</span><span class="w"> </span><span class="k">connect</span><span class="p">,</span><span class="w"> </span><span class="n">resource</span><span class="p">,</span><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="k">view</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">M1</span><span class="p">;</span><span class="w"> </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"M1"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'M1.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">M1</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="n">M1</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">M1</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"I1_DATA"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'I1_DATA.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"I1_INDEX"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'I1_INDEX.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"M1_DATA"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'M1_DATA.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"M1_INDEX"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'M1_INDEX.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"V1_DATA"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'V1_DATA.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span><span class="w"> </span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"V1_INDEX"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'V1_INDEX.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_28">安装步骤</h3>
+<h3 id="_29">安装完毕配置</h3>
+<h3 id="_30">反向代理设置</h3>
+<p>将"3DSpace_httpd_fragment.conf"拷贝到Apache的conf目录，这个文件里面对于CAS和NOCAS的TomEE对应端口默认是没有设置的，所以我们需要将这个文件中的端口号内容进行相应的设置，修改2023x_v1.conf文件，将3dspace的conf文件引入，重启Apache。</p>
+<h3 id="tomee_1">Tomee服务配置</h3>
+<p>执行
+</p><div class="highlight"><pre><span></span><code>BuildDeploy3DSpace_CAS.sh
+</code></pre></div>
+和
+<div class="highlight"><pre><span></span><code>BuildDeploy3DSpace_NoCAS.sh
+</code></pre></div>
+<p>脚本，生成CAS和NoCAS的war文件，然后拷贝生成的war文件至3dspace的cas和nocas目录。
+注意：因为后面还有必须和选装的webapp需要进行安装，等那些模块安装完，还是需要重新生成war包的，这里如果是想第一时间进行3dspace服务的验证，可以现在生成war包，否则可以等相关的webapp都安装完后再进行war包的生成。
+修改cas和nocas的startup.sh文件
+在cas的startup.sh里面增加</p>
+<div class="highlight"><pre><span></span><code>./app/DassaultSystemes/R2023x/3DSpace/scripts/mxEnvCAS.sh
+</code></pre></div>
+<p>在nocas的startup.sh里面增加
+</p><div class="highlight"><pre><span></span><code>./app/DassaultSystemes/R2023x/3DSpace/scripts/mxEnv.sh
+</code></pre></div>
+<h3 id="_31">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：</p>
+<p>https://dsu.3ds.com/3dspace  </p>
+<p>输入账号密码，进入如下界面：</p>
+<h2 id="fcs">安装FCS</h2>
+<h3 id="_32">安装步骤</h3>
+<h3 id="_33">安装完毕配置</h3>
+<p>将"fcs_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将fcs_httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。
+3DE安装后，默认有三个Store：plmx、STORE和Image Store，执行MQL命令，修改这三个store的FCS信息，修改命令为：</p>
+<div class="highlight"><pre><span></span><code>mod<span class="w"> </span>store<span class="w"> </span>STORE<span class="w"> </span>fcs<span class="w"> </span><span class="s2">"https://dsu.3ds.com:443/fcs"</span><span class="p">;</span>
+mod<span class="w"> </span>store<span class="w"> </span>plmx<span class="w"> </span>fcs<span class="w"> </span><span class="s2">"https://dsu.3ds.com:443/fcs"</span><span class="p">;</span>
+mod<span class="w"> </span>store<span class="w"> </span><span class="s2">"Image Store"</span><span class="w"> </span>fcs<span class="w"> </span><span class="s2">"https://dsu.3ds.com:443/fcs"</span><span class="p">;</span>
+</code></pre></div>
+<p>修改完成后，执行相应的mql命令查看，确认三个store都修改完成。以plmx为例，得到的结果应该如下图：</p>
+<h3 id="_34">安装完成测试</h3>
+<p>打开Firefox浏览器，输入网址：</p>
+<p>https://dsu.3ds.com/fcs/servlet/fcs/about </p>
+<h2 id="3dswym">安装3DSwym</h2>
+<h3 id="_35">创建用户与表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dswym</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dswym"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'DBSOCIAL.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dswym"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dswym"</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3dswym</span><span class="p">;</span>
+
+<span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dswym_media"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'DBMEDIA.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dswym_media"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dswym_media"</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3dswym_media</span><span class="p">;</span>
+
+<span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dswym_widget"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'DBWIDGET.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dswym_widget"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dswym_widget"</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3dswym_widget</span><span class="p">;</span>
+</code></pre></div>
+<h2 id="cloudview">安装CloudView</h2>
+<h2 id="3dswym_1">安装3DSwym</h2>
+<h3 id="_36">安装完毕配置</h3>
+<p>将"3DSwym _httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2022x_v1.conf文件，将3DSwym _httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。
+21.5.   安装完成测试
+打开Firefox浏览器，输入网址 ：</p>
+<p>https://dsu.3ds.com/3dswym</p>
+<p>输入账号密码，进入如下界面：</p>
+<h3 id="_37">服务维护</h3>
+<p>执行命令开启
+3DSwym Fundation ：TomEE启动与关闭
+3DSwym Video Converter：
+</p><div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2023x/3DSwym/linux_a64/code/command/ExternalConverterSvc<span class="w"> </span>start
+</code></pre></div>
+<p>3DSwym Index：
+</p><div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2023x/3DSwym/linux_a64/datadir/bin/cvinit.sh<span class="w"> </span>start
+</code></pre></div>
+<h2 id="3dnotification">安装3DNotification</h2>
+<h3 id="_38">创建表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dnotif</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dnotif"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'x3dnotification01.dbf'</span><span class="w"> </span><span class="k">SIZE</span><span class="w"> </span><span class="mi">50</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">50</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dnotif</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dnotif"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dnotif</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dnotif"</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3dnotif</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_39">设置环境变量</h3>
+<p>如果当前机器是数据库与3DE平台装在一起，那么将3DE的用户的ORACLE_HOME和Oracle安装用户的环境变量设置相同，如果Oracle安装在别的机器上，那么需要安装Oracle的client服务。注意client服务需要先安装basic服务，并且这两个服务要和Oracle数据库的版本保持一致。</p>
+<div class="highlight"><pre><span></span><code>su<span class="w"> </span>-<span class="w"> </span>plmadm
+vi<span class="w"> </span>.bash_profile
+</code></pre></div>
+<p>添加如下内容，并保存退出。</p>
+<div class="highlight"><pre><span></span><code>export ORACLE_HOME=/app/oracle/product/19C/db_1;
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME/lib
+</code></pre></div>
+<p>执行命令，重新加载环境变量
+</p><div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.bash_profile
+</code></pre></div>
+<p>上面的示例是因为数据库和3DNotification装在一台机器上，所以不用安装Oracle的client，并且将Oracle_home的值指向和Oracle安装设定的目录一致，如果安装3DNotification的服务器上面没有安装Oracle，那么就需要安装client服务，并且将Oracle_home指向类似下面示例的位置。
+</p><div class="highlight"><pre><span></span><code>export ORACLE_HOME=/usr/lib/oracle/12.1/client64
+</code></pre></div>
+<p>使配置文件生效
+</p><div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>.bash_profile
+</code></pre></div>
+<p>Oracle的client端下载地址为：</p>
+<p>https://www.oracle.com/database/technologies/instant-client/downloads.html</p>
+<h3 id="_40">安装步骤</h3>
+<h3 id="_41">安装完毕配置</h3>
+<p>将"3DNotification_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2023x_v1.conf文件，将3DNotification_httpd_fragment.conf的引用注释去掉，重启Apache服务。</p>
+<h3 id="_42">安装完成测试</h3>
+<p>登陆3DDashboard：</p>
+<p>https://dsu.3ds.com/3ddashboard </p>
+<p>打开3DNotification Center出现如下画面说明安装成功</p>
+<h3 id="_43">服务维护</h3>
+<p>启动和关闭服务的命令如下：</p>
+<p></p><div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2022x/3DNotification/linux_a64/code/command/node<span class="w"> </span>start
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>/app/DassaultSystemes/R2022x/3DNotification/linux_a64/code/command/node<span class="w"> </span>stop
+</code></pre></div>
+<h2 id="3dcomment">安装3DComment</h2>
+<h3 id="_44">创建表空间</h3>
+<div class="highlight"><pre><span></span><code><span class="k">create</span><span class="w"> </span><span class="k">user</span><span class="w"> </span><span class="n">x3dcomment</span><span class="w"> </span><span class="n">identified</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="n">SEQUENCE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SESSION</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">grant</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">SMALLFILE</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="ss">"x3dcomment"</span><span class="w"> </span><span class="n">LOGGING</span><span class="w"> </span><span class="n">DATAFILE</span><span class="w"> </span><span class="s1">'x3dcomment.dbf'</span>
+<span class="k">SIZE</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">AUTOEXTEND</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="k">NEXT</span><span class="w"> </span><span class="mi">10</span><span class="n">M</span><span class="w"> </span><span class="n">MAXSIZE</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">EXTENT</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="k">LOCAL</span><span class="w"> </span><span class="n">SEGMENT</span><span class="w"> </span><span class="k">SPACE</span><span class="w"> </span><span class="n">MANAGEMENT</span><span class="w"> </span><span class="n">AUTO</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dcomment</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">tablespace</span><span class="w"> </span><span class="ss">"x3dcomment"</span><span class="p">;</span>
+<span class="k">ALTER</span><span class="w"> </span><span class="k">USER</span><span class="w"> </span><span class="n">x3dcomment</span><span class="w"> </span><span class="n">QUOTA</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="ss">"x3dcomment"</span><span class="p">;</span>
+<span class="k">GRANT</span><span class="w"> </span><span class="n">UNLIMITED</span><span class="w"> </span><span class="n">TABLESPACE</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">x3dcomment</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="_45">安装步骤</h3>
+<h3 id="_46">安装完毕配置</h3>
+<p>将"3DComment_httpd_fragment.conf" 相应内容修改后拷贝到Apache的conf目录，修改2022x_v1.conf文件，将3DComment _httpd_fragment.conf的引用注释去掉，重启Apache服务。启动tomee服务。
+23.4.   安装完测试</p>
+<p>登陆3DSwym：</p>
+<p>https://dsu.3ds.com/3dswym</p>
+<p>可以添加评论代表安装成功，如下图：</p>
+<h2 id="webapp">WebApp安装</h2>
+<p>注意：即使用户只是Rich Client端的用户，有些基础的webapp也是需要安装的，Rich Client端也是会调用到一些CSV的webapp的，所以webapp的安装算是一个必要步骤。
+因为webapp的安装好多都是有依赖关系的，所以这里我还是给出一个推荐的安装顺序，当然这个排序并非唯一，这里的排序只是我个人整理并安装验证过的。</p>
+<ol>
+<li>3DExplore</li>
+<li>ENOVIAEnterpriseChangeManagement</li>
+<li>ENOVIACollaborativeTasksFoundation</li>
+<li>ENOVIAIPClassificationFoundation</li>
+<li>ENOVIAProjectManagementFoundation</li>
+<li>DELMIAManufacturingModelingFoundation</li>
+<li>DataModelCustomizationFoundation</li>
+<li>ENOVIADocumentManagement</li>
+<li>ENOVIAX-CADDesignFoundation</li>
+<li>ENOVIAIntegrationExchangeFramework</li>
+<li>ENOVIACollaborationforMicrosoftServer</li>
+<li>DELMIAConnectorforApriso</li>
+<li>ENOVIAUnifiedX-CADDesignManagement</li>
+<li>CATIASystemsDesigner</li>
+<li>ENOVIACopyandArtworkFoundation</li>
+<li>ENOVIATraceableRequirementsManagementFoundation</li>
+<li>CATIASystemsEmbeddedElectronics</li>
+<li>CATIASystemsTraceability</li>
+<li>ENOVIAEngineeringBOMManagementFoundation</li>
+<li>ENOVIAEnterpriseAVLManagement</li>
+<li>ENOVIAEBOMAVLManagement</li>
+<li>ENOVIAVariantManagementFoundation</li>
+<li>ENOVIAConfiguredBOMManagementFoundation</li>
+<li>ENOVIAManufacturingBOMManagementFoundation</li>
+<li>ENOVIABOMandDMRFoundation</li>
+<li>ENOVIAPDFRenderingMonitorService</li>
+<li>ENOVIAMarketRegistrationFoundation</li>
+<li>ENOVIADeviceIdentificationFoundation</li>
+<li>ENOVIAAdverseEventReportingFoundation</li>
+<li>ENOVIAProductSpecificationsFoundation</li>
+<li>ENOVIAIPProtectionandExportControlManagement</li>
+<li>ENOVIAUnitBOMManagementFoundation</li>
+<li>ENOVIAMaterialsComplianceFoundation</li>
+<li>ENOVIABOMMaterialsCompliancyFoundation</li>
+<li>ENOVIAMaterialsComplianceReportingFoundation</li>
+<li>DELMIAMfgItemsStructurePlanner</li>
+<li>DELMIAManufacturingAssetsDefinition</li>
+<li>ENOVIAHigh-TechNewPartRequestandDevelopmentOverlay</li>
+<li>DELMIAProcessReview</li>
+<li>DELMIA3DWorkbook</li>
+<li>DELMIA3DLean</li>
+<li>CATIAQualityCheckerConfiguration</li>
+<li>ENOVIADocumentControlFoundation</li>
+<li>ENOVIACAPAandAuditFoundation</li>
+<li>ENOVIAComplaintsandNonConformancesFoundation</li>
+<li>ENOVIAProjectandDHFManagementFoundation</li>
+<li>CATIASystemsReportGeneration</li>
+<li>CATIASystemsExperienceValidation</li>
+<li>ENOVIASupplierItemManagement</li>
+<li>ENOVIASpecificationManagementFoundation</li>
+</ol>
+<h3 id="ds-installeroption">配置DS Installer环境变量（option）</h3>
+<p>因为WebApp的安装需要载入一些依赖文件，所以每个模块的安装基本都要输入命令参数，如：StartGUI.sh -installerPath DS_Installer_unzipped_directory_Path。我们这里可以输入命令如：export DSY_ENOVIA_Installer=/usr/xxx/xxx/1，这样就不用每个安装模块都需要输入installerPath这个路径参数了，如果安装会持续时间比较久，中间会有多次重启之类的操作，也可以将这个变量直接做成用户的固定环境变量参数。</p>
+<h3 id="_47">安装注意</h3>
+<p>因为webapp的安装基本上都是默认参数的安装下去，所以这里我就不给出具体的安装步骤了，安装过程中唯一需要注意的是两点：第一、webapp的安装是需要选择3dspace的安装目录的，这个目录需要选对；第二、大部分webapp是默认安装到3dspace的app子目录下的，但是有些webapp的安装目录并非是默认的app子目录，这里安装目录的选择没有特别的要求，唯一需要注意的是选择的目录一定是plmadm具备写权限的目录即可；</p>
+<h3 id="_48">安装完成配置</h3>
+<h3 id="war">重新部署War包</h3>
+<p>新WebApp安装，会给系统带来一些全新的服务和文件，因此，我们需要将war包重新生成一下，具体的操作和验证和新安装完3dspace相同。</p>
+<h3 id="jpo">编译JPO</h3>
+<p>同样，在数据库里面也因为安装全新的webapp，所有也有很多权限的JPO导入到数据库中，为了后面的调用不出错误，我们需要进入mql环境，将全部的JPO做一个编译操作，具体命令如下：
+</p><div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="w"> </span>context<span class="w"> </span>person<span class="w"> </span>creator<span class="p">;</span>
+compile<span class="w"> </span>prog<span class="w"> </span>*<span class="w"> </span>force<span class="w"> </span>update<span class="p">;</span>
+</code></pre></div>
+<p>如果WebApp模块装的比较多，那么编译JPO会是一个比较耗时的工作，编译的时候请耐心等待。</p>
+<h3 id="fts">更改FTS配置</h3>
+<p>在安装完WebApp，尤其是打完WebApp补丁后，经常会遇到FTS搜索出问题的情况，这种问题基本都是FTS默认的配置文件发生变化，而新的配置文件没有成功导入schema的缘故，所以我们建议在安装完所有的WebApp和补丁后，都做一下FTS配置的操作。
+做FTS的配置操作有两种方法，一种是可以直接执行系统里面的脚本命令，在3DSpace的安装目录下，在script目录下有一个命令脚本</p>
+<div class="highlight"><pre><span></span><code>FullTextSearch_PostInstall.sh
+</code></pre></div>
+<p>执行这个脚本，可以直接完成FTS的配置文件更换和索引重新生成的操作；另外一种就是直接在mql环境里面运行如下的mql命令：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">set</span><span class="w"> </span>system<span class="w"> </span>searchindex<span class="w"> </span>file<span class="w"> </span>/app/DassaultSystemes/R2023x/3DSpace/Apps/BusinessProcessServices/V6R2023x/Modules/ENOFramework/AppInstall/Programs/config.xml<span class="w"> </span><span class="p">;</span>
+start<span class="w"> </span>searchindex<span class="w"> </span>mode<span class="w"> </span>full<span class="p">;</span>
+</code></pre></div>
+<p>个人建议，如果对mql操作不是很熟练，还是执行脚本来更新FTS配置最简单。
+注意：FTS的配置更改进行操作的时候，需要确保3DSpace Index的服务是启动的。</p>
+<h2 id="_49">系统其他配置更改</h2>
+<h3 id="apache_1">Apache日志设定</h3>
+<p>默认Apache日志目录中access_log与error_log是不会自动切割，随着时间会变大，如果没有按时清理，在后面写入新的日志信息会比较影响性能，另外文件太大，对后期的日志查找也不太方便，建议可以按照下列方法进行自动切割，切割日志可按文件大小与时间，建议按照时间切割。</p>
+<p>修改Apache的httpd.conf</p>
+<p>找到并修改ErrorLog</p>
+<div class="highlight"><pre><span></span><code>#ErrorLog "logs/error_log"
+ErrorLog "|/app/apache24/bin/rotatelogs /usr/apache24/logs/error-%Y-%m-%d.log 86400"
+</code></pre></div>
+<p>找到并修改CustomLog</p>
+<div class="highlight"><pre><span></span><code>#CustomLog "logs/access_log" common
+CustomLog "|/app/apache24/bin/rotatelogs /usr/apache24/logs/access-%Y-%m-%d.log 86400" common
+</code></pre></div>
+<p>重启apache</p>
+<p>注意：这里注意自己的Apache安装路径</p>
+<h3 id="tomee-cache">TomEE Cache设置</h3>
+<p>有时候我们在3dspace的tomee实例启动日志里面能发现有提示cache不足的警告，这是因为tomee的默认缓存是10M，我们可以修改tomee实例中的context.xml文件，增加cache的最大值，这里可以根据具体的需求来进行调整，但是不适合调整的过大。</p>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;Resources</span><span class="w"> </span><span class="na">cachingAllowed=</span><span class="s">"true"</span><span class="w"> </span><span class="na">cacheMaxSize=</span><span class="s">"100000"</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div>
+<h2 id="linux_1">常用Linux命令</h2>
+<ul>
+<li>vi修改文件内容
+i 开始进入编辑模式
+/ 执行搜索
+:q 退出
+:q ! 不保存退出
+:wq 保存退出</li>
+<li>mkdir -p 创建文件夹</li>
+<li>rpm -qa|grep 查询rpm包是否安装</li>
+<li>rpm -Uvh安装rpm包</li>
+<li>dnf -y install 通过yum源安装package包，如果有前置依赖，也会自动安装好</li>
+<li>rm -f删除文件</li>
+<li>rm -rf 删除文件夹及下面所有文件</li>
+<li>unzip解压zip格式的压缩文件</li>
+<li>xhost +
+还没有执行xhost +之前，执行echo $DISPLAY，检查当前变量值，默认应该为“:1”，然后执行xhost +命令，再次检查DISPLAY变量值，如果为空，则设置为“:1”。</li>
+<li>chmod -R 777 给目录所有权限</li>
+<li>chown -R oracle:oinstall 更改目录所有权，此处oracle是用户名，oinstall是组名</li>
+<li>find $ORACLE_BASE -name "init.ora*" 在指定目录下寻找指定的文件</li>
+<li>tar -zxvf  解压*.tar.gz的压缩包</li>
+<li>tar -xvf 解压*.tar的压缩包</li>
+<li>mv 移动一个文件夹到另外一个位置</li>
+<li>cp -r 拷贝一个文件或者文件夹到另外一个位置</li>
+<li>lsof -i:端口号 查看端口号被占用的情况</li>
+<li>ps -ef|grep tomee：查看tomee的进程</li>
+<li>kill -s 9 进程编号：强制关闭某个进程</li>
+<li>lsof -i :5099查看5099端口是否被占用</li>
+<li>netstat -an | grep 1521 查看1521端口是否被占用</li>
+<li>cat /etc/hostname 查看主机名</li>
+<li>df -hl查看硬盘使用情况</li>
+<li>free -m：查看swap大小</li>
+</ul></div>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2023 DS USERS
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:<song_hsu@126.com>" target="_blank" rel="noopener" title="Email to me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.tabs.link", "navigation.tabs", "toc.integrate", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+      
+        <script src="../../../javascripts/highlight.js"></script>
+      
+    
+  </body>
+</html>

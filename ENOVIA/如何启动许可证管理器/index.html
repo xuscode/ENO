@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../%E6%B8%85%E7%90%86%E7%BC%93%E5%AD%98/">
+        <link rel="prev" href="../%E5%88%9B%E5%BB%BA%E5%90%88%E4%BD%9C%E5%8C%BA%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%88%9B%E5%BB%BA%E6%9D%83%E9%99%90/">
       
       
-        <link rel="next" href="../%E7%AE%A1%E7%90%86%E7%A9%BA%E9%97%B4%E6%9D%83%E9%99%90/">
+        <link rel="next" href="../%E5%A6%82%E4%BD%95%E7%94%A8mql%E6%9F%A5%E8%AF%A2%E4%B8%80%E4%B8%AA%E8%B4%A6%E5%8F%B7%E7%9A%84%E5%85%A8%E9%83%A8%E5%85%B3%E8%81%94%E7%9A%84%E5%8D%8F%E4%BD%9C%E5%8C%BA/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>用户名批量建立 - ENOVIA Knowledge Base</title>
+        <title>如何启动许可证管理器 - ENOVIA Knowledge Base</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用户名批量建立
+              如何启动许可证管理器
             
           </span>
         </div>
@@ -399,9 +399,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../%E5%A6%82%E4%BD%95%E5%90%AF%E5%8A%A8%E8%AE%B8%E5%8F%AF%E8%AF%81%E7%AE%A1%E7%90%86%E5%99%A8/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -410,6 +419,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -479,29 +489,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    用户名批量建立
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../%E7%94%A8%E6%88%B7%E5%90%8D%E6%89%B9%E9%87%8F%E5%BB%BA%E7%AB%8B/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,40 +500,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#3dpassport-user" class="md-nav__link">
-    创建 3DPassport User
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3dspace-user" class="md-nav__link">
-    创建3DSpace User
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1252,85 +1208,10 @@
   
 
 
-<div><h1 id="_1">用户名批量建立</h1>
-<h2 id="3dpassport-user">创建 3DPassport User</h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/d<span class="w"> </span>C:<span class="se">\D</span>assaultSystemes<span class="se">\R</span>2020x<span class="se">\3</span>DPassport<span class="se">\w</span>in_b64<span class="se">\c</span>ode<span class="se">\c</span>ommand
-PassportUserImport.bat<span class="w"> </span>-file<span class="w"> </span>C:<span class="se">\3</span>DPassportUserCreationScript.txt<span class="w"> </span>-default_password<span class="w"> </span>Qwer1234<span class="w"> </span>-url<span class="w"> </span>https://v6r2020x.3de.com/3dpassport
-</code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">3DPassportUserCreationScript.txt</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>*PERSON<span class="w"> </span>designer1<span class="p">;</span>Company<span class="w"> </span>Name
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span>CIV
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span>designer1
-+ATTRIBUTE<span class="w"> </span>Country<span class="p">;</span>CHN
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span>designer1@3de.com
-
-*PERSON<span class="w"> </span>designer2<span class="p">;</span>Company<span class="w"> </span>Name
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span>CIV
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span>designer2
-+ATTRIBUTE<span class="w"> </span>Country<span class="p">;</span>CHN
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span>designer1@3de.com
-
-*PERSON<span class="w"> </span>designer1<span class="p">;</span>Company<span class="w"> </span>Name
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span>CIV
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span>designer1
-+ATTRIBUTE<span class="w"> </span>Country<span class="p">;</span>CHN
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span>designer1@3de.com
-
-*PERSON<span class="w"> </span>designer1<span class="p">;</span>Company<span class="w"> </span>Name
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span>CIV
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span>designer1
-+ATTRIBUTE<span class="w"> </span>Country<span class="p">;</span>CHN
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span>designer1@3de.com
-
-*PERSON<span class="w"> </span>designer1<span class="p">;</span>Company<span class="w"> </span>Name
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span>CIV
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span>designer1
-+ATTRIBUTE<span class="w"> </span>Country<span class="p">;</span>CHN
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span>designer1@3de.com
-</code></pre></div>
-</div>
-</div>
-</div>
-<hr>
-<h2 id="3dspace-user">创建3DSpace User</h2>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\D</span>assaultSystemes<span class="se">\%</span>version%<span class="se">\3</span>DSpace<span class="se">\w</span>in_b64<span class="se">\c</span>ode<span class="se">\c</span>ommand
-VPLMPosImport.bat<span class="w"> </span>-user<span class="w"> </span><span class="s2">"admin_platform"</span><span class="w"> </span>-password<span class="w"> </span><span class="s2">"Qwer1234"</span><span class="w"> </span>-context<span class="w"> </span><span class="s2">"VPLMAdmin.Company Name.Default"</span><span class="w"> </span>-server<span class="w"> </span><span class="s2">"http://v6r2020x.3de.com:8070/internal"</span><span class="w"> </span>-file<span class="w"> </span>C:<span class="se">\3</span>DSpaceUserCreationScript.txt<span class="w"> </span>-report<span class="w"> </span>c:<span class="se">\U</span>serCreationReport.txt
-</code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">3DSpaceUserCreationScript.txt</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>*NULL<span class="w"> </span>$
-*SEPARATOR<span class="w">    </span><span class="p">;</span>
-*PROJECT<span class="w"> </span>PROJECTSPACE<span class="p">;</span>$<span class="p">;</span>PROJECTSPACE<span class="p">;</span>Team<span class="p">;</span>DesignTeam
-+VISIBILITY<span class="w"> </span>Protected
-*CTX<span class="w"> </span>VPLMProjectLeader<span class="p">;</span>Company<span class="w"> </span>Name<span class="p">;</span>PROJECTSPACE
-*PERSON<span class="w"> </span>designer1<span class="p">;</span>Company<span class="w"> </span>Name
-+PASSWORD<span class="w"> </span>Qwer1234
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span><span class="w"> </span>Product
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span><span class="w"> </span>Architect
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span><span class="w"> </span>designer1@3de.com
-+CTX<span class="w"> </span>VPLMProjectLeader.Company<span class="w"> </span>Name.PROJECTSPACE<span class="p">;</span>,<span class="p">;</span>IFW,CSV,CIV,KDI
-+MEMBER<span class="w"> </span>Company<span class="w"> </span>Name
-
-
-*NULL<span class="w"> </span>$
-*SEPARATOR<span class="w">    </span><span class="p">;</span>
-*PROJECT<span class="w"> </span>PROJECTSPACE<span class="p">;</span>$<span class="p">;</span>PROJECTSPACE<span class="p">;</span>Team<span class="p">;</span>DesignTeam
-+VISIBILITY<span class="w"> </span>Protected
-*CTX<span class="w"> </span>VPLMProjectLeader<span class="p">;</span>Company<span class="w"> </span>Name<span class="p">;</span>PROJECTSPACE
-*PERSON<span class="w"> </span>designer2<span class="p">;</span>Company<span class="w"> </span>Name
-+PASSWORD<span class="w"> </span>Qwer1234
-+ATTRIBUTE<span class="w"> </span>First<span class="w"> </span>Name<span class="p">;</span><span class="w"> </span>Product
-+ATTRIBUTE<span class="w"> </span>Last<span class="w"> </span>Name<span class="p">;</span><span class="w"> </span>Architect
-+ATTRIBUTE<span class="w"> </span>Email<span class="w"> </span>Address<span class="p">;</span><span class="w"> </span>designer2@3de.com
-+CTX<span class="w"> </span>VPLMProjectLeader.Company<span class="w"> </span>Name.PROJECTSPACE<span class="p">;</span>,<span class="p">;</span>IFW,CSV,CIV,KDI
-+MEMBER<span class="w"> </span>Company<span class="w"> </span>Name
-</code></pre></div>
-</div>
-</div>
-</div></div>
+<div><h1 id="_1">如何启动许可证管理器</h1>
+<p>通过系统快捷方式点击启动，如果找不到，就在cmd 命令行输入以下代码：</p>
+<div class="highlight"><pre><span></span><code><span class="s2">"C:\Program Files\Dassault Systemes\DS License Server\win_b64\code\bin\DSLicSrv.exe"</span> -adminUI
+</code></pre></div></div>
 
 
 
