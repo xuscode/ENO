@@ -2,6 +2,19 @@
 
 ## __技术相关网站__
 
+- Software Download
+
+    https://www.teambition.com
+
+    Account Number：+852-55317568
+    Password：1qaz@WSX
+
+    使用账号和密码的方式登录，
+    进去之后会看到 dsapp 这个项目，里面有包含的所有软件；
+
+    Log in using account and password，
+    after entering you will see the dsapp project which contains all the software included
+---
 
 ## __达索系统业务管理__
 
