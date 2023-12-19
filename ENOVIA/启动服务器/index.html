@@ -1465,14 +1465,20 @@ timeout /t 4
 <span class="k">echo</span> ===license===============================
 
 <span class="k">echo</span> =====Oracle=====
+
+net stop <span class="s2">"OracleOraDB19Home1MTSRecoveryService"</span>
+timeout /t 3
+net stop <span class="s2">"OracleJobSchedulerMYDB"</span>
+timeout /t 3
 net stop <span class="s2">"OracleOraDB19Home1TNSListener"</span>
 timeout /t 3
 net stop <span class="s2">"OracleRemExecServiceV2"</span>
 timeout /t 3
-net stop <span class="s2">"OracleServiceENOVIAV6"</span>
+net stop <span class="s2">"OracleServiceMYDB"</span>
 timeout /t 3
-net stop <span class="s2">"OracleVssWriterENOVIAV6"</span>
+net stop <span class="s2">"OracleVssWriterMYDB"</span>
 timeout /t 3
+
 <span class="k">echo</span> =====Oracle=====
 
 <span class="k">echo</span> ***************************************************************
@@ -1548,16 +1554,20 @@ timeout /t 4
 
 <span class="k">echo</span> =====Oracle=====
 
-net start <span class="s2">"OracleOraDB12Home1MTSRecoveryService"</span>
+net start <span class="s2">"OracleOraDB19Home1MTSRecoveryService"</span>
 timeout /t 3
-net start <span class="s2">"OracleOraDB12Home1TNSListener"</span>
+net start <span class="s2">"OracleJobSchedulerMYDB"</span>
+timeout /t 3
+net start <span class="s2">"OracleOraDB19Home1TNSListener"</span>
 timeout /t 3
 net start <span class="s2">"OracleRemExecServiceV2"</span>
 timeout /t 3
-net start <span class="s2">"OracleServiceORCL"</span>
+net start <span class="s2">"OracleServiceMYDB"</span>
 timeout /t 3
-net start <span class="s2">"OracleVssWriterORCL"</span>
+net start <span class="s2">"OracleVssWriterMYDB"</span>
 timeout /t 3
+
+
 <span class="k">echo</span> =====Oracle=====
 
 <span class="k">echo</span> ***************************************************************
