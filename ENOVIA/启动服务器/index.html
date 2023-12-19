@@ -494,8 +494,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tomee_1" class="md-nav__link">
-    内部tomee
+  <a href="#r2021xtomee" class="md-nav__link">
+    R2021x内部tomee
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#r2024xtomee" class="md-nav__link">
+    R2024x内部tomee
   </a>
   
 </li>
@@ -1348,7 +1355,7 @@ timeout /t 20
 <span class="k">set</span> <span class="nv">CATALINA_HOME</span><span class="p">=</span>C:\TomEE\tomee-3dsywm
 <span class="k">call</span> C:\TomEE\tomee-3dsywm\bin\startup.bat
 </code></pre></div>
-<h2 id="tomee_1">内部tomee</h2>
+<h2 id="r2021xtomee">R2021x内部tomee</h2>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
 <span class="k">echo</span> =====STOP ALL===========================
@@ -1357,15 +1364,6 @@ timeout /t 20
 net stop <span class="s2">"DS License Server"</span>
 timeout /t 4
 <span class="k">echo</span> ===license===============================
-
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
 
 <span class="k">echo</span> =====Oracle=====
 net stop <span class="s2">"OracleOraDB19Home1TNSListener"</span>
@@ -1379,26 +1377,11 @@ timeout /t 3
 <span class="k">echo</span> =====Oracle=====
 
 <span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-
 <span class="k">echo</span> =====Restart Apache Server=====
 net stop <span class="s2">"Apache2.4"</span>
 timeout /t 2
 <span class="k">echo</span> =====End Apache Server=====
 
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
 <span class="k">echo</span> ***************************************************************
 
 <span class="k">echo</span> =====End TomEE Server=====
@@ -1427,13 +1410,7 @@ timeout /t 2
 <span class="k">echo</span> ===license================================
 
 <span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
+
 
 <span class="k">echo</span> =====Restart Apache Server=====
 net start <span class="s2">"Apache2.4"</span>
@@ -1441,13 +1418,7 @@ timeout /t 4
 <span class="k">echo</span> =====End Apache Server======
 
 <span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
+
 
 <span class="k">echo</span> =====Oracle=====
 
@@ -1464,13 +1435,7 @@ timeout /t 3
 <span class="k">echo</span> =====Oracle=====
 
 <span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
-<span class="k">echo</span> ***************************************************************
+
 
 <span class="k">echo</span> =====Restart TomEE Server=====
 net start <span class="s2">"3DEXPERIENCELauncher"</span>
@@ -1487,6 +1452,158 @@ timeout /t 3
 
 net start <span class="s2">"PDFRService_R2021x"</span>
 timeout /t 3
+<span class="k">echo</span> =====End Apache Server=====
+</code></pre></div>
+<h2 id="r2024xtomee">R2024x内部tomee</h2>
+<div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
+
+<span class="k">echo</span> =====STOP ALL===========================
+
+<span class="k">echo</span> ===license===============================
+net stop <span class="s2">"DS License Server"</span>
+timeout /t 4
+<span class="k">echo</span> ===license===============================
+
+<span class="k">echo</span> =====Oracle=====
+net stop <span class="s2">"OracleOraDB19Home1TNSListener"</span>
+timeout /t 3
+net stop <span class="s2">"OracleRemExecServiceV2"</span>
+timeout /t 3
+net stop <span class="s2">"OracleServiceENOVIAV6"</span>
+timeout /t 3
+net stop <span class="s2">"OracleVssWriterENOVIAV6"</span>
+timeout /t 3
+<span class="k">echo</span> =====Oracle=====
+
+<span class="k">echo</span> ***************************************************************
+<span class="k">echo</span> =====Restart Apache Server=====
+net stop <span class="s2">"Apache2.4"</span>
+timeout /t 2
+<span class="k">echo</span> =====End Apache Server=====
+
+<span class="k">echo</span> ***************************************************************
+
+<span class="k">echo</span> =====End TomEE Server=====
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DPassport TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DDashboard TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x fedsearch TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DSpace Index"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DSpace TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DSpaceNoCAS TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DNotification Node"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DComment Node"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DSwym Node"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DSwym ExternalConverterSvc"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x 3DOrchestrate TomEE+"</span>
+timeout /t 3
+
+net stop <span class="s2">"3DEXPERIENCE R2024x FileCollaborationServer TomEE+"</span>
+timeout /t 3
+
+<span class="c1">REM net stop "PDFRService_R2024x"</span>
+<span class="c1">REM timeout /t 3</span>
+
+
+<span class="k">echo</span> =====End TomEE Server=====
+
+<span class="k">echo</span> =====START ALL============================
+
+
+<span class="k">echo</span> ===license================================
+net start <span class="s2">"DS License Server"</span>
+timeout /t 2
+<span class="k">echo</span> ===license================================
+
+<span class="k">echo</span> ***************************************************************
+
+
+<span class="k">echo</span> =====Restart Apache Server=====
+net start <span class="s2">"Apache2.4"</span>
+timeout /t 4
+<span class="k">echo</span> =====End Apache Server======
+
+<span class="k">echo</span> ***************************************************************
+
+
+<span class="k">echo</span> =====Oracle=====
+
+net start <span class="s2">"OracleOraDB12Home1MTSRecoveryService"</span>
+timeout /t 3
+net start <span class="s2">"OracleOraDB12Home1TNSListener"</span>
+timeout /t 3
+net start <span class="s2">"OracleRemExecServiceV2"</span>
+timeout /t 3
+net start <span class="s2">"OracleServiceORCL"</span>
+timeout /t 3
+net start <span class="s2">"OracleVssWriterORCL"</span>
+timeout /t 3
+<span class="k">echo</span> =====Oracle=====
+
+<span class="k">echo</span> ***************************************************************
+
+
+<span class="k">echo</span> =====Restart TomEE Server=====
+net start <span class="s2">"3DEXPERIENCELauncher"</span>
+timeout /t 3
+
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DPassport TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DDashboard TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x fedsearch TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DSpace Index"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DSpace TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DSpaceNoCAS TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DNotification Node"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DComment Node"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DSwym Node"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DSwym ExternalConverterSvc"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x 3DOrchestrate TomEE+"</span>
+timeout /t 3
+
+net start <span class="s2">"3DEXPERIENCE R2024x FileCollaborationServer TomEE+"</span>
+timeout /t 3
+
 <span class="k">echo</span> =====End Apache Server=====
 </code></pre></div></div>
 
