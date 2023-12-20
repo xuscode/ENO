@@ -381,26 +381,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux-%E4%BF%AE%E6%94%B9%E8%AE%B8%E5%8F%AF%E8%AF%81%E5%9C%B0%E5%9D%80/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    修改许可证地址
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../%E5%88%9B%E5%BB%BA%E5%90%88%E4%BD%9C%E5%8C%BA%E6%8F%90%E7%A4%BA%E6%B2%A1%E6%9C%89%E5%88%9B%E5%BB%BA%E6%9D%83%E9%99%90/" class="md-nav__link">
         
   
@@ -430,6 +410,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    创建许可
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -439,6 +430,39 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    修改windows许可证地址
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    修改linux许可证地址
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -680,10 +704,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_16" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_15" >
         
           
-          <label class="md-nav__link" for="__nav_2_16" id="__nav_2_16_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_15" id="__nav_2_15_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -694,8 +718,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_16_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_16">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_15">
             <span class="md-nav__icon md-icon"></span>
             移除license
           </label>
@@ -1269,9 +1293,16 @@
 
 
 <div><h1 id="_1">创建许可</h1>
+<h2 id="windows">修改windows许可证地址</h2>
 <div class="highlight"><pre><span></span><code><span class="k">md</span> C:\ProgramData\DassaultSystemes\Licenses\
-<span class="k">echo</span> 18.tcp.cpolar.top:11421 <span class="p">&gt;</span>C:\ProgramData\DassaultSystemes\Licenses\DSLicSrv.txt
-</code></pre></div></div>
+<span class="k">echo</span> 3.tcp.vip.cpolar.cn:13908  <span class="p">&gt;</span>C:\ProgramData\DassaultSystemes\Licenses\DSLicSrv.txt
+</code></pre></div>
+<h2 id="linux">修改linux许可证地址</h2>
+<p></p><div class="highlight"><pre><span></span><code>su
+r2024x
+vim var/DassaultSystemes/Licenses/DSLicSrv.txt
+</code></pre></div>
+    x3ds \  x3ds</div>
 
 
 
