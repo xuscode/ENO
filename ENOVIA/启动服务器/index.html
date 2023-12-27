@@ -467,6 +467,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    linux 服务器启动说明
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    服务器基础操作
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#tomee" class="md-nav__link">
     外部tomee
   </a>
@@ -1300,6 +1314,19 @@
 
 
 <div><h1 id="start-service">Start Service</h1>
+<h2 id="linux">linux 服务器启动说明</h2>
+<p>首先启动进入虚拟机，账户为 x3ds 密码为 x3ds,然后进去之后，通过命令行修改许可证地址，
+先输入 su，输入密码 r2024x，这样就切换为  root 用户了，接着输入 cd / 进入根目录，
+输入 vim var/DassaultSystemes/Licenses/DSLicSrv.txt 弹出vim 编辑界面，输入 i 进行文字插入，
+修改许可证地址为  2.tcp.cpolar.cn:10732  ，之后 按住esc 左下角会显示冒号，输入wq! 强制保存推出；</p>
+<p>许可证修改好了之后，需要启动服务器， 在命令行输入  startup_all.sh  命令，启动所有的服务器，如果需要关闭，输入 shutdown_all.sh</p>
+<p>等待10分钟后，打开 火狐浏览器 即可登录服务器，</p>
+<p>进入 redhat 复制MyRootCA证书到客户端，安装到客户端，选择 受信任的根证书 即可；</p>
+<p>客户端启动地址是  https://r2024x.mydomain.com:443/3dspace</p>
+<p>运行以下代码修改 系统host 地址，加入服务器的地址，这样才能Ping通并且可以访问；</p>
+<div class="highlight"><pre><span></span><code><span class="k">echo</span> 192.168.10.11 r2024x.mydomain.com r2024x <span class="p">&gt;</span>C:\Windows\System32\drivers\etc\hosts
+</code></pre></div>
+<h2 id="_1">服务器基础操作</h2>
 <p>复制下面的命令到txt里面，修改后缀为bat，双击批量运行</p>
 <h2 id="tomee">外部tomee</h2>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
