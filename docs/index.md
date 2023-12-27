@@ -49,6 +49,21 @@
 ## __本地服务器网站__
 
 
+=== "R2024x-r2024x.mydomain.com"
+
+    - [localhost](https://r2024x.mydomain.com)
+    - [3DPassport](https://r2024x.mydomain.com/3dpassport)
+    - [admin登录逃生通道](https://r2024x.mydomain.com/3dpassport/admin-tools/v2)
+    - [3DDashboard](https://r2024x.mydomain.com/3ddashboard)
+    - [3DSearch](https://r2024x.mydomain.com/federated/search?query=test)
+    - [3DSpace](https://r2024x.mydomain.com/3dspace)
+    - [Internal](https://r2024x.mydomain.com/internal/)
+    - [FCS](https://r2024x.mydomain.com/fcs/servlet/fcs/about)
+    - [3DSwym](https://r2024x.mydomain.com/3dswym)
+    - [Exalead](http://r2024x.mydomain.com:19001/admin/)
+    - [Autovue检查](https://r2024x.mydomain.com/3dspace/VueServlet)
+
+
 === "R2023x-r2023x.mydomain.com"
 
     - [localhost](https://r2023x.mydomain.com)
