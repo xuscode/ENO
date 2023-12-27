@@ -467,20 +467,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#linux" class="md-nav__link">
-    linux 服务器启动说明
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    服务器基础操作
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#tomee" class="md-nav__link">
     外部tomee
   </a>
@@ -1314,7 +1300,19 @@
 
 
 <div><h1 id="start-service">Start Service</h1>
-<h2 id="linux">linux 服务器启动说明</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="__tabbed_1_1" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">linux 服务器启动说明</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<p>挑选合适的ssh 连接工具
+比如如下：</p>
+<ul>
+<li>https://github.com/team-ide/teamide.git</li>
+<li>MobaXterm_Personal</li>
+<li>tabbt</li>
+<li>micorsoft terminal </li>
+</ul>
 <p>首先启动进入虚拟机，账户为 x3ds 密码为 x3ds,然后进去之后，通过命令行修改许可证地址，
 先输入 su，输入密码 r2024x，这样就切换为  root 用户了，接着输入 cd / 进入根目录，
 输入 vim var/DassaultSystemes/Licenses/DSLicSrv.txt 弹出vim 编辑界面，输入 i 进行文字插入，
@@ -1326,9 +1324,13 @@
 <p>运行以下代码修改 系统host 地址，加入服务器的地址，这样才能Ping通并且可以访问；</p>
 <div class="highlight"><pre><span></span><code><span class="k">echo</span> 192.168.10.11 r2024x.mydomain.com r2024x <span class="p">&gt;</span>C:\Windows\System32\drivers\etc\hosts
 </code></pre></div>
-<h2 id="_1">服务器基础操作</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked id="__tabbed_2_1" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">windows 服务器启动说明</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
 <p>复制下面的命令到txt里面，修改后缀为bat，双击批量运行</p>
-<h2 id="tomee">外部tomee</h2>
+<h3 id="tomee">外部tomee</h3>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 <span class="k">cd</span> /d C:\TomEE
 <span class="k">set</span> <span class="nv">CATALINA_HOME</span><span class="p">=</span>C:\TomEE\tomee-3dpassport
@@ -1362,7 +1364,7 @@ timeout /t 20
 <span class="k">set</span> <span class="nv">CATALINA_HOME</span><span class="p">=</span>C:\TomEE\tomee-3dsywm
 <span class="k">call</span> C:\TomEE\tomee-3dsywm\bin\startup.bat
 </code></pre></div>
-<h2 id="r2021xtomee">R2021x内部tomee</h2>
+<h3 id="r2021xtomee">R2021x内部tomee</h3>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
 <span class="k">echo</span> =====STOP ALL===========================
@@ -1461,7 +1463,7 @@ net start <span class="s2">"PDFRService_R2021x"</span>
 timeout /t 3
 <span class="k">echo</span> =====End Apache Server=====
 </code></pre></div>
-<h2 id="r2024xtomee">R2024x内部tomee</h2>
+<h3 id="r2024xtomee">R2024x内部tomee</h3>
 <div class="highlight"><pre><span></span><code><span class="p">@</span><span class="k">echo</span> off
 
 <span class="k">echo</span> =====STOP ALL===========================
