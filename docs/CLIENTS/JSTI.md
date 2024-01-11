@@ -14,7 +14,7 @@
 
 - 操作系统(win/Linux)：
 	账号：3DEXPERIENCE-SERVER
-	密码：?
+	密码：Jsti@123
 ---
 
 - 3DE平台系统:
