@@ -24,4 +24,6 @@ REM timeout /t 10
 
 cd /d %~dp0
 
-mkdocs gh-deploy
+mkdocs gh-deploy --ignore-version
+
+timeout /t 20

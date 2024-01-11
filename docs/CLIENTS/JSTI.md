@@ -24,3 +24,5 @@
 	- linux:webapps/webapps
 	- linux:oracle/oracle
 	
+	-ssh:
+		10.60.17.112/root/enovia
