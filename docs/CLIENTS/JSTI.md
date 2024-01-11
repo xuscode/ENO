@@ -12,12 +12,12 @@
 
 ---
 
-- 操作系统(win/Linux)：
+## 操作系统(win/Linux)：
 	账号：3DEXPERIENCE-SERVER
 	密码：Jsti@123
 ---
 
-- 3DE平台系统:
+## 3DE平台系统:
 	- 账号：admin_platform/Dsenovia2022
 
 	- linux:root/enovia
@@ -26,3 +26,8 @@
 	
 	-ssh:
 		10.60.17.112/root/enovia
+		
+		
+## 网址：
+	- [https://dsplm22x.3de.com/3dspace](https://dsplm22x.3de.com/3dspace)
+	
