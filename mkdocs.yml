@@ -1,4 +1,4 @@
-site_name: ENOVIA Knowledge Base
+site_name: ENGLISH FOR EVERONE
 
 # theme:
     # name: yeti
@@ -49,7 +49,7 @@ markdown_extensions:
 extra:
   social:
     - icon: fontawesome/solid/paper-plane
-      link: mailto:<song_hsu@126.com>
+      link: mailto:<NOO@126.com>
       name: Email to me 
 
   generator: false
@@ -68,7 +68,7 @@ extra_javascript:
   - javascripts/highlight.js
 repo_url: https://github.com/xuscode/enovia.git
 
-copyright: Copyright &copy; 2023 DS USERS
+copyright: Copyright &copy; 2023 USERS
 
 
 
